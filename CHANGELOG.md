@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.7.0 — 19 October 2026
+
+- Every element type of every syntax now says whether it is **essential** or **optional**, so completeness can be checked by type: a thing described in a syntax is complete when every essential type is decided, and an optional type left open does not make it incomplete. Each syntax's page marks its types, and an optional type says what deciding it does. The marks are written at each syntax's source: boardgameBuilder's `palette.py`, Zariia's `record-syntax.json`, Split-Domain Cognition's `personhood-syntax.json` and `life-syntax.json`, and the Museum of Vestigial Desire's `framework-syntax.json`. Three types are optional so far: theme and simulation in the board game, and rooms in the framework. The build refuses a syntax whose element types are not marked.
+
 ## 0.6.2 — 17 October 2026
 
 - The README is the documentation: what SYNTAX is, the words, the rules every syntax keeps, the syntax file field by field with an example, how the family mark is drawn, every address the site serves, how to add a syntax, and how to build and deploy. Its table of syntaxes is written by the build, from the same list the site is.

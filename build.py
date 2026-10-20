@@ -42,6 +42,8 @@ SYNTAXES = [{
     "element_types": [{
         "name": d["display"],
         "holds": "several" if d.get("multi") else "one",
+        "need": d["need"],
+        **({"helps": d["helps"]} if "helps" in d else {}),
         "description": d["description"],
         "elements": [{"name": b["display"], "description": meta_for(b["id"])["description"]} for b in d["blocks"]],
     } for d in palette.DIMENSIONS],
@@ -117,12 +119,19 @@ SYNTAXES.append({
     "described_entities": [],
 })
 
+# Every element type says whether a thing of that kind needs it, so completeness can be checked by type: a thing is
+# complete when every essential type is decided, and an optional type says what deciding it does (Prayas, 19 October 2026).
 for s in SYNTAXES:
     # An exclusion said only by absence from a list is not said: every syntax states what it leaves out.
     if not s.get("left_out"):
         sys.exit(f"'{s['name']}' does not state what it leaves out")
     if not PRIMARY_NAME.match(s["name"]):
         sys.exit(f"'{s['name']}' is not a primary name: name a syntax for the kind of thing it breaks up")
+    for t in s["element_types"]:
+        if t.get("need") not in ("essential", "optional"):
+            sys.exit(f"'{s['name']}': element type '{t['name']}' does not say whether it is essential or optional")
+        if t["need"] == "optional" and not t.get("helps"):
+            sys.exit(f"'{s['name']}': optional element type '{t['name']}' does not say what deciding it does")
 
 e = html.escape
 STYLE = (HERE / "style.css").read_text()
@@ -197,8 +206,8 @@ def page(title, body, current, field=None, og="home", description=DESCRIPTION, p
 
 for s in SYNTAXES:
     types = "".join(
-        f"""<section class="type"><h3>{e(t['name'])} <span class="holds">holds {t['holds']}</span></h3>
-<p class="aside">{e(t['description'])}</p>
+        f"""<section class="type"><h3>{e(t['name'])} <span class="holds">holds {t['holds']}</span>{f' <span class="holds">{t["need"]}</span>' if t.get("need") else ""}</h3>
+<p class="aside">{e(t['description'])}{f" Optional: {e(t['helps'])}" if t.get("helps") else ""}</p>
 {f"<dl>{''.join(f'<dt>{e(x["name"])}{' <span class="holds">thing</span>' if x.get("thing") else ''}</dt><dd>{e(x["description"])}</dd>' for x in t['elements'])}</dl>" if t['elements'] else ""}</section>"""
         for t in s["element_types"])
     inst = "".join(f'<li><a href="{e(i["url"])}">{e(i["name"])}</a>: {e(i["what"])}{"".join(f' (<a href="{e(u)}">{e(label)}</a>)' for label, u in i["links"])}</li>' for i in s["instances"])

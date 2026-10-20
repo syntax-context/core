@@ -8,6 +8,7 @@
   {
    "name": "Core mechanic",
    "holds": "several",
+   "need": "essential",
    "description": "The main thing players do on their turn.",
    "elements": [
     {
@@ -87,6 +88,7 @@
   {
    "name": "Victory condition",
    "holds": "one",
+   "need": "essential",
    "description": "What players are trying to do.",
    "elements": [
     {
@@ -142,6 +144,7 @@
   {
    "name": "Player interaction",
    "holds": "one",
+   "need": "essential",
    "description": "How players affect each other.",
    "elements": [
     {
@@ -193,6 +196,7 @@
   {
    "name": "Chance or skill",
    "holds": "one",
+   "need": "essential",
    "description": "How much luck vs. brain-work decides the game.",
    "elements": [
     {
@@ -228,6 +232,8 @@
   {
    "name": "Theme",
    "holds": "one",
+   "need": "optional",
+   "helps": "gives players a world to picture, which makes rules easier to remember and the choices something to be about",
    "description": "What the game is about.",
    "elements": [
     {
@@ -283,6 +289,7 @@
   {
    "name": "Information visibility",
    "holds": "one",
+   "need": "essential",
    "description": "What players can see about each other.",
    "elements": [
     {
@@ -322,6 +329,7 @@
   {
    "name": "Timing",
    "holds": "several",
+   "need": "essential",
    "description": "When and how fast players act: one after another, all at once, whenever they like, against a clock, across real days, slowed down or speeding up.",
    "elements": [
     {
@@ -357,6 +365,8 @@
   {
    "name": "Simulation",
    "holds": "several",
+   "need": "optional",
+   "helps": "ties the game to a real situation, so players can talk about that situation afterwards through what happened at the table",
    "description": "The real problem the game models, and how players learn from it.",
    "elements": [
     {

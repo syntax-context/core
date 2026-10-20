@@ -9,6 +9,7 @@
   {
    "name": "place",
    "holds": "one",
+   "need": "essential",
    "description": "Where the animal is.",
    "elements": [
     {
@@ -24,6 +25,7 @@
   {
    "name": "food",
    "holds": "one",
+   "need": "essential",
    "description": "What the animal eats, and who brings it.",
    "elements": [
     {
@@ -39,6 +41,7 @@
   {
    "name": "action",
    "holds": "one",
+   "need": "essential",
    "description": "What the animal does.",
    "elements": [
     {
@@ -54,6 +57,7 @@
   {
    "name": "body",
    "holds": "one",
+   "need": "essential",
    "description": "The animal's body.",
    "elements": [
     {
@@ -69,6 +73,7 @@
   {
    "name": "signal",
    "holds": "one",
+   "need": "essential",
    "description": "What the animal makes heard or seen.",
    "elements": [
     {

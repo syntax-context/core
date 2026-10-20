@@ -80,6 +80,8 @@ Each syntax is read from the project that holds it. Where a syntax lives in one 
 
 **One source per syntax.** The syntax is written once, in the instance that holds it, and SYNTAX reads it from there. Nothing is copied into this repository by hand; the `site/<slug>.json` files are build output.
 
+**Every element type says whether it is essential or optional.** Completeness is checked by type: a thing described in a syntax is complete when every essential type is decided, and an optional type left open does not make it incomplete. Each element type carries `need`, and an optional one also carries `helps`, a line on what deciding it does; the build stops if any type lacks `need`, or an optional type lacks `helps`. So far three types are optional: theme and simulation in the board game, and rooms in the framework.
+
 **Each syntax has a mark drawn by one rule**, described below, so a new syntax gets a mark without anybody designing one.
 
 ## The syntax file
@@ -94,6 +96,7 @@ A syntax is a JSON object. The board game syntax is assembled from boardgameBuil
   {
    "name": "class",
    "holds": "one",
+   "need": "essential",
    "description": "What the sealed channel is, beside the open one.",
    "elements": [
     {"name": "the counter-voice", "description": "another take of the same moment"},
@@ -113,6 +116,8 @@ A syntax is a JSON object. The board game syntax is assembled from boardgameBuil
 | `element_types[].name` | yes | the element type's name |
 | `element_types[].holds` | yes | `"one"` or `"several"`: how many of its elements one entity can choose |
 | `element_types[].description` | yes | one or two sentences on what the type is |
+| `element_types[].need` | yes | `"essential"` (a thing of this kind is not complete until this type is decided) or `"optional"` (it is complete without it, and deciding it changes the thing) |
+| `element_types[].helps` | yes, where `need` is `"optional"` | what deciding the optional type does, in a line |
 | `element_types[].elements` | yes | a list; it may be empty where the type is a slot rather than a choice, as the record's open and sealed channels are |
 | `elements[].name` | yes | the element's name |
 | `elements[].description` | yes | what the element is |
@@ -169,7 +174,7 @@ python3 og.py         # draws og/*.png with headless Chrome; set CHROME to the b
 caprover deploy -n myplaceholder -a syntax -t syntax.tar
 ```
 
-The build stops, with a message saying why, if a syntax is not named by a primary name, if a syntax does not say what it leaves out, if `VERSION` and the newest entry in `CHANGELOG.md` disagree, or if a syntax has no preview image.
+The build stops, with a message saying why, if a syntax is not named by a primary name, if a syntax does not say what it leaves out, if an element type does not say whether it is essential or optional (or, when optional, what deciding it does), if `VERSION` and the newest entry in `CHANGELOG.md` disagree, or if a syntax has no preview image.
 
 The site is static files served by nginx in a container (`Dockerfile`, `nginx.conf`, `captain-definition`). nginx keeps no access log.
 

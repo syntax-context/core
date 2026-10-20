@@ -8,18 +8,21 @@
   {
    "name": "open channel",
    "holds": "one",
+   "need": "essential",
    "description": "The track anyone hears. It plays whole in any player, with no key.",
    "elements": []
   },
   {
    "name": "sealed channel",
    "holds": "one",
+   "need": "essential",
    "description": "A second track carried in the same file and locked with a key. Anyone can see that it is there; with the key it plays in sync with the open channel.",
    "elements": []
   },
   {
    "name": "class",
    "holds": "one",
+   "need": "essential",
    "description": "What the sealed channel is, beside the open one.",
    "elements": [
     {

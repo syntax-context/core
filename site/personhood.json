@@ -8,6 +8,7 @@
   {
    "name": "intent",
    "holds": "one",
+   "need": "essential",
    "description": "What the work is for. It comes first and stays with the person doing the work; the sentence that states it is never a model's.",
    "elements": [
     {
@@ -37,6 +38,7 @@
   {
    "name": "language",
    "holds": "one",
+   "need": "essential",
    "description": "The language work: reading, gathering, describing, writing. It is held by people unless it has been negotiated and set up otherwise.",
    "elements": [
     {
@@ -62,6 +64,7 @@
   {
    "name": "judgement",
    "holds": "one",
+   "need": "essential",
    "description": "The judgement work, answerable to consistency, explicitness, reproducibility and revisability: a verdict against a standard written in advance.",
    "elements": [
     {
@@ -87,6 +90,7 @@
   {
    "name": "residue",
    "holds": "one",
+   "need": "essential",
    "description": "What the description handed to the judgement does not capture: named and left visible as unrated, never folded into the verdict or denied.",
    "elements": [
     {

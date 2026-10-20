@@ -4,3 +4,6 @@ syntax.tar
 __pycache__/
 CLAUDE.md
 .claude-project/
+models/
+notes/
+slicer/

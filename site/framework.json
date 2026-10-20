@@ -8,6 +8,7 @@
   {
    "name": "stance",
    "holds": "one",
+   "need": "essential",
    "description": "How the framework's name binds what follows.",
    "elements": [
     {
@@ -23,6 +24,7 @@
   {
    "name": "pool",
    "holds": "one",
+   "need": "essential",
    "description": "What the framework collects.",
    "elements": [
     {
@@ -34,6 +36,8 @@
   {
    "name": "rooms",
    "holds": "several",
+   "need": "optional",
+   "helps": "keeps what the framework collects in containers, each with its own condition for entry, so what enters one need not enter another",
    "description": "The containers the pool is kept in, each with its own condition for entry.",
    "elements": [
     {
@@ -65,6 +69,7 @@
   {
    "name": "access",
    "holds": "one",
+   "need": "essential",
    "description": "How widely the framework is open, against how intensely it is held: the more the access, the less the intensity.",
    "elements": [
     {
@@ -80,6 +85,7 @@
   {
    "name": "count",
    "holds": "one",
+   "need": "essential",
    "description": "Whether the framework knows how many it reaches.",
    "elements": [
     {
