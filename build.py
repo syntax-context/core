@@ -138,7 +138,7 @@ STYLE = (HERE / "style.css").read_text()
 
 
 MARK = (HERE / "brand" / "syntax-mark.svg").read_text()
-SOURCE = "https://github.com/prayasabhinav/syntax"
+SOURCE = "https://github.com/syntax-context/core"
 
 
 def nav(current):
@@ -196,7 +196,7 @@ def page(title, body, current, field=None, og="home", description=DESCRIPTION, p
 <div class="sheet">
 <nav class="nav">{nav(current)}</nav>
 <main>{body}</main>
-<footer><p>SYNTAX is a project of <a href="https://prayasabhinav.net">Prayas Abhinav</a>, licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, with its source at <a href="{SOURCE}">github.com/prayasabhinav/syntax</a>. No analytics and no counters. Set in Mukta by Ek Type (<a href="/fonts/OFL.txt">SIL Open Font License</a>).</p></footer>
+<footer><p>SYNTAX is a project of <a href="https://prayasabhinav.net">Prayas Abhinav</a>, licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, with its source at <a href="{SOURCE}">github.com/syntax-context/core</a>. No analytics and no counters. Set in Mukta by Ek Type (<a href="/fonts/OFL.txt">SIL Open Font License</a>).</p></footer>
 </div>
 </div>
 </body>
