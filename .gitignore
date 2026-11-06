@@ -7,3 +7,17 @@ CLAUDE.md
 models/
 notes/
 slicer/
+# ka fakir has its own repository (syntax-context/ka-fakir, when he says); it is never part of core.
+lakir-ka-fakir/
+aadha-teetar-aadhi-bater/
+gagar-mein-sagar/
+
+# 6 November 2026: the tools live in projects/, each with its own history or none; the links at the old names keep old paths working, and none of it is core.
+projects/
+aadha-teetar-aadhi-bater
+gagar-mein-sagar
+kahen-khet-ki-sune-khalihan-ki
+akal-mand-ko-ishara-kafi
+misunderstanding-feasibility
+slicer
+models
