@@ -66,7 +66,7 @@ The table below is written by `build.py` from the same list the site is built fr
 | <img src="site/personhood/mark.svg" height="40" alt="the personhood mark"> | [**personhood**](https://syntax.prayasabhinav.net/personhood/) | 4 | 17 | Split-Domain Cognition | Split-Domain Cognition; Koher | [`personhood.json`](https://syntax.prayasabhinav.net/personhood.json) |
 | <img src="site/framework/mark.svg" height="40" alt="the framework mark"> | [**framework**](https://syntax.prayasabhinav.net/framework/) | 5 | 13 | the Museum of Vestigial Desire | Museum of Vestigial Desire | [`framework.json`](https://syntax.prayasabhinav.net/framework.json) |
 | <img src="site/life/mark.svg" height="40" alt="the life mark"> | [**life**](https://syntax.prayasabhinav.net/life/) | 5 | 10 | Split-Domain Cognition | Split-Domain Cognition's animal-rights variant | [`life.json`](https://syntax.prayasabhinav.net/life.json) |
-| <img src="site/small-model/mark.svg" height="40" alt="the small model mark"> | [**small model**](https://syntax.prayasabhinav.net/small-model/) | 6 | 36 | the small model builder | the small model builder | [`small-model.json`](https://syntax.prayasabhinav.net/small-model.json) |
+| <img src="site/narrow-small-model/mark.svg" height="40" alt="the narrow small model mark"> | [**narrow small model**](https://syntax.prayasabhinav.net/narrow-small-model/) | 6 | 36 | ungli | ungli | [`narrow-small-model.json`](https://syntax.prayasabhinav.net/narrow-small-model.json) |
 <!-- syntaxes:end -->
 
 Each syntax is read from the project that holds it. Where a syntax lives in one project and SYNTAX copies it, the two drift; here the build reads the instance's own file every time, so the site and the instance cannot say different things.

@@ -51,11 +51,10 @@ for s in build.SYNTAXES:
     n_el = sum(len(t["elements"]) for t in s["element_types"])
     cards[s["slug"]] = card(build.family_mark(s), "a syntax", s["name"],
                             f"{len(s['element_types'])} element types and {n_el} elements")
-# The small model builder is a tool on its own host, built on the small model syntax; it has its own preview.
-small = next(s for s in build.SYNTAXES if s["slug"] == "small-model")
-cards["small-model-builder"] = card(build.family_mark(small), "a tool on the small model syntax", "Small model builder",
-                                    f"Design a task as small models and code, beside what {len(build.MODELS)} models already built were measured to do",
-                                    url="small-model.syntax.prayasabhinav.net")
+# ungli, the builder on the narrow small model syntax, has its own host and its own mark; it has its own preview.
+cards["ungli"] = card((HERE / "projects" / "ungli" / "brand" / "ungli-mark.svg").read_text(), "ungli rakhna · on the exact spot", "ungli",
+                      f"A builder for narrow small models, beside what {len(build.MODELS)} models already built were measured to do",
+                      url="ungli.syntax.prayasabhinav.net")
 
 with tempfile.TemporaryDirectory() as tmp:
     for slug, html in cards.items():

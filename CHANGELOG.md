@@ -2,6 +2,11 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.10.0 — 13 November 2026
+
+- The small model syntax is now the **narrow small model** syntax: narrow is the size of a model's answer, a kind, a span, an item, a number or codes, never a sentence, and not the size of the model. Its builder is now **ungli**, at [ungli.syntax.prayasabhinav.net](https://ungli.syntax.prayasabhinav.net), named for *ungli rakhna*, to put a finger on the exact spot, which is all a model there does. ungli has its own mark: one fingertip resting on one cell of a row.
+- Every old address redirects: /small-model/ to /narrow-small-model/, /small-model.json to /narrow-small-model.json, and the builder's addresses, here and at small-model.syntax.prayasabhinav.net, to ungli.
+
 ## 0.9.0 — 13 November 2026
 
 - The small model builder has its own address, [small-model.syntax.prayasabhinav.net](https://small-model.syntax.prayasabhinav.net). A design there is a task broken into steps, each step plain code or a small model. Beside the open step it shows the nearest models I have built, what each was measured to do, and what their records say to check. Designs are kept in the browser and download as a spec or as a file the builder opens again. The old address on this site forwards there, keeping the model named after #.

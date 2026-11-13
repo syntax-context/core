@@ -121,21 +121,21 @@ SYNTAXES.append({
 
 # The small model syntax and its builder (his words, 13 November 2026: "can a small model builder (qith approx reading
 # of the kind of outout and accuracy) be made? -- syntax", then "make builder and deploy"). The syntax and the table of
-# models built so far, each with what was measured on it, are kept with the builder in projects/small-model-builder/.
-SMB = HERE / "projects" / "small-model-builder"
-small = json.loads((SMB / "small-model-syntax.json").read_text())
+# models built so far, each with what was measured on it, are kept with the builder, ungli, in projects/ungli/.
+SMB = HERE / "projects" / "ungli"
+small = json.loads((SMB / "narrow-small-model-syntax.json").read_text())
 MODELS = json.loads((SMB / "models.json").read_text())
 SYNTAXES.append({
     "name": small["name"],
-    "read_from": "the small model builder",
-    "slug": "small-model",
+    "read_from": "ungli",
+    "slug": "narrow-small-model",
     "breaks_up": small["breaks_up"],
     "left_out": small["left_out"],
     "element_types": small["element_types"],
-    "instances": [{"name": "the small model builder", "url": "https://small-model.syntax.prayasabhinav.net",
-                   "what": "design a task as steps of small models and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check",
+    "instances": [{"name": "ungli", "url": "https://ungli.syntax.prayasabhinav.net",
+                   "what": "a builder: design a task as steps of narrow small models and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
                    "links": []}],
-    "described_entities": [{"name": m["name"], "url": f"https://small-model.syntax.prayasabhinav.net/#{m['slug']}"} for m in MODELS],
+    "described_entities": [{"name": m["name"], "url": f"https://ungli.syntax.prayasabhinav.net/#{m['slug']}"} for m in MODELS],
 })
 
 # Every element type says whether a thing of that kind needs it, so completeness can be checked by type: a thing is
@@ -282,14 +282,6 @@ bairang = """<h1>Bairang</h1>
 <p><a href="https://bairang.koher.app">bairang.koher.app</a></p>"""
 (HERE / "site" / "bairang").mkdir(parents=True, exist_ok=True)
 (HERE / "site" / "bairang" / "index.html").write_text(page("Bairang · SYNTAX", bairang, "bairang", path="/bairang/"))
-# The builder moved to its own host on 13 November 2026 (his words: "give small model a real builder on another sub
-# domain"); this address forwards there, keeping the model named after #.
-(HERE / "site" / "small-model" / "builder").mkdir(parents=True, exist_ok=True)
-(HERE / "site" / "small-model" / "builder" / "index.html").write_text(
-    '<!doctype html><meta charset="utf-8"><title>The small model builder</title>'
-    '<link rel="canonical" href="https://small-model.syntax.prayasabhinav.net/">'
-    '<script>location.replace("https://small-model.syntax.prayasabhinav.net/" + location.hash)</script>'
-    '<p>The small model builder is at <a href="https://small-model.syntax.prayasabhinav.net/">small-model.syntax.prayasabhinav.net</a>.</p>\n')
 (HERE / "site" / "favicon.svg").write_text(MARK)
 shutil.copytree(HERE / "fonts", HERE / "site" / "fonts", dirs_exist_ok=True)
 # The link-preview images are drawn by og.py and kept in og/; a syntax without one is refused, so a new syntax
