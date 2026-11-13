@@ -132,11 +132,12 @@ SYNTAXES.append({
     "slug": "nsm",
     "breaks_up": small["breaks_up"],
     "left_out": small["left_out"],
+    "note": small["note"],   # which NSM this is, and which it is not (13 November 2026)
     "element_types": small["element_types"],
     "instances": [{"name": "ungli", "url": "https://ungli.syntax.prayasabhinav.net",
                    "what": "a builder: design a task as steps of NSMs (Narrow Small Models) and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
                    "links": []}],
-    "described_entities": [{"name": m["name"], "url": f"https://ungli.syntax.prayasabhinav.net/#{m['slug']}"} for m in MODELS],
+    "described_entities": [{"name": m["name"], "url": f"https://ungli.syntax.prayasabhinav.net/#{m['slug']}"} for m in MODELS if m.get("listed", True)],
 })
 
 # The band syntax, read from Bairang (his words, 13 November 2026: "bairang is a kind of thing which has syntax - it is

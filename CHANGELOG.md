@@ -2,6 +2,14 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.15.2 — 13 November 2026
+
+- kahen's record is back in ungli's readings, with its result (108 of 179, where always answering the same gets 107) and the warning drawn from it, and is still not listed among the exemplars or here. ungli shows the records of weak results as they stand.
+
+## 0.15.1 — 13 November 2026
+
+- The NSM syntax's page, and ungli, say that NSM here stands for Narrow Small Model and is not the Natural Semantic Metalanguage, Anna Wierzbicka's framework in linguistics.
+
 ## 0.15.0 — 13 November 2026
 
 - The NSM syntax has three optional element types for the plain code beside an NSM: *code takes* (one NSM's answer, several NSMs' answers, the input itself, a list written in advance), *code does* (checks, looks up, counts, compares with a line, routes, filters, assembles) and *code gives* (a decision, a name or none, a flag for a person, something made from pieces written in advance, the input passed on, don't know to a person). Each element names the NSM where code already does it. ungli shows them as code blocks in a colour of their own and reads them from here.
