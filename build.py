@@ -306,7 +306,9 @@ def markdown(text):
     out = []
     for block in re.split(r"\n\s*\n", text.strip()):
         lines = block.split("\n")
-        if re.match(r"^#{1,6} ", lines[0]) and len(lines) == 1:
+        if block.lstrip().startswith("<"):   # a block of HTML the note carries, such as a diagram, goes through as it is
+            out.append(block)
+        elif re.match(r"^#{1,6} ", lines[0]) and len(lines) == 1:
             n = min(len(lines[0].split(" ")[0]) + 1, 4); out.append(f"<h{n}>{inline(lines[0].split(' ', 1)[1])}</h{n}>")
         elif all(re.match(r"^\s*[-•] ", l) for l in lines):
             out.append("<ul>" + "".join(f"<li>{inline(re.sub(r'^\s*[-•] ', '', l))}</li>" for l in lines) + "</ul>")
