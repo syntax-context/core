@@ -61,7 +61,7 @@ The table below is written by `build.py` from the same list the site is built fr
 <!-- syntaxes:start -->
 | Mark | Syntax | Element types | Elements | Read from | Instances | As data |
 |---|---|---|---|---|---|---|
-| <img src="site/board-game/mark.svg" height="40" alt="the board game mark"> | [**board game**](https://syntax.prayasabhinav.net/board-game/) | 8 | 151 | boardgameBuilder | boardgameBuilder | [`board-game.json`](https://syntax.prayasabhinav.net/board-game.json) |
+| <img src="site/board-game/mark.svg" height="40" alt="the board game mark"> | [**board game**](https://syntax.prayasabhinav.net/board-game/) | 9 | 193 | boardgameBuilder | boardgameBuilder | [`board-game.json`](https://syntax.prayasabhinav.net/board-game.json) |
 | <img src="site/record/mark.svg" height="40" alt="the record mark"> | [**record**](https://syntax.prayasabhinav.net/record/) | 3 | 6 | Zariia | Zariia | [`record.json`](https://syntax.prayasabhinav.net/record.json) |
 | <img src="site/personhood/mark.svg" height="40" alt="the personhood mark"> | [**personhood**](https://syntax.prayasabhinav.net/personhood/) | 4 | 17 | Split-Domain Cognition | Split-Domain Cognition; Koher | [`personhood.json`](https://syntax.prayasabhinav.net/personhood.json) |
 | <img src="site/framework/mark.svg" height="40" alt="the framework mark"> | [**framework**](https://syntax.prayasabhinav.net/framework/) | 5 | 13 | the Museum of Vestigial Desire | Museum of Vestigial Desire | [`framework.json`](https://syntax.prayasabhinav.net/framework.json) |

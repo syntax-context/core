@@ -302,6 +302,182 @@
    ]
   },
   {
+   "name": "Kind of fun",
+   "holds": "several",
+   "need": "essential",
+   "description": "The enjoyment the game is built to give, named as the books on play and games name it.",
+   "elements": [
+    {
+     "name": "competition (agon)",
+     "description": "The pleasure of testing your ability against a rival under rules built to make the contest fair, so that whoever wins has clearly shown superiority in one quality such as speed, memory or ingenuity. Named in the books as agon; agonistic games; competitive play."
+    },
+    {
+     "name": "chance (alea)",
+     "description": "The pleasure of leaving the result to luck: waiting, hoping and risking a stake, with no skill able to change the outcome. In the milder sense Macklin and Sharp give, the pleasure of planning around unpredictable events. Named in the books as alea; games of chance; games of chance and uncertainty."
+    },
+    {
+     "name": "make believe (mimicry)",
+     "description": "The pleasure of accepting a pretended world, or of behaving as someone other than yourself, so that you feel more than your ordinary self through fantasy, disguise or pretence. Named in the books as mimicry; make-believe."
+    },
+    {
+     "name": "vertigo (ilinx)",
+     "description": "The pleasure of deliberately unsettling your balance or perception, a short voluptuous panic in an otherwise clear mind, through spinning, falling, speed or other dizziness. Named in the books as ilinx; vertigo; intoxication."
+    },
+    {
+     "name": "exuberance (paidia)",
+     "description": "The unplanned pleasure of free, noisy, improvised play with no purpose but itself, such as a kitten with wool or a baby with a rattle, tending to run to excess. Boyd names the same ground as spontaneity (acting freely as a whole person) plus exhilaration (a lift that is more than mere excitement). Named in the books as paidia; spontaneity; exhilaration."
+    },
+    {
+     "name": "challenge (ludus)",
+     "description": "The pleasure of working against a difficulty that has been set up for its own sake, an obstacle and not an opponent, and of reaching a satisfactory solution for no other reward. Named in the books as ludus; enjoyment of challenge; obstacle."
+    },
+    {
+     "name": "skill mastery",
+     "description": "The satisfaction of developing and using skill, whether quick bodily skill (timing, precision) or mental skill (planning, analysis), and of playing well in itself. Named in the books as skill-based play; satisfaction from playing well."
+    },
+    {
+     "name": "learning",
+     "description": "The pleasure of absorbing a pattern, understanding something new or seeing yourself improve, which the brain rewards. Koster restricts the word fun to this; Burgun and Elias describe the same pleasure as mastery or self-improvement over many plays. Named in the books as fun (as pattern learning); climbing the heuristics tree."
+    },
+    {
+     "name": "flow",
+     "description": "Complete absorption in an activity in which the challenge meets your skill, done for its own sake, with self-consciousness and sense of time dropping away. Named in the books as flow; optimal experience; autotelic experience."
+    },
+    {
+     "name": "hard fun",
+     "description": "Enjoyable hard work: choosing a demanding task so that the stress you feel is energising and optimistic, not fearful, and leaves you stronger than you started. Named in the books as hard fun; eustress."
+    },
+    {
+     "name": "easy fun",
+     "description": "Relaxing, low-effort enjoyment such as passive entertainment. McGonigal argues it leaves people feeling lower than hard fun does; Csikszentmihalyi's 'pleasure' is the same ground, contentment from needs being met, which restores order but does not make you grow. Named in the books as easy fun; pleasure."
+    },
+    {
+     "name": "triumph (fiero)",
+     "description": "The surge of triumph after overcoming a real difficulty, often shown with arms thrown up. The harder the obstacle, the stronger it is. Elias lists the plain pleasure of winning as a reward. Named in the books as fiero; pleasure from winning."
+    },
+    {
+     "name": "hope of success",
+     "description": "The feeling of confidence that you can succeed and are improving, and the charged moment of hope just before success when you try hardest. Named in the books as the hope of being successful; urgent optimism."
+    },
+    {
+     "name": "vicarious pride (naches)",
+     "description": "The bursting pride of seeing someone you taught or helped succeed, for example coaching a friend through a game you have mastered. Koster adds kvell, the feeling of bragging about someone you mentor. Named in the books as naches; kvell."
+    },
+    {
+     "name": "happy embarrassment",
+     "description": "Playful teasing and trash-talking that stings a little and, because it is plainly not meant to hurt, confirms trust and warms the relationship. Named in the books as happy embarrassment; teasing; trash-talking."
+    },
+    {
+     "name": "gloating (schadenfreude)",
+     "description": "The pleasure of seeing a rival fail, in effect a put-down. Named in the books as schadenfreude."
+    },
+    {
+     "name": "cooperation",
+     "description": "The pleasure of working with others towards a shared goal, in step with them and doing what none of you could alone, like a pass that leads to a goal. Named in the books as cooperative play."
+    },
+    {
+     "name": "sociability",
+     "description": "The pleasure of the company of other players: talk, give and take, belonging and the bonds that form around a game, before and after as well as during it. Named in the books as social interaction; social connection; people factor."
+    },
+    {
+     "name": "playing well together",
+     "description": "Satisfaction in how a group plays, judged by the manner of playing together, not by who wins; choosing and changing games to suit what all are willing to play, and competing as a loving challenge to each other. Named in the books as the well-played game; playing well together."
+    },
+    {
+     "name": "negotiation",
+     "description": "The pleasure of social give-and-take in a game: persuading, forming and breaking alliances and bargaining. Named in the books as political games; alliance making."
+    },
+    {
+     "name": "status",
+     "description": "The satisfaction of standing, ranking or being seen as skilled within a group, including records of who won and by how much. Named in the books as social status maneuvers; status rewards."
+    },
+    {
+     "name": "delight",
+     "description": "The brief pleasure of recognising a pattern and being surprised by it, such as the end of a mystery when everything falls into place. Elias uses aesthetic enjoyment for the look of the game, its graphics and well-made pieces. Named in the books as aesthetic appreciation; delight; sensawunda; aesthetic enjoyment."
+    },
+    {
+     "name": "elegant action",
+     "description": "The pleasure of acting, deciding or solving well: the elegance of a clean solution or a perfectly dodged obstacle, and the fit between your abilities and the task. Named in the books as aesthetic striving play; functional beauty; harmony of practical fit."
+    },
+    {
+     "name": "touch",
+     "description": "The pleasure of handling the components: the weight of chess pieces, the feel of shuffling cards, rolling dice, punching out cardboard, a well-carved game piece. Named in the books as tactile; sensual pleasures."
+    },
+    {
+     "name": "excitement",
+     "description": "The bodily charge of fast, physical or risky play, such as an adrenaline rush, or the physical reactions of mastering a bodily problem. Named in the books as excitement or adrenaline rush; visceral reactions."
+    },
+    {
+     "name": "escape",
+     "description": "The relief of stepping out of everyday life and its cares for a time. Named in the books as escapism; escape from the everyday."
+    },
+    {
+     "name": "discovery",
+     "description": "The pleasure of exploring a world or a space of possibilities, finding out how it works and what is in it, and of the sense of discovering something new. Named in the books as discovery; exploration; explorers; curiosity."
+    },
+    {
+     "name": "epic meaning",
+     "description": "The satisfaction of belonging to, and contributing to, something larger and longer-lasting than yourself, felt with curiosity, awe and wonder at large scales. Named in the books as meaning; epic meaning; awe; wonder."
+    },
+    {
+     "name": "story",
+     "description": "The pleasure of a story unfolding through your actions, whether you take on a character in a loose rule-set or move through a designed narrative. Named in the books as role-playing; story experience; storytelling."
+    },
+    {
+     "name": "performance",
+     "description": "The pleasure of acting, improvising and putting on a show, often as much fun to watch as to play, such as charades or a physical dance of bodies. Named in the books as performative play."
+    },
+    {
+     "name": "expression",
+     "description": "The pleasure of expressing a feeling or idea through a game, as the maker or as the player. Named in the books as expressive play; self-discovery and expression."
+    },
+    {
+     "name": "simulation",
+     "description": "The pleasure of playing inside a model of a real system, for example as mayor or tycoon, and seeing its workings and the point of view it takes. Named in the books as simulation-based play."
+    },
+    {
+     "name": "tension",
+     "description": "The strain of an undecided outcome: wanting something to succeed or resolve and striving to decide it, strongest in contests and gambling. Named in the books as tension."
+    },
+    {
+     "name": "rapture",
+     "description": "Complete absorption and devotion in play that passes into elation and abolishes the sense of 'only' playing; frivolity and ecstasy are the poles between which play moves. Named in the books as rapture; elation; ecstasy."
+    },
+    {
+     "name": "whimsy",
+     "description": "The pleasure of silly actions, unexpected results and absurdity, a sense of euphoria that has to be felt to be understood; for DeKoven also a shared joke, savoured between players. Named in the books as whimsical play; silliness; the pleasure of silliness."
+    },
+    {
+     "name": "fun failure",
+     "description": "The enjoyment of failing in an entertaining way, when failure shows your agency, makes you laugh and keeps hope and learning going. Named in the books as fun failure."
+    },
+    {
+     "name": "blissful productivity",
+     "description": "The pleasure of being immersed in clear, demanding work that gives quick, visible results. Named in the books as satisfying work; blissful productivity."
+    },
+    {
+     "name": "value clarity",
+     "description": "The satisfaction of goals that are clear, comparable and rankable, offering relief from the muddle of real-life values. Named in the books as value clarity."
+    },
+    {
+     "name": "striving",
+     "description": "Taking up a goal only for the sake of the struggle to reach it, so that the activity is the point and the winning is a device; the reverse of ordinary practical life. Named in the books as striving play."
+    },
+    {
+     "name": "mirth",
+     "description": "Plain gladness in play, tending to break out in laughter. Named in the books as mirth; happiness; laughter."
+    },
+    {
+     "name": "subversion",
+     "description": "Playing against the expected script: acting out the forbidden or unexpected, redressing or reskinning, or rewriting the rules, in order to question conventions. Named in the books as critical play; unplaying; reskinning; rewriting."
+    },
+    {
+     "name": "creative playing",
+     "description": "The excitement of play that comes from the precarious meeting of inner reality and the real, shared world, Winnicott's account of children's playing. Named in the books as creative playing; precariousness of play."
+    }
+   ]
+  },
+  {
    "name": "Victory condition",
    "holds": "one",
    "need": "essential",
