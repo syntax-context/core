@@ -25,7 +25,7 @@ FONTS = (HERE / "fonts").as_uri()
 e = build.e
 
 
-def card(mark, kicker, name, line):
+def card(mark, kicker, name, line, url="syntax.prayasabhinav.net"):
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face {{ font-family: "Mukta"; font-weight: 400; src: url({FONTS}/mukta-400.woff2); }}
 @font-face {{ font-family: "Mukta"; font-weight: 600; src: url({FONTS}/mukta-600.woff2); }}
@@ -42,7 +42,7 @@ html, body {{ margin: 0; width: 1200px; height: 630px; background: #0a1428; font
 .url {{ font-weight: 600; font-size: 22px; letter-spacing: 0.08em; margin-top: auto; }}
 </style></head><body><div class="page"><div class="field">{mark}</div>
 <div class="sheet"><span class="kicker">{e(kicker)}</span><span class="name">{e(name)}</span>
-<span class="line">{e(line)}</span><span class="url">syntax.prayasabhinav.net</span></div></div></body></html>"""
+<span class="line">{e(line)}</span><span class="url">{e(url)}</span></div></div></body></html>"""
 
 
 cards = {"home": card(build.MARK, "Kinds of things, broken into parts", "SYNTAX",
@@ -51,6 +51,11 @@ for s in build.SYNTAXES:
     n_el = sum(len(t["elements"]) for t in s["element_types"])
     cards[s["slug"]] = card(build.family_mark(s), "a syntax", s["name"],
                             f"{len(s['element_types'])} element types and {n_el} elements")
+# The small model builder is a tool on its own host, built on the small model syntax; it has its own preview.
+small = next(s for s in build.SYNTAXES if s["slug"] == "small-model")
+cards["small-model-builder"] = card(build.family_mark(small), "a tool on the small model syntax", "Small model builder",
+                                    f"Design a task as small models and code, beside what {len(build.MODELS)} models already built were measured to do",
+                                    url="small-model.syntax.prayasabhinav.net")
 
 with tempfile.TemporaryDirectory() as tmp:
     for slug, html in cards.items():

@@ -2,6 +2,11 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.9.0 — 13 November 2026
+
+- The small model builder has its own address, [small-model.syntax.prayasabhinav.net](https://small-model.syntax.prayasabhinav.net). A design there is a task broken into steps, each step plain code or a small model. Beside the open step it shows the nearest models I have built, what each was measured to do, and what their records say to check. Designs are kept in the browser and download as a spec or as a file the builder opens again. The old address on this site forwards there, keeping the model named after #.
+- The builder has its own link-preview image.
+
 ## 0.8.0 — 13 November 2026
 
 - A sixth syntax, **small model**: a model that does one job and answers with a kind, a span, an item, a number or codes, never with sentences, and leaves the decision to code. Its element types are the job, what it reads, what it answers, the base it starts from, where its labels come from and where it runs. It leaves out any model that writes.

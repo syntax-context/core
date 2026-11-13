@@ -220,83 +220,83 @@
  "instances": [
   {
    "name": "the small model builder",
-   "url": "/small-model/builder/",
-   "what": "choose one element of each type and read what the nearest models already built were measured to do",
+   "url": "https://small-model.syntax.prayasabhinav.net",
+   "what": "design a task as steps of small models and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check",
    "links": []
   }
  ],
  "described_entities": [
   {
    "name": "rai",
-   "url": "/small-model/builder/#rai"
+   "url": "https://small-model.syntax.prayasabhinav.net/#rai"
   },
   {
    "name": "RAM",
-   "url": "/small-model/builder/#ram"
+   "url": "https://small-model.syntax.prayasabhinav.net/#ram"
   },
   {
    "name": "aadha",
-   "url": "/small-model/builder/#aadha"
+   "url": "https://small-model.syntax.prayasabhinav.net/#aadha"
   },
   {
    "name": "gagar",
-   "url": "/small-model/builder/#gagar"
+   "url": "https://small-model.syntax.prayasabhinav.net/#gagar"
   },
   {
    "name": "the syntax slicer",
-   "url": "/small-model/builder/#slicer"
+   "url": "https://small-model.syntax.prayasabhinav.net/#slicer"
   },
   {
    "name": "mom, a base trained from scratch",
-   "url": "/small-model/builder/#mom"
+   "url": "https://small-model.syntax.prayasabhinav.net/#mom"
   },
   {
    "name": "kahen, the gap mark",
-   "url": "/small-model/builder/#kahen"
+   "url": "https://small-model.syntax.prayasabhinav.net/#kahen"
   },
   {
    "name": "the misunderstanding probes",
-   "url": "/small-model/builder/#probes"
+   "url": "https://small-model.syntax.prayasabhinav.net/#probes"
   },
   {
    "name": "akal",
-   "url": "/small-model/builder/#akal"
+   "url": "https://small-model.syntax.prayasabhinav.net/#akal"
   },
   {
    "name": "carries",
-   "url": "/small-model/builder/#carries"
+   "url": "https://small-model.syntax.prayasabhinav.net/#carries"
   },
   {
    "name": "how sure",
-   "url": "/small-model/builder/#how-sure"
+   "url": "https://small-model.syntax.prayasabhinav.net/#how-sure"
   },
   {
    "name": "stand-in",
-   "url": "/small-model/builder/#stand-in"
+   "url": "https://small-model.syntax.prayasabhinav.net/#stand-in"
   },
   {
    "name": "move",
-   "url": "/small-model/builder/#move"
+   "url": "https://small-model.syntax.prayasabhinav.net/#move"
   },
   {
    "name": "sense",
-   "url": "/small-model/builder/#sense"
+   "url": "https://small-model.syntax.prayasabhinav.net/#sense"
   },
   {
    "name": "Hoja's gaali scorer",
-   "url": "/small-model/builder/#hoja-scorer"
+   "url": "https://small-model.syntax.prayasabhinav.net/#hoja-scorer"
   },
   {
    "name": "Hoja Paarakhi's word spotter",
-   "url": "/small-model/builder/#paarakhi"
+   "url": "https://small-model.syntax.prayasabhinav.net/#paarakhi"
   },
   {
    "name": "Beam's thread model",
-   "url": "/small-model/builder/#beam-thread"
+   "url": "https://small-model.syntax.prayasabhinav.net/#beam-thread"
   },
   {
    "name": "Beam's maze maker",
-   "url": "/small-model/builder/#beam-maze"
+   "url": "https://small-model.syntax.prayasabhinav.net/#beam-maze"
   }
  ]
 }
