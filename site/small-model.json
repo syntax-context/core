@@ -1,0 +1,302 @@
+{
+ "name": "small model",
+ "read_from": "the small model builder",
+ "slug": "small-model",
+ "breaks_up": "a small model: one that does a single job and answers with a number, a choice, a span or codes, never with sentences, and leaves the decision to code",
+ "left_out": "A model that writes. Anything that writes sentences for people is not a small model in this syntax: a small model answers with a kind, a span, an item, a number or codes, and code decides what follows. Also left out: what the model is for in the world, its name, and the keys, which stay with the person who keyed them.",
+ "element_types": [
+  {
+   "name": "job",
+   "holds": "one",
+   "need": "essential",
+   "description": "The one operation the model does. A larger task is broken into such operations first, each done by its own model or by code.",
+   "elements": [
+    {
+     "name": "sort",
+     "description": "puts each thing it reads into one of a few kinds set in advance",
+     "gives": "It puts each thing it reads into one of a few kinds set in advance."
+    },
+    {
+     "name": "point",
+     "description": "finds the part of what it reads that answers a question, or says there is none",
+     "gives": "It points at the part of what it reads that answers a question, or at nothing."
+    },
+    {
+     "name": "match",
+     "description": "says which item on a list written in advance the thing it reads goes with",
+     "gives": "It says which item on a list written in advance the thing it reads goes with."
+    },
+    {
+     "name": "spot",
+     "description": "says which of a set of words or sounds recorded in advance occurred",
+     "gives": "It says which of the words or sounds recorded in advance occurred."
+    },
+    {
+     "name": "score",
+     "description": "gives each option a number, and code takes the highest",
+     "gives": "It gives each option a number, and code takes the highest."
+    },
+    {
+     "name": "choose",
+     "description": "picks codes from sets, one slot at a time",
+     "gives": "It picks codes from sets, one slot at a time."
+    }
+   ]
+  },
+  {
+   "name": "reads",
+   "holds": "one",
+   "need": "essential",
+   "description": "What goes into the model each time it answers.",
+   "elements": [
+    {
+     "name": "a sentence",
+     "description": "one sentence at a time",
+     "gives": "It reads one sentence at a time."
+    },
+    {
+     "name": "a pair of sentences",
+     "description": "two sentences read together, such as a question and its answer",
+     "gives": "It reads two sentences together."
+    },
+    {
+     "name": "a passage",
+     "description": "a few sentences up to a page, with a question about it",
+     "gives": "It reads a passage of a few sentences up to a page."
+    },
+    {
+     "name": "a whole text",
+     "description": "a whole text, shortened to fit the model's window",
+     "gives": "It reads a whole text, shortened to fit its window."
+    },
+    {
+     "name": "a window of sound",
+     "description": "a second or two of sound from a microphone",
+     "gives": "It hears a second or two of sound at a time."
+    },
+    {
+     "name": "numbers",
+     "description": "a few whole numbers that describe a situation",
+     "gives": "It reads a few numbers that describe a situation."
+    },
+    {
+     "name": "codes",
+     "description": "numbers that stand for words, never the words themselves",
+     "gives": "It reads only codes that stand for words, never the words."
+    }
+   ]
+  },
+  {
+   "name": "answers",
+   "holds": "one",
+   "need": "essential",
+   "description": "The shape of what comes out. Every answer can also be none, and code reads none as don’t know.",
+   "elements": [
+    {
+     "name": "a kind",
+     "description": "one of a few kinds set in advance",
+     "gives": "It answers with one of the kinds, or none."
+    },
+    {
+     "name": "yes or no",
+     "description": "one of two answers",
+     "gives": "It answers yes or no, or none."
+    },
+    {
+     "name": "a span",
+     "description": "where an answer starts and ends in what it read",
+     "gives": "It answers with where the answer starts and ends, or none."
+    },
+    {
+     "name": "an item",
+     "description": "one item from a list written in advance",
+     "gives": "It answers with one item from the list, or none."
+    },
+    {
+     "name": "a number",
+     "description": "a number for each option, which code compares",
+     "gives": "It answers with a number for each option."
+    },
+    {
+     "name": "codes",
+     "description": "codes chosen from sets, which code turns back into words",
+     "gives": "It answers with codes, which code turns back into words."
+    }
+   ]
+  },
+  {
+   "name": "base",
+   "holds": "one",
+   "need": "essential",
+   "description": "The model it starts from before it is trained on the job.",
+   "elements": [
+    {
+     "name": "a MiniLM reader taught to point",
+     "description": "a 33-million-parameter English encoder already trained to find answers in text"
+    },
+    {
+     "name": "a MiniLM encoder with a new head",
+     "description": "the same size of encoder with a small new layer that picks one of a few kinds"
+    },
+    {
+     "name": "an adapter on a trained reader",
+     "description": "a small set of added weights trained on top of a model already trained for a nearby job"
+    },
+    {
+     "name": "a multilingual small encoder",
+     "description": "a small encoder that reads several languages, retrained on Indian languages"
+    },
+    {
+     "name": "an audio encoder, frozen",
+     "description": "a model trained on sound, kept as it is, with a small scorer trained on top"
+    },
+    {
+     "name": "a keyword-spotting encoder",
+     "description": "a tiny encoder, tens to hundreds of thousands of parameters, that compares sound with recorded examples"
+    },
+    {
+     "name": "trained from scratch",
+     "description": "no ready model: every weight learnt from the start"
+    },
+    {
+     "name": "a few whole-number weights",
+     "description": "no neural network: a handful of numbers that multiply the inputs"
+    }
+   ]
+  },
+  {
+   "name": "labels",
+   "holds": "one",
+   "need": "essential",
+   "description": "Where the right answers it learns from come from.",
+   "elements": [
+    {
+     "name": "the maker's keys",
+     "description": "the maker's own answers, keyed one item at a time on blind sheets"
+    },
+    {
+     "name": "a stated rule",
+     "description": "answers code works out from a rule the maker stated in words"
+    },
+    {
+     "name": "written rows",
+     "description": "rows written for training by another model, with the answer known from how each was made"
+    },
+    {
+     "name": "another model's reading",
+     "description": "labels another model gave, used on the maker's word"
+    },
+    {
+     "name": "a dataset's labels",
+     "description": "the labels a public dataset came with"
+    }
+   ]
+  },
+  {
+   "name": "runs on",
+   "holds": "one",
+   "need": "essential",
+   "description": "Where the model answers once it is trained.",
+   "elements": [
+    {
+     "name": "a Raspberry Pi 5",
+     "description": "inside a toy or a game, on its processor, with nothing sent anywhere"
+    },
+    {
+     "name": "a phone's browser",
+     "description": "in the page itself, with nothing sent to a server"
+    },
+    {
+     "name": "a small server",
+     "description": "a server's processor with no graphics card, such as one with 1 CPU and 2 GB"
+    },
+    {
+     "name": "a graphics card",
+     "description": "a machine with a graphics card, such as an RTX 3060 with 12 GB"
+    }
+   ]
+  }
+ ],
+ "instances": [
+  {
+   "name": "the small model builder",
+   "url": "/small-model/builder/",
+   "what": "choose one element of each type and read what the nearest models already built were measured to do",
+   "links": []
+  }
+ ],
+ "described_entities": [
+  {
+   "name": "rai",
+   "url": "/small-model/builder/#rai"
+  },
+  {
+   "name": "RAM",
+   "url": "/small-model/builder/#ram"
+  },
+  {
+   "name": "aadha",
+   "url": "/small-model/builder/#aadha"
+  },
+  {
+   "name": "gagar",
+   "url": "/small-model/builder/#gagar"
+  },
+  {
+   "name": "the syntax slicer",
+   "url": "/small-model/builder/#slicer"
+  },
+  {
+   "name": "mom, a base trained from scratch",
+   "url": "/small-model/builder/#mom"
+  },
+  {
+   "name": "kahen, the gap mark",
+   "url": "/small-model/builder/#kahen"
+  },
+  {
+   "name": "the misunderstanding probes",
+   "url": "/small-model/builder/#probes"
+  },
+  {
+   "name": "akal",
+   "url": "/small-model/builder/#akal"
+  },
+  {
+   "name": "carries",
+   "url": "/small-model/builder/#carries"
+  },
+  {
+   "name": "how sure",
+   "url": "/small-model/builder/#how-sure"
+  },
+  {
+   "name": "stand-in",
+   "url": "/small-model/builder/#stand-in"
+  },
+  {
+   "name": "move",
+   "url": "/small-model/builder/#move"
+  },
+  {
+   "name": "sense",
+   "url": "/small-model/builder/#sense"
+  },
+  {
+   "name": "Hoja's gaali scorer",
+   "url": "/small-model/builder/#hoja-scorer"
+  },
+  {
+   "name": "Hoja Paarakhi's word spotter",
+   "url": "/small-model/builder/#paarakhi"
+  },
+  {
+   "name": "Beam's thread model",
+   "url": "/small-model/builder/#beam-thread"
+  },
+  {
+   "name": "Beam's maze maker",
+   "url": "/small-model/builder/#beam-maze"
+  }
+ ]
+}

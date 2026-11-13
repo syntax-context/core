@@ -82,6 +82,222 @@
     {
      "name": "drawing the map",
      "description": "Players draw or build the map as they play, so the world is made by the people in it. In The Quiet Year, a community's map grows week by week on one sheet of paper."
+    },
+    {
+     "name": "ask for what they hold",
+     "description": "On your turn you ask one player for a card or a rank. If they have it, they have to hand it over, and you may ask again. Your question also tells everyone what you hold."
+    },
+    {
+     "name": "bet against the bank",
+     "description": "The bank is one of the players. The others place their bets, the bank throws, and winners are paid at fixed odds. The bank passes round so no one keeps the advantage."
+    },
+    {
+     "name": "betting on a throw",
+     "description": "Players put money or things on the table before the dice or coin land, and the throw decides who takes them. Nobody can steer the throw, so the only choice a player makes is the bet."
+    },
+    {
+     "name": "betting on your hand",
+     "description": "Players put chips in a pot while they still think their hidden cards can win. You can match a bet, raise it, or drop out and lose what you put in."
+    },
+    {
+     "name": "build your own side",
+     "description": "Before or during play, each player picks the character, deck or army they will play. Two players can arrive with very different sides."
+    },
+    {
+     "name": "calling a contract",
+     "description": "Before the play starts, you say what you are going to do, such as win three tricks. If you manage it you score; if you fail the other side scores or you pay."
+    },
+    {
+     "name": "capture and convert",
+     "description": "A piece you capture stays on the board and changes sides, so it now works for you. Because pieces can change hands, the player who is ahead can fall behind in a single move."
+    },
+    {
+     "name": "capture and rescue",
+     "description": "If you are caught, you wait in a jail. A teammate who reaches the jail without being caught can set you free."
+    },
+    {
+     "name": "capture by surrounding",
+     "description": "To take a piece, you place your pieces on both sides of it, or all around it, until it has no room left. There is no hopping over it or hitting it."
+    },
+    {
+     "name": "catch-up help",
+     "description": "The game gives players who are behind a chance to jump ahead. A lead is never completely safe until the very end."
+    },
+    {
+     "name": "chance alone decides",
+     "description": "The dice or the cards decide everything. You throw or turn a card, and the result says who gains. Players make no choices of their own."
+    },
+    {
+     "name": "chase and tag",
+     "description": "One player is It and chases the rest. When It touches someone, that person becomes It, and the chase starts again."
+    },
+    {
+     "name": "choose your target",
+     "description": "Each turn, you pick which player is hit, helped or traded with. Who you pick counts as much as what you do. With three or more players, there is more than one person to pick from."
+    },
+    {
+     "name": "connecting across the board",
+     "description": "Your stones have to make one unbroken chain from one side of the board to another, and that chain wins the game. The other player tries to cut it. Taking pieces is not the aim."
+    },
+    {
+     "name": "counter cycle",
+     "description": "Each choice beats one other choice and loses to a third, as in rock, paper and scissors. No choice wins every time, so players keep using all of them."
+    },
+    {
+     "name": "declaring combinations",
+     "description": "You show a pair or a run you hold, such as a king and queen of one suit, and score points for it while the game goes on. The cards stay in your hand."
+    },
+    {
+     "name": "different powers for each player",
+     "description": "Each player has a power that nobody else has, which changes a rule in their favour. So each player plays by slightly different rules."
+    },
+    {
+     "name": "doubling the stakes",
+     "description": "Part-way through the game you may offer to double what it is worth. The other player either accepts and plays on, or gives up the game and loses the points already at stake."
+    },
+    {
+     "name": "forced capture",
+     "description": "If you can capture, you have to. Some games make you take the capture that wins the most pieces. Your opponent can use this to force your move."
+    },
+    {
+     "name": "grow stronger over time",
+     "description": "What you do in the game builds up your character's power. Later challenges are harder, and you meet them with more than you began with."
+    },
+    {
+     "name": "a list that keeps growing",
+     "description": "Each player says the whole list so far, then adds one new item. The list gets longer every turn, and players have to remember all of it."
+    },
+    {
+     "name": "handicap",
+     "description": "The more skilled player starts with less: fewer stones, fewer points or less time. This gives the less skilled player a real chance to win."
+    },
+    {
+     "name": "hide and find",
+     "description": "Someone hides, or hides something. The others hunt for it, and the game ends when it is found."
+    },
+    {
+     "name": "jumping over pieces",
+     "description": "Your piece hops over another piece and lands in the empty space behind it. In checkers the piece you hop over is taken away; in Chinese Checkers it stays."
+    },
+    {
+     "name": "keep some dice and roll the rest",
+     "description": "You roll all your dice, set aside the ones you like and roll the rest again. After a few rolls you have to stop with what you hold."
+    },
+    {
+     "name": "landing sends a piece back",
+     "description": "If your piece lands on a space where another player's piece stands, theirs goes back to the start. Some safe spaces protect a piece from this."
+    },
+    {
+     "name": "make a row and take a piece",
+     "description": "Three of your pieces in a row is a mill, and a mill lets you take one of the other player's pieces. So you try to build rows of your own while breaking up theirs."
+    },
+    {
+     "name": "making words from letters",
+     "description": "The pieces are letters. You build, guess or hunt for real words, and a dictionary settles any argument."
+    },
+    {
+     "name": "matching the open ends",
+     "description": "You add a tile to the end of a line, but only if its number matches the end. If you have no matching tile, you miss your turn."
+    },
+    {
+     "name": "melding",
+     "description": "You lay a finished set of cards face up on the table. From then on you, and sometimes other players, can add matching cards to it."
+    },
+    {
+     "name": "one-use powers",
+     "description": "Each piece or player starts with a special power that works once. Using it means removing its marker, so the main choice is when to spend it."
+    },
+    {
+     "name": "the other player has a say",
+     "description": "On your turn you offer a move, but the other player has a say. They may turn it down, or choose between two moves you offer."
+    },
+    {
+     "name": "passing a message along",
+     "description": "A message travels from player to player, by whisper or by squeeze. It may change on the way, and nobody can check it until it arrives."
+    },
+    {
+     "name": "passing cards",
+     "description": "Before play begins, you choose some of your cards and hand them to another player. You cannot look at the cards you will get until you have chosen."
+    },
+    {
+     "name": "pie rule",
+     "description": "One player sets up the start of the game, and then the other player picks which side to play. So the first player tries to make both sides even, like cutting a pie when someone else chooses the slice."
+    },
+    {
+     "name": "promotion",
+     "description": "When one of your pieces reaches the far end of the board, it can turn into a piece with more power. This gives you a reason to push forward, even when staying back feels safer."
+    },
+    {
+     "name": "relay",
+     "description": "Your team runs a race in legs. One player goes, hands over a ball or a flag to the next, and the first team to finish every leg wins."
+    },
+    {
+     "name": "a shape that cannot be captured",
+     "description": "Some shapes are safe. If your stones make the shape, nothing around them can take them. It gives you a goal to build towards while the other player tries to surround you."
+    },
+    {
+     "name": "scoring cards named in advance",
+     "description": "Winning tricks is only the way to reach the prizes. The prizes are named cards, such as the highest trump or the Jack of trumps, and a single card can win more than one."
+    },
+    {
+     "name": "shared cards in the middle",
+     "description": "Some cards are turned face up in the middle, and everyone can use them. You mix them with the cards in your own hand to make the highest set you can."
+    },
+    {
+     "name": "shared pot",
+     "description": "Everyone puts a counter into the middle before play. One player wins it all. If nobody wins, it stays there and grows, so the next round is worth more."
+    },
+    {
+     "name": "sowing seeds",
+     "description": "You scoop up all the seeds from one pit and drop them one at a time into the pits that follow. Where your last seed lands decides what you can take."
+    },
+    {
+     "name": "spare hand",
+     "description": "An extra hand is dealt face down in the middle. One player gets to take it, swap it or buy it, then puts cards back before play begins."
+    },
+    {
+     "name": "special squares",
+     "description": "Some spaces on the track have a rule of their own. One may keep you safe, another may send you back or make you miss a turn."
+    },
+    {
+     "name": "spend to use",
+     "description": "Every card, unit or item has a price in the game. The ones that do more cost more, so you choose what to buy with what you have."
+    },
+    {
+     "name": "split your forces",
+     "description": "You have a fixed amount to share out between several places or jobs. Putting a lot in one means less in another, and the other player is sharing out theirs too."
+    },
+    {
+     "name": "stop on a signal",
+     "description": "Everyone keeps moving until a signal comes, such as the music stopping. Then you freeze or grab a seat, and the slowest player is caught."
+    },
+    {
+     "name": "swapping cards for new ones",
+     "description": "You may put cards back and take new ones from the table or a pile, to get cards you want before the hand is played. Sometimes another player has to agree."
+    },
+    {
+     "name": "taking the discard pile",
+     "description": "Every card players throw away goes in one pile. On your turn you may pick up the whole pile, as long as you can use the card on top straight away."
+    },
+    {
+     "name": "trump suit",
+     "description": "One suit is named for the hand, and every card in it beats every card in the other suits. A low trump can win a trick against a high card of another suit."
+    },
+    {
+     "name": "two games at once",
+     "description": "Two games run at once on two boards. You are one side on the first board and the other side on the second, so you are attacking and defending together."
+    },
+    {
+     "name": "wild cards",
+     "description": "Some cards can stand for any other card you choose. A wild card can finish a set that would otherwise be missing one piece."
+    },
+    {
+     "name": "wraparound board",
+     "description": "The edges of the board are joined. If your line runs off the right side, it carries on from the left side."
+    },
+    {
+     "name": "yes-or-no questions",
+     "description": "One player knows a secret. The others ask questions that can be answered yes or no, and each answer shrinks the list of things it could be."
     }
    ]
   },
@@ -138,6 +354,26 @@
     {
      "name": "cannot be won",
      "description": "The game is made so that nobody can win it, or it pushes back against being played at all. Playing it shows you something by refusing what you expect from a game."
+    },
+    {
+     "name": "beat the layout",
+     "description": "You play alone against the cards. You win if you clear the table or build every card into its place, and the game says you lost if you get stuck."
+    },
+    {
+     "name": "best of several games",
+     "description": "Play several short games in a row. Whoever wins the most games wins, and you can stop as soon as nobody can catch up. Two wins out of three is the simplest kind."
+    },
+    {
+     "name": "fewest points",
+     "description": "Every point you pick up counts against you. When the game ends, the player with the fewest points wins."
+    },
+    {
+     "name": "finish on an exact number",
+     "description": "You cannot just get there first. You have to land exactly on the target number, and going past it costs you the win or the hand."
+    },
+    {
+     "name": "play to lose",
+     "description": "The aim is turned upside down. In some games the player who gives everything away wins; in others the player who makes the last move loses."
     }
    ]
   },
@@ -190,6 +426,14 @@
     {
      "name": "public game",
      "description": "The game is played in a street, a park or a market, and anyone passing by can join in. Street games like stapu, hopscotch drawn in chalk, work this way."
+    },
+    {
+     "name": "one against the rest",
+     "description": "All the other players team up against a single player. If the lone player wins, they are paid more."
+    },
+    {
+     "name": "playing alone",
+     "description": "Nobody else takes a turn: it is you against the pack. Luck and your own choices decide how it goes, and you can still compare results with a friend afterwards."
     }
    ]
   },
@@ -323,6 +567,14 @@
     {
      "name": "map revealed as you go",
      "description": "The map starts hidden. Areas are turned over only when a player explores them, so nobody knows what lies ahead until they go there."
+    },
+    {
+     "name": "a hand laid face up",
+     "description": "One hand is spread face up for all to see, while every other hand stays secret. A player may play the open hand as well as their own."
+    },
+    {
+     "name": "secret scores",
+     "description": "Some of your points or money are kept secret from the other players. Nobody can add up the scores for certain, so everyone has to guess who is ahead."
     }
    ]
   },
@@ -359,6 +611,14 @@
     {
      "name": "accelerated",
      "description": "The game speeds up as it goes: timers shrink, more happens each round, and the end comes in a rush. In Tetris the pieces fall faster at every level."
+    },
+    {
+     "name": "extra turn",
+     "description": "On some throws, or when you hit another piece, you get another go at once. A lucky player can move many times before anyone else."
+    },
+    {
+     "name": "staged game",
+     "description": "The game comes in stages with different rules, like first picking your cards and then playing with them. What you do in the first stage sets up the second."
     }
    ]
   },
@@ -419,12 +679,12 @@
  "instances": [
   {
    "name": "boardgameBuilder",
-   "url": "https://boardgame.blevn.xyz",
+   "url": "https://boardgame.syntax.prayasabhinav.net",
    "what": "a tool for designing a board game from these elements, with a public wiki of what each combination tends to produce",
    "links": [
     [
      "the wiki",
-     "https://boardgame-wiki.blevn.xyz"
+     "https://boardgame-wiki.syntax.prayasabhinav.net"
     ]
    ]
   }
@@ -432,191 +692,191 @@
  "described_entities": [
   {
    "name": "Pig",
-   "url": "https://boardgame.blevn.xyz/#games/pig"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/pig"
   },
   {
    "name": "Three-card Hanabi",
-   "url": "https://boardgame.blevn.xyz/#games/mini-hanabi"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/mini-hanabi"
   },
   {
    "name": "The blocking grid",
-   "url": "https://boardgame.blevn.xyz/#games/blocking-grid"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/blocking-grid"
   },
   {
    "name": "Werewolf-5",
-   "url": "https://boardgame.blevn.xyz/#games/werewolf-5"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/werewolf-5"
   },
   {
    "name": "Paper auction",
-   "url": "https://boardgame.blevn.xyz/#games/paper-auction"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/paper-auction"
   },
   {
    "name": "Pick-and-pass",
-   "url": "https://boardgame.blevn.xyz/#games/pick-and-pass"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/pick-and-pass"
   },
   {
    "name": "Last-card-out",
-   "url": "https://boardgame.blevn.xyz/#games/last-card-out"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/last-card-out"
   },
   {
    "name": "Nim",
-   "url": "https://boardgame.blevn.xyz/#games/nim"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/nim"
   },
   {
    "name": "Raja Mantri Chor Sipahi",
-   "url": "https://boardgame.blevn.xyz/#games/raja-mantri-chor-sipahi"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/raja-mantri-chor-sipahi"
   },
   {
    "name": "Gulaam Chor",
-   "url": "https://boardgame.blevn.xyz/#games/gulaam-chor"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/gulaam-chor"
   },
   {
    "name": "Satte pe Satta",
-   "url": "https://boardgame.blevn.xyz/#games/satte-pe-satta"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/satte-pe-satta"
   },
   {
    "name": "Dots and Boxes",
-   "url": "https://boardgame.blevn.xyz/#games/dots-and-boxes"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/dots-and-boxes"
   },
   {
    "name": "Battleship on paper",
-   "url": "https://boardgame.blevn.xyz/#games/paper-battleship"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/paper-battleship"
   },
   {
    "name": "Bulls and Cows",
-   "url": "https://boardgame.blevn.xyz/#games/bulls-and-cows"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/bulls-and-cows"
   },
   {
    "name": "Cheat",
-   "url": "https://boardgame.blevn.xyz/#games/cheat"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/cheat"
   },
   {
    "name": "Spoons",
-   "url": "https://boardgame.blevn.xyz/#games/spoons"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/spoons"
   },
   {
    "name": "Cram",
-   "url": "https://boardgame.blevn.xyz/#games/cram"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/cram"
   },
   {
    "name": "SOS",
-   "url": "https://boardgame.blevn.xyz/#games/sos"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/sos"
   },
   {
    "name": "Three Men's Morris",
-   "url": "https://boardgame.blevn.xyz/#games/three-mens-morris"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/three-mens-morris"
   },
   {
    "name": "Set",
-   "url": "https://boardgame.blevn.xyz/#games/set"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/set"
   },
   {
    "name": "3 Quarters",
-   "url": "https://boardgame.blevn.xyz/#games/3-quarters"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/3-quarters"
   },
   {
    "name": "All or Nothing",
-   "url": "https://boardgame.blevn.xyz/#games/all-or-nothing"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/all-or-nothing"
   },
   {
    "name": "Eleusis",
-   "url": "https://boardgame.blevn.xyz/#games/eleusis"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/eleusis"
   },
   {
    "name": "Mao",
-   "url": "https://boardgame.blevn.xyz/#games/mao"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/mao"
   },
   {
    "name": "Nomic",
-   "url": "https://boardgame.blevn.xyz/#games/nomic"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/nomic"
   },
   {
    "name": "The Mind",
-   "url": "https://boardgame.blevn.xyz/#games/the-mind"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/the-mind"
   },
   {
    "name": "Exquisite Corpse",
-   "url": "https://boardgame.blevn.xyz/#games/exquisite-corpse"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/exquisite-corpse"
   },
   {
    "name": "Consequences",
-   "url": "https://boardgame.blevn.xyz/#games/consequences"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/consequences"
   },
   {
    "name": "Racetrack",
-   "url": "https://boardgame.blevn.xyz/#games/racetrack"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/racetrack"
   },
   {
    "name": "Sprouts",
-   "url": "https://boardgame.blevn.xyz/#games/sprouts"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/sprouts"
   },
   {
    "name": "Hex",
-   "url": "https://boardgame.blevn.xyz/#games/hex"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/hex"
   },
   {
    "name": "Sim",
-   "url": "https://boardgame.blevn.xyz/#games/sim"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/sim"
   },
   {
    "name": "Chomp",
-   "url": "https://boardgame.blevn.xyz/#games/chomp"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/chomp"
   },
   {
    "name": "Kayles",
-   "url": "https://boardgame.blevn.xyz/#games/kayles"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/kayles"
   },
   {
    "name": "Quantum tic-tac-toe",
-   "url": "https://boardgame.blevn.xyz/#games/quantum-tic-tac-toe"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/quantum-tic-tac-toe"
   },
   {
    "name": "Ultimate tic-tac-toe",
-   "url": "https://boardgame.blevn.xyz/#games/ultimate-tic-tac-toe"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/ultimate-tic-tac-toe"
   },
   {
    "name": "Paper soccer",
-   "url": "https://boardgame.blevn.xyz/#games/paper-soccer"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/paper-soccer"
   },
   {
    "name": "Mū Tōrere",
-   "url": "https://boardgame.blevn.xyz/#games/mu-torere"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/mu-torere"
   },
   {
    "name": "Aadu Puli Attam",
-   "url": "https://boardgame.blevn.xyz/#games/aadu-puli-attam"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/aadu-puli-attam"
   },
   {
    "name": "Moksha Patam",
-   "url": "https://boardgame.blevn.xyz/#games/moksha-patam"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/moksha-patam"
   },
   {
    "name": "The Royal Game of Ur",
-   "url": "https://boardgame.blevn.xyz/#games/royal-game-of-ur"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/royal-game-of-ur"
   },
   {
    "name": "Senet",
-   "url": "https://boardgame.blevn.xyz/#games/senet"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/senet"
   },
   {
    "name": "Kemps",
-   "url": "https://boardgame.blevn.xyz/#games/kemps"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/kemps"
   },
   {
    "name": "Liar's Dice",
-   "url": "https://boardgame.blevn.xyz/#games/liars-dice"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/liars-dice"
   },
   {
    "name": "Cuttle",
-   "url": "https://boardgame.blevn.xyz/#games/cuttle"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/cuttle"
   },
   {
    "name": "Mendikot",
-   "url": "https://boardgame.blevn.xyz/#games/mendikot"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/mendikot"
   },
   {
    "name": "Penney's game",
-   "url": "https://boardgame.blevn.xyz/#games/penneys-game"
+   "url": "https://boardgame.syntax.prayasabhinav.net/#games/penneys-game"
   }
  ]
 }

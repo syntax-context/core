@@ -2,6 +2,20 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.8.0 — 13 November 2026
+
+- A sixth syntax, **small model**: a model that does one job and answers with a kind, a span, an item, a number or codes, never with sentences, and leaves the decision to code. Its element types are the job, what it reads, what it answers, the base it starts from, where its labels come from and where it runs. It leaves out any model that writes.
+- [The small model builder](https://syntax.prayasabhinav.net/small-model/builder/): choose one element of any type and it shows the nearest of the 18 small models I have built or designed so far, with what each was measured to do and on which test. No predicted figures. Each model has its own address there, and the syntax's page lists them all.
+
+## 0.7.3 — 5 November 2026
+
+- The Bairang page now says that I write to spaces, ask what they could offer, and invite them to apply or pitch.
+
+## 0.7.2 — 5 November 2026
+
+- A Bairang page and a nav entry, linking to [bairang.koher.app](https://bairang.koher.app). Bairang is a band of practitioners I curate; it is not a syntax.
+- The board game page and `board-game.json` now give boardgameBuilder and its wiki at their addresses under syntax.prayasabhinav.net, as moved on 30 October; the old addresses still redirect.
+
 ## 0.7.1 — 28 October 2026
 
 - SYNTAX has its own organisation on GitHub. The source moved from github.com/prayasabhinav/syntax to [github.com/syntax-context/core](https://github.com/syntax-context/core), which the footer and the links to the changelog and roadmap now name; the old address redirects.

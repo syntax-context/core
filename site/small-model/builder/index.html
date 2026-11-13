@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The small model builder · SYNTAX</title>
+<meta name="description" content="Choose what a small model reads, does and answers, and read what the nearest models already built were measured to do.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SYNTAX">
+<meta property="og:title" content="The small model builder · SYNTAX">
+<meta property="og:description" content="Choose what a small model reads, does and answers, and read what the nearest models already built were measured to do.">
+<meta property="og:url" content="https://syntax.prayasabhinav.net/small-model/builder/">
+<meta property="og:image" content="https://syntax.prayasabhinav.net/og/small-model.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The small model builder · SYNTAX: its mark beside its name">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://syntax.prayasabhinav.net/small-model/builder/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/mukta-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>/* SYNTAX — frontend-design-prayas-plain: the fixed tokens, Mukta only, served from /fonts with no request to Google.
+   Two zones: the field (the mark alone on the night) and the sheet (everything read). */
+@font-face { font-family: "Mukta"; font-weight: 400; font-display: swap; src: url(/fonts/mukta-400.woff2) format("woff2"); }
+@font-face { font-family: "Mukta"; font-weight: 600; font-display: swap; src: url(/fonts/mukta-600.woff2) format("woff2"); }
+@font-face { font-family: "Mukta"; font-weight: 800; font-display: swap; src: url(/fonts/mukta-800.woff2) format("woff2"); }
+
+:root {
+  --ground: #0a1428; --deep: #12213f; --cobalt: #1848c0; --cobalt-2: #3a6ae0; --mist: #9fb3e0;
+  --sheet: #f8f4ec; --ink: #0a1428; --warm: #e8a53a; --radius: 6px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--ink); font: 400 17px/1.6 "Mukta", "Noto Sans", "Segoe UI", sans-serif; }
+
+.page { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); min-height: 100vh; }
+.field { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px; padding: 48px 24px; color: var(--mist); }
+.field a { color: inherit; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.field svg { width: min(16rem, 60%); max-height: 56vh; height: auto; display: block; }
+.field .v a { display: inline; color: inherit; }
+.field .word { font-weight: 800; font-size: 48px; line-height: 1; letter-spacing: 0.08em; color: var(--sheet); }
+.field .v { font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; font-variant-numeric: tabular-nums; }
+
+.sheet { background: var(--sheet); margin: 24px 24px 24px 0; border-radius: var(--radius); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35); padding: 48px; }
+main, footer { max-width: 46rem; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+.nav a { font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; background: var(--mist); padding: 8px 16px; border-radius: var(--radius); }
+.nav a:hover, .nav a:focus-visible { background: var(--cobalt); color: var(--sheet); }
+.nav a[aria-current="page"] { background: var(--ink); color: var(--sheet); }
+main > * + * { margin-top: 16px; }
+h1 { font-weight: 800; font-size: 48px; line-height: 1.1; margin: 0; }
+h2 { font-weight: 800; font-size: 32px; line-height: 1.2; margin: 48px 0 0; }
+h3 { font-weight: 800; font-size: 22px; line-height: 1.3; margin: 32px 0 0; }
+p { margin: 0; }
+.lede { font-size: 22px; line-height: 1.5; }
+.label, .holds { font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+.holds { color: var(--cobalt); margin-left: 8px; vertical-align: middle; }
+.aside { font-size: 14px; }
+a { color: var(--cobalt); text-underline-offset: 3px; }
+
+dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 24px; margin: 16px 0 0; }
+dt { font-weight: 600; }
+dd { margin: 0; }
+
+/* A syntax on the index, and a type on its page: flat blocks of the deep tone, never a coloured rule */
+.syntaxes { list-style: none; padding: 0; display: grid; gap: 16px; }
+.syntaxes a { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 24px; align-items: center; background: var(--ink); color: var(--sheet); border-radius: var(--radius); padding: 24px; text-decoration: none; }
+.syntaxes svg { grid-row: span 2; width: 48px; height: 64px; display: block; }
+.syntaxes .name { display: block; font-weight: 800; font-size: 32px; line-height: 1.2; }
+.syntaxes .what { display: block; font-size: 14px; color: var(--mist); font-variant-numeric: tabular-nums; }
+.syntaxes a:hover, .syntaxes a:focus-visible { background: var(--cobalt); }
+.syntaxes a:hover .what, .syntaxes a:focus-visible .what { color: var(--sheet); }
+
+.type { margin-top: 32px; }
+.type h3 { margin: 0; }
+.type .aside { margin-top: 8px; font-size: 17px; }
+
+.entities { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
+.entities a { display: block; background: var(--ink); color: var(--sheet); border-radius: var(--radius); padding: 4px 12px; font-size: 14px; text-decoration: none; }
+.entities a:hover, .entities a:focus-visible { background: var(--cobalt); }
+
+footer { margin-top: 48px; font-size: 14px; }
+
+@media (max-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr); }
+  .field { position: static; height: auto; padding: 32px 16px 24px; }
+  .field a { flex-direction: row; gap: 16px; }
+  .field svg { width: auto; height: 48px; }
+  .field .word { font-size: 32px; }
+  .sheet { margin: 0 16px 16px; padding: 24px; }
+  .nav { margin-bottom: 32px; }
+  h1 { font-size: 32px; }
+  h2 { font-size: 22px; margin-top: 32px; }
+  .lede { font-size: 17px; }
+  dl { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  dd { margin-bottom: 8px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="field"><a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="SYNTAX">
+  <title>SYNTAX: three element types, one element chosen from each</title>
+  <rect width="120" height="120" rx="6" fill="#0a1428"/>
+  <g fill="#12213f">
+    <rect x="44" y="4" width="32" height="32" rx="3"/><rect x="84" y="4" width="32" height="32" rx="3"/>
+    <rect x="4" y="44" width="32" height="32" rx="3"/><rect x="44" y="44" width="32" height="32" rx="3"/>
+    <rect x="4" y="84" width="32" height="32" rx="3"/><rect x="84" y="84" width="32" height="32" rx="3"/>
+  </g>
+  <rect x="4" y="4" width="32" height="32" rx="3" fill="#1848c0"/>
+  <rect x="84" y="44" width="32" height="32" rx="3" fill="#1848c0"/>
+  <rect x="44" y="84" width="32" height="32" rx="3" fill="#e8a53a"/>
+</svg>
+<span class="word">SYNTAX</span></a><span class="v">Version 0.8.0</span></div>
+<div class="sheet">
+<nav class="nav"><a href="/">Home</a><a href="/syntaxes/" aria-current="page">Syntaxes</a><a href="/bairang/">Bairang</a></nav>
+<main><style>.pick { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.pick button { font: 600 14px/1.3 "Mukta", sans-serif; border: 0; border-radius: var(--radius); padding: 8px 12px; background: var(--mist); color: var(--ink); cursor: pointer; }
+.pick button:hover, .pick button:focus-visible { background: var(--cobalt-2); color: var(--sheet); outline: none; }
+.pick button[aria-pressed="true"] { background: var(--ink); color: var(--sheet); }
+#reading { margin-top: 32px; padding: 24px; background: var(--ink); color: var(--sheet); border-radius: var(--radius); }
+#reading > * + * { margin-top: 16px; }
+#reading .label { color: var(--warm); }
+#reading .aside, #reading .what { color: var(--mist); }
+.model { background: var(--deep); border-radius: var(--radius); padding: 16px; }
+.model h4 { margin: 0; font-weight: 800; font-size: 22px; }
+.model p, .model ul { margin: 8px 0 0; }
+.results { padding-left: 20px; }
+.results b { color: var(--warm); }</style>
+<h1>The small model builder</h1>
+<p class="lede">Choose what a small model does, what it reads, what it answers, what it starts from, whose labels it learns from and where it runs. The builder shows the models I have already built that come nearest to those choices, with what each was measured to do and on which test. It does not predict a figure for a model that does not exist yet.</p>
+<div id="choices"></div>
+<section id="reading" aria-live="polite"></section>
+<p class="aside">The figures are copied from my own records of each model as they were measured. Each model I measure from now on is added here. The syntax itself: <a href="/small-model/">the small model syntax</a>.</p>
+<script type="application/json" id="syntax-data">{"name": "small model", "read_from": "the small model builder", "slug": "small-model", "breaks_up": "a small model: one that does a single job and answers with a number, a choice, a span or codes, never with sentences, and leaves the decision to code", "left_out": "A model that writes. Anything that writes sentences for people is not a small model in this syntax: a small model answers with a kind, a span, an item, a number or codes, and code decides what follows. Also left out: what the model is for in the world, its name, and the keys, which stay with the person who keyed them.", "element_types": [{"name": "job", "holds": "one", "need": "essential", "description": "The one operation the model does. A larger task is broken into such operations first, each done by its own model or by code.", "elements": [{"name": "sort", "description": "puts each thing it reads into one of a few kinds set in advance", "gives": "It puts each thing it reads into one of a few kinds set in advance."}, {"name": "point", "description": "finds the part of what it reads that answers a question, or says there is none", "gives": "It points at the part of what it reads that answers a question, or at nothing."}, {"name": "match", "description": "says which item on a list written in advance the thing it reads goes with", "gives": "It says which item on a list written in advance the thing it reads goes with."}, {"name": "spot", "description": "says which of a set of words or sounds recorded in advance occurred", "gives": "It says which of the words or sounds recorded in advance occurred."}, {"name": "score", "description": "gives each option a number, and code takes the highest", "gives": "It gives each option a number, and code takes the highest."}, {"name": "choose", "description": "picks codes from sets, one slot at a time", "gives": "It picks codes from sets, one slot at a time."}]}, {"name": "reads", "holds": "one", "need": "essential", "description": "What goes into the model each time it answers.", "elements": [{"name": "a sentence", "description": "one sentence at a time", "gives": "It reads one sentence at a time."}, {"name": "a pair of sentences", "description": "two sentences read together, such as a question and its answer", "gives": "It reads two sentences together."}, {"name": "a passage", "description": "a few sentences up to a page, with a question about it", "gives": "It reads a passage of a few sentences up to a page."}, {"name": "a whole text", "description": "a whole text, shortened to fit the model's window", "gives": "It reads a whole text, shortened to fit its window."}, {"name": "a window of sound", "description": "a second or two of sound from a microphone", "gives": "It hears a second or two of sound at a time."}, {"name": "numbers", "description": "a few whole numbers that describe a situation", "gives": "It reads a few numbers that describe a situation."}, {"name": "codes", "description": "numbers that stand for words, never the words themselves", "gives": "It reads only codes that stand for words, never the words."}]}, {"name": "answers", "holds": "one", "need": "essential", "description": "The shape of what comes out. Every answer can also be none, and code reads none as don’t know.", "elements": [{"name": "a kind", "description": "one of a few kinds set in advance", "gives": "It answers with one of the kinds, or none."}, {"name": "yes or no", "description": "one of two answers", "gives": "It answers yes or no, or none."}, {"name": "a span", "description": "where an answer starts and ends in what it read", "gives": "It answers with where the answer starts and ends, or none."}, {"name": "an item", "description": "one item from a list written in advance", "gives": "It answers with one item from the list, or none."}, {"name": "a number", "description": "a number for each option, which code compares", "gives": "It answers with a number for each option."}, {"name": "codes", "description": "codes chosen from sets, which code turns back into words", "gives": "It answers with codes, which code turns back into words."}]}, {"name": "base", "holds": "one", "need": "essential", "description": "The model it starts from before it is trained on the job.", "elements": [{"name": "a MiniLM reader taught to point", "description": "a 33-million-parameter English encoder already trained to find answers in text"}, {"name": "a MiniLM encoder with a new head", "description": "the same size of encoder with a small new layer that picks one of a few kinds"}, {"name": "an adapter on a trained reader", "description": "a small set of added weights trained on top of a model already trained for a nearby job"}, {"name": "a multilingual small encoder", "description": "a small encoder that reads several languages, retrained on Indian languages"}, {"name": "an audio encoder, frozen", "description": "a model trained on sound, kept as it is, with a small scorer trained on top"}, {"name": "a keyword-spotting encoder", "description": "a tiny encoder, tens to hundreds of thousands of parameters, that compares sound with recorded examples"}, {"name": "trained from scratch", "description": "no ready model: every weight learnt from the start"}, {"name": "a few whole-number weights", "description": "no neural network: a handful of numbers that multiply the inputs"}]}, {"name": "labels", "holds": "one", "need": "essential", "description": "Where the right answers it learns from come from.", "elements": [{"name": "the maker's keys", "description": "the maker's own answers, keyed one item at a time on blind sheets"}, {"name": "a stated rule", "description": "answers code works out from a rule the maker stated in words"}, {"name": "written rows", "description": "rows written for training by another model, with the answer known from how each was made"}, {"name": "another model's reading", "description": "labels another model gave, used on the maker's word"}, {"name": "a dataset's labels", "description": "the labels a public dataset came with"}]}, {"name": "runs on", "holds": "one", "need": "essential", "description": "Where the model answers once it is trained.", "elements": [{"name": "a Raspberry Pi 5", "description": "inside a toy or a game, on its processor, with nothing sent anywhere"}, {"name": "a phone's browser", "description": "in the page itself, with nothing sent to a server"}, {"name": "a small server", "description": "a server's processor with no graphics card, such as one with 1 CPU and 2 GB"}, {"name": "a graphics card", "description": "a machine with a graphics card, such as an RTX 3060 with 12 GB"}]}], "instances": [{"name": "the small model builder", "url": "/small-model/builder/", "what": "choose one element of each type and read what the nearest models already built were measured to do", "links": []}], "described_entities": [{"name": "rai", "url": "/small-model/builder/#rai"}, {"name": "RAM", "url": "/small-model/builder/#ram"}, {"name": "aadha", "url": "/small-model/builder/#aadha"}, {"name": "gagar", "url": "/small-model/builder/#gagar"}, {"name": "the syntax slicer", "url": "/small-model/builder/#slicer"}, {"name": "mom, a base trained from scratch", "url": "/small-model/builder/#mom"}, {"name": "kahen, the gap mark", "url": "/small-model/builder/#kahen"}, {"name": "the misunderstanding probes", "url": "/small-model/builder/#probes"}, {"name": "akal", "url": "/small-model/builder/#akal"}, {"name": "carries", "url": "/small-model/builder/#carries"}, {"name": "how sure", "url": "/small-model/builder/#how-sure"}, {"name": "stand-in", "url": "/small-model/builder/#stand-in"}, {"name": "move", "url": "/small-model/builder/#move"}, {"name": "sense", "url": "/small-model/builder/#sense"}, {"name": "Hoja's gaali scorer", "url": "/small-model/builder/#hoja-scorer"}, {"name": "Hoja Paarakhi's word spotter", "url": "/small-model/builder/#paarakhi"}, {"name": "Beam's thread model", "url": "/small-model/builder/#beam-thread"}, {"name": "Beam's maze maker", "url": "/small-model/builder/#beam-maze"}]}</script>
+<script type="application/json" id="models-data">[{"slug": "rai", "name": "rai", "status": "released 29 September 2026", "job": "points at the phrase in a short typed answer that answers a form's question, or at nothing; code decides whether the form is complete", "elements": {"job": "point", "reads": "a passage", "answers": "a span", "base": "a MiniLM reader taught to point", "labels": "written rows", "runs on": "a small server"}, "results": [{"value": "152 of 180", "what": "honest English answers counted, with no non-answer counted", "test": "a test set it never trained on, written in Claude Code", "date": "29 September 2026"}, {"value": "64 of 96", "what": "answers counted on forms it never trained on", "test": "unseen forms, same threshold", "date": "29 September 2026"}, {"value": "27 of 58", "what": "Hinglish answers counted", "test": "honest Hinglish answers it never trained on", "date": "29 September 2026"}, {"value": "125 of 131", "what": "Indian names counted as who", "test": "names no training row contains", "date": "29 September 2026"}], "notes": "Every test answer was written in Claude Code, and I chose the threshold on the same sets I report. Training the pointing with another seed moves a count by about thirty answers. Not measured on answers typed by people who use it."}, {"slug": "ram", "name": "RAM", "status": "released 15 October 2026", "job": "for each act in a piece of office writing, points at who will do it, or at nobody", "elements": {"job": "point", "reads": "a passage", "answers": "a span", "base": "a MiniLM reader taught to point", "labels": "written rows", "runs on": "a small server"}, "results": [{"value": "178 of 178", "what": "acts right, against 162 of 178 for a sentence parser alone", "test": "five sets of notings written by models and keyed by hand", "date": "15 October 2026"}, {"value": "39 against 38", "what": "acts right, RAM against the parser alone, on plain notings", "test": "plain notings", "date": "15 October 2026"}], "notes": "On plain writing a parser does nearly as well; RAM is ahead on messier prose. Every set was seen and led to a fix, so none is blind, and none was written by people who write notings for a living."}, {"slug": "aadha", "name": "aadha", "status": "offline since 9 November 2026", "job": "marks each sentence of a student's text as story, the good noise or unwanted noise; code turns the marks into the balance an animal dances to", "elements": {"job": "sort", "reads": "a sentence", "answers": "a kind", "base": "a MiniLM encoder with a new head", "labels": "another model's reading", "runs on": "a small server"}, "results": [{"value": "576 of 603", "what": "sentences marked as I marked them (Haiku 441, Sonnet 456)", "test": "603 sentences I marked before any model saw them", "date": "30 October 2026"}, {"value": "62 of 72", "what": "good-noise sentences found (Haiku 72, Sonnet 67)", "test": "the same 603 sentences", "date": "30 October 2026"}, {"value": "176 of 182", "what": "sentences right on the sets keyed under the present marks", "test": "sets I keyed", "date": "3 November 2026"}], "notes": "Hosted models matched or beat it on the good noise. Its whole lead over them is one boundary, abstract nonsense, which they called the good noise. The version last served trained on another model's reading, on my word; I had not keyed those rows. Two soups of the same arm differ by 13 to 16 lines on the large sets, so a smaller gap decides nothing."}, {"slug": "gagar", "name": "gagar", "status": "offline since 5 November 2026", "job": "reads a whole text of 100 to 350 words and answers once: the good noise, story or noise", "elements": {"job": "sort", "reads": "a whole text", "answers": "a kind", "base": "an adapter on a trained reader", "labels": "a stated rule", "runs on": "a small server"}, "results": [{"value": "129 of 132", "what": "held-back parts of my Museum pages read as the good noise", "test": "pages it never trained on", "date": "4 November 2026"}, {"value": "99 of 100", "what": "student essays read as story", "test": "student essays", "date": "4 November 2026"}, {"value": "180 of 182", "what": "held-back windows still read as the good noise with their sentences shuffled", "test": "shuffled windows of my pages", "date": "4 November 2026"}], "notes": "It adds up a kind of sentence and does not read order, so shuffled text passes. It reads reflective prose and does not follow an argument. I took it offline because a text with its halves swapped passed the order check."}, {"slug": "slicer", "name": "the syntax slicer", "status": "never deployed", "job": "for each option of each box of a syntax, points at the sentence in a description that shows that option, or at nothing", "elements": {"job": "point", "reads": "a passage", "answers": "a span", "base": "a MiniLM reader taught to point", "labels": "written rows"}, "results": [{"value": "50 right, 1 partly, 4 wrong", "what": "boxes decided on board-game rule texts; the rest left undecided", "test": "47 rule texts with my labels", "date": "21 October 2026"}, {"value": "55%", "what": "of the boxes it left undecided, my own option was its first choice (81% within its top three)", "test": "the same 47 games, fourth run", "date": "21 October 2026"}], "notes": "At a threshold strict enough to let few wrong answers through, most boxes get no answer. The prompted 7B reader it replaced changed 13 of 16 answers when the options were listed in reverse."}, {"slug": "mom", "name": "mom, a base trained from scratch", "status": "dropped 26 September 2026", "job": "a small encoder trained from scratch on an open corpus, meant to replace rai's base", "elements": {"job": "point", "reads": "a passage", "answers": "a span", "base": "trained from scratch", "labels": "written rows"}, "results": [{"value": "185", "what": "answers counted over rai's sets, against 234 to 242 for the same job on MiniLM", "test": "rai's sets", "date": "26–27 September 2026"}], "notes": "A 12-layer model this size trained from scratch stayed below MiniLM, so I kept a ready-made base."}, {"slug": "kahen", "name": "kahen, the gap mark", "status": "in design; v0.1 trained 3 November 2026", "job": "marks whether the gap in one line is the point", "elements": {"job": "sort", "reads": "a sentence", "answers": "yes or no", "base": "a MiniLM encoder with a new head", "labels": "another model's reading"}, "results": [{"value": "108 of 179", "what": "right, where always answering 'the point' gets 107", "test": "held-out lines labelled by a working rule", "date": "3 November 2026"}], "notes": "It learnt nothing a constant answer does not give. Its labels came from a model's working rule; I had not keyed them."}, {"slug": "probes", "name": "the misunderstanding probes", "status": "archived", "job": "asked whether a small model can learn a public dataset's label: same meaning, an answer found, sarcasm", "elements": {"job": "sort", "reads": "a pair of sentences", "answers": "yes or no", "base": "a MiniLM encoder with a new head", "labels": "a dataset's labels"}, "results": [{"value": "0.872", "what": "right on paraphrase pairs (always the commonest answer: 0.558)", "test": "8,000 PAWS test rows", "date": "3–4 November 2026"}, {"value": "6 of 16", "what": "right on sixteen pairs written outside the dataset", "test": "16 rows written for the test", "date": "3–4 November 2026"}, {"value": "0.808", "what": "right on sarcasm, below always answering not sarcastic (0.857)", "test": "1,400 iSarcasmEval test rows", "date": "3–4 November 2026"}], "notes": "A high score on the dataset's own test said little about sentences written elsewhere."}, {"slug": "akal", "name": "akal", "status": "in design", "job": "reads whether an indirect answer means yes or no", "elements": {"job": "sort", "reads": "a pair of sentences", "answers": "yes or no", "base": "a MiniLM encoder with a new head", "labels": "a dataset's labels"}, "results": [{"value": "0.829", "what": "right (always the commonest answer: 0.539; word count: 0.678)", "test": "Circa test rows", "date": "3–4 November 2026"}, {"value": "11 of 16", "what": "right on sixteen rows written outside the dataset", "test": "16 rows written for the test", "date": "3–4 November 2026"}], "notes": "It got 11 of 16 right on rows written outside the dataset. A coin gets that many about one time in ten."}, {"slug": "carries", "name": "carries", "status": "removed 31 October 2026", "job": "matches a sentence to the step of an argument it carries", "elements": {"job": "match", "reads": "a sentence", "answers": "an item", "base": "a multilingual small encoder", "labels": "written rows", "runs on": "a phone's browser"}, "results": [{"value": "111 of 136, 99 of 122, 87 of 126, 82 of 119", "what": "matched with none wrong, in Gujarati, Marathi, Hindi and mixed", "test": "held-out generated cases", "date": "24 October 2026"}], "notes": "I removed it from the tool on 31 October 2026. Its figures come from generated cases and open corpora, not from students' writing. I set the threshold so one half had no wrong answers, then counted the other half once."}, {"slug": "how-sure", "name": "how sure", "status": "removed 31 October 2026", "job": "labels one English sentence hedged, boosted or plain", "elements": {"job": "sort", "reads": "a sentence", "answers": "a kind", "base": "a MiniLM encoder with a new head", "labels": "written rows", "runs on": "a phone's browser"}, "results": [{"value": "180 of 180", "what": "right, none wrong", "test": "held-out generated cases", "date": "24 October 2026"}], "notes": "I removed it from the tool on 31 October 2026. Its figures come from generated cases and open corpora, not from students' writing. I set the threshold so one half had no wrong answers, then counted the other half once."}, {"slug": "stand-in", "name": "stand-in", "status": "removed 31 October 2026", "job": "points at the word that stands in for a chosen English word", "elements": {"job": "point", "reads": "a sentence", "answers": "a span", "base": "a MiniLM reader taught to point", "labels": "written rows", "runs on": "a phone's browser"}, "results": [{"value": "38 of 94", "what": "answered, none wrong", "test": "held-out generated cases", "date": "24 October 2026"}], "notes": "I removed it from the tool on 31 October 2026. Its figures come from generated cases and open corpora, not from students' writing. I set the threshold so one half had no wrong answers, then counted the other half once."}, {"slug": "move", "name": "move", "status": "removed 31 October 2026", "job": "names the move a step's first sentence makes", "elements": {"job": "sort", "reads": "a sentence", "answers": "a kind", "base": "a MiniLM encoder with a new head", "labels": "written rows", "runs on": "a phone's browser"}, "results": [{"value": "131 of 270", "what": "answered, none wrong", "test": "held-out generated cases", "date": "24 October 2026"}], "notes": "I removed it from the tool on 31 October 2026. Its figures come from generated cases and open corpora, not from students' writing. I set the threshold so one half had no wrong answers, then counted the other half once."}, {"slug": "sense", "name": "sense", "status": "measured, never shipped", "job": "picks which dictionary sense a Hindi word has in its step", "elements": {"job": "match", "reads": "a sentence", "answers": "an item", "base": "a multilingual small encoder", "labels": "written rows", "runs on": "a phone's browser"}, "results": [{"value": "no round", "what": "beat always choosing the first sense", "test": "held-out generated cases", "date": "24 October 2026"}], "notes": "I removed it from the tool on 31 October 2026. Its figures come from generated cases and open corpora, not from students' writing. I set the threshold so one half had no wrong answers, then counted the other half once."}, {"slug": "hoja-scorer", "name": "Hoja's gaali scorer", "status": "in design", "job": "scores each two seconds of sound: no gaali, aimed at nobody, aimed at the toy, aimed past it; code decides whether the toy darkens", "elements": {"job": "sort", "reads": "a window of sound", "answers": "a kind", "base": "an audio encoder, frozen", "labels": "the maker's keys", "runs on": "a Raspberry Pi 5"}, "results": [{"value": "65 ms", "what": "per window on one thread for the encoder cut to two seconds (31–41 ms on four)", "test": "a Mac mini, not the Pi", "date": "7 November 2026"}, {"value": "2,070 ms", "what": "per window for the uncut encoder at int8 on a Pi 5, measured by someone else", "test": "a third party's bench", "date": "April 2026"}], "notes": "No accuracy yet: no scorer is trained. The fan inside is a sound the microphone hears, so the model has to be fitted with it running."}, {"slug": "paarakhi", "name": "Hoja Paarakhi's word spotter", "status": "proposed 11 November 2026", "job": "hears each second of sound and says which of the owner's recorded words occurred, or none", "elements": {"job": "spot", "reads": "a window of sound", "answers": "an item", "base": "a keyword-spotting encoder", "labels": "the maker's keys", "runs on": "a Raspberry Pi 5"}, "results": [{"value": "up to 80%", "what": "right at 5% false alarms, a published figure, not mine", "test": "isolated English commands (Rusci and Tuytelaars 2023)", "date": "2023"}], "notes": "Words inside running speech, and Hindi or Hinglish, are not measured."}, {"slug": "beam-thread", "name": "Beam's thread model", "status": "in the game since 9 November 2026", "job": "scores situations in a maze game and the highest is picked: where a player comes out, which thread to cut, which to keep", "elements": {"job": "score", "reads": "numbers", "answers": "a number", "base": "a few whole-number weights", "labels": "another model's reading", "runs on": "a phone's browser"}, "results": [{"value": "88% to 100%", "what": "the same pick as a few plain lines of code", "test": "300 simulated games", "date": "9 November 2026"}], "notes": "As it stands there is no small model to show: plain code picks the same thing almost every time."}, {"slug": "beam-maze", "name": "Beam's maze maker", "status": "scrapped 8 November 2026", "job": "at each step of carving a maze, picks one of the legal directions", "elements": {"job": "score", "reads": "numbers", "answers": "a number", "base": "a few whole-number weights", "runs on": "a phone's browser"}, "results": [{"value": "41 to 32", "what": "key presses from start to gate at level 3, from no help to full help: its whole reach", "test": "300 mazes per setting, weights at full strength, before any training", "date": "8 November 2026"}], "notes": "I scrapped it before training because its choices could hardly move what it was meant to change. I should have measured that reach before building it."}]</script>
+<script>// The small model builder: choose one element of each type, and read what the nearest models already built and measured
+// did. It never predicts a figure: every number it shows was measured on a model in the table, on the test named beside it.
+const SYN = JSON.parse(document.getElementById('syntax-data').textContent);
+const MODELS = JSON.parse(document.getElementById('models-data').textContent);
+const WEIGHT = { job: 3, answers: 2, reads: 2, base: 2, labels: 1, 'runs on': 1 };
+const chosen = {};
+const $ = id => document.getElementById(id);
+const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+
+function form() {
+  const f = $('choices');
+  for (const t of SYN.element_types) {
+    const s = el('section', 'type');
+    s.append(el('h3', null, t.name), el('p', 'aside', t.description + (t.need === 'optional' ? ' Optional.' : '')));
+    const row = el('div', 'pick');
+    for (const x of t.elements) {
+      const b = el('button', null, x.name); b.type = 'button'; b.title = x.description;
+      b.onclick = () => { chosen[t.name] = chosen[t.name] === x.name ? undefined : x.name; draw(); };
+      b.dataset.type = t.name; b.dataset.el = x.name; row.append(b);
+    }
+    s.append(row); f.append(s);
+  }
+}
+
+function nearest() {
+  const picked = Object.keys(chosen).filter(k => chosen[k]);
+  if (!picked.length) return [];
+  return MODELS.map(m => {
+    const same = picked.filter(k => m.elements[k] === chosen[k]), differ = picked.filter(k => m.elements[k] && m.elements[k] !== chosen[k]);
+    return { m, same, differ, score: same.reduce((a, k) => a + (WEIGHT[k] || 1), 0) };
+  }).filter(r => r.score > 0).sort((a, b) => b.score - a.score || b.m.results.length - a.m.results.length).slice(0, 3);
+}
+
+const describe = (type, name) => SYN.element_types.find(t => t.name === type).elements.find(x => x.name === name) || {};
+
+function draw() {
+  document.querySelectorAll('.pick button').forEach(b => b.setAttribute('aria-pressed', chosen[b.dataset.type] === b.dataset.el));
+  const out = $('reading'); out.replaceChildren();
+  const open = SYN.element_types.filter(t => t.need === 'essential' && !chosen[t.name]).map(t => t.name);
+  out.append(el('p', 'label', open.length ? 'Still to decide: ' + open.join(', ') : 'Every essential type is decided'));
+  const gives = ['reads', 'job', 'answers'].filter(k => chosen[k]).map(k => describe(k, chosen[k]).gives).filter(Boolean);
+  if (gives.length) out.append(el('p', 'lede', gives.join(' ') + ' Whatever it answers, code checks it and decides what happens; an answer it cannot check counts as don’t know.'));
+  const near = nearest();
+  if (!Object.values(chosen).some(Boolean)) { out.append(el('p', null, 'Choose an element of any type to see the nearest models already built.')); return; }
+  if (!near.length) { out.append(el('p', null, 'No model built so far shares any of these choices, so there is no measured case to read from.')); return; }
+  out.append(el('h3', null, 'The nearest models already built'));
+  for (const { m, same, differ } of near) out.append(card(m, same, differ));
+  if (chosen.job && chosen.answers && !near.some(r => r.same.includes('job') && r.same.includes('answers'))) out.append(el('p', 'aside', 'None of these does the same job with the same kind of answer, so read their figures as distant cases.'));
+}
+
+function card(m, same, differ) {
+  const c = el('article', 'model'); c.id = m.slug;
+  c.append(el('h4', null, m.name), el('p', 'what', m.job + ' · ' + m.status));
+  c.append(el('p', 'aside', 'Shares ' + (same.join(', ') || 'nothing') + (differ.length ? '; differs in ' + differ.map(k => k + ' (' + m.elements[k] + ')').join(', ') : '') + '.'));
+  if (m.results.length) {
+    const l = el('ul', 'results');
+    for (const r of m.results) { const i = el('li'); i.append(el('b', null, r.value), document.createTextNode(' ' + r.what + '. Tested on ' + r.test + (r.date ? ', ' + r.date : '') + '.')); l.append(i); }
+    c.append(l);
+  } else c.append(el('p', 'aside', 'Not measured yet.'));
+  if (m.notes) c.append(el('p', 'aside', m.notes));
+  return c;
+}
+
+form();
+// A model named after # opens with its own choices made, so each model built so far has an address here.
+const start = MODELS.find(m => m.slug === location.hash.slice(1));
+if (start) Object.assign(chosen, start.elements);
+draw();
+if (start) $(start.slug)?.scrollIntoView();
+</script></main>
+<footer><p>SYNTAX is a project of <a href="https://prayasabhinav.net">Prayas Abhinav</a>, licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, with its source at <a href="https://github.com/syntax-context/core">github.com/syntax-context/core</a>. No analytics and no counters. Set in Mukta by Ek Type (<a href="/fonts/OFL.txt">SIL Open Font License</a>).</p></footer>
+</div>
+</div>
+</body>
+</html>

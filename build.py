@@ -119,6 +119,25 @@ SYNTAXES.append({
     "described_entities": [],
 })
 
+# The small model syntax and its builder (his words, 13 November 2026: "can a small model builder (qith approx reading
+# of the kind of outout and accuracy) be made? -- syntax", then "make builder and deploy"). The syntax and the table of
+# models built so far, each with what was measured on it, are kept with the builder in projects/small-model-builder/.
+SMB = HERE / "projects" / "small-model-builder"
+small = json.loads((SMB / "small-model-syntax.json").read_text())
+MODELS = json.loads((SMB / "models.json").read_text())
+SYNTAXES.append({
+    "name": small["name"],
+    "read_from": "the small model builder",
+    "slug": "small-model",
+    "breaks_up": small["breaks_up"],
+    "left_out": small["left_out"],
+    "element_types": small["element_types"],
+    "instances": [{"name": "the small model builder", "url": "/small-model/builder/",
+                   "what": "choose one element of each type and read what the nearest models already built were measured to do",
+                   "links": []}],
+    "described_entities": [{"name": m["name"], "url": f"/small-model/builder/#{m['slug']}"} for m in MODELS],
+})
+
 # Every element type says whether a thing of that kind needs it, so completeness can be checked by type: a thing is
 # complete when every essential type is decided, and an optional type says what deciding it does (Prayas, 19 October 2026).
 for s in SYNTAXES:
@@ -142,7 +161,7 @@ SOURCE = "https://github.com/syntax-context/core"
 
 
 def nav(current):
-    links = [("/", "Home", "home"), ("/syntaxes/", "Syntaxes", "syntaxes")]
+    links = [("/", "Home", "home"), ("/syntaxes/", "Syntaxes", "syntaxes"), ("/bairang/", "Bairang", "bairang")]
     mark = lambda key: ' aria-current="page"' if key == current else ""
     return "".join(f'<a href="{href}"{mark(key)}>{e(text)}</a>' for href, text, key in links)
 
@@ -256,6 +275,40 @@ listing = f"""<h1>Syntaxes</h1>
 <ul class="syntaxes">{rows}</ul>"""
 (HERE / "site" / "syntaxes").mkdir(parents=True, exist_ok=True)
 (HERE / "site" / "syntaxes" / "index.html").write_text(page("Syntaxes · SYNTAX", listing, "syntaxes", path="/syntaxes/"))
+bairang = """<h1>Bairang</h1>
+<p class="lede">A letter sent without enough postage. Whoever receives it pays, or it goes back.</p>
+<p>Bairang is a band of individual practitioners, each doing their own thing, who show and publish together in episodes. The work sits between art and design. I curate it, and I am also one of the people in it.</p>
+<p>Each invitation carries a provocation and asks for one work in response to it. There is no open call. You can propose yourself as somebody I should invite, and a gallery or space can say what it can offer an episode. I write to spaces and ask what they could offer. I invite them to apply or pitch.</p>
+<p><a href="https://bairang.koher.app">bairang.koher.app</a></p>"""
+(HERE / "site" / "bairang").mkdir(parents=True, exist_ok=True)
+(HERE / "site" / "bairang" / "index.html").write_text(page("Bairang · SYNTAX", bairang, "bairang", path="/bairang/"))
+BUILDER_CSS = """.pick { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.pick button { font: 600 14px/1.3 "Mukta", sans-serif; border: 0; border-radius: var(--radius); padding: 8px 12px; background: var(--mist); color: var(--ink); cursor: pointer; }
+.pick button:hover, .pick button:focus-visible { background: var(--cobalt-2); color: var(--sheet); outline: none; }
+.pick button[aria-pressed="true"] { background: var(--ink); color: var(--sheet); }
+#reading { margin-top: 32px; padding: 24px; background: var(--ink); color: var(--sheet); border-radius: var(--radius); }
+#reading > * + * { margin-top: 16px; }
+#reading .label { color: var(--warm); }
+#reading .aside, #reading .what { color: var(--mist); }
+.model { background: var(--deep); border-radius: var(--radius); padding: 16px; }
+.model h4 { margin: 0; font-weight: 800; font-size: 22px; }
+.model p, .model ul { margin: 8px 0 0; }
+.results { padding-left: 20px; }
+.results b { color: var(--warm); }"""
+builder = f"""<style>{BUILDER_CSS}</style>
+<h1>The small model builder</h1>
+<p class="lede">{e(small["builder_lede"])}</p>
+<div id="choices"></div>
+<section id="reading" aria-live="polite"></section>
+<p class="aside">{e(small["builder_aside"])} The syntax itself: <a href="/small-model/">the small model syntax</a>.</p>
+<script type="application/json" id="syntax-data">{json.dumps(next(s for s in SYNTAXES if s["slug"] == "small-model"), ensure_ascii=False).replace("</", "<\\/")}</script>
+<script type="application/json" id="models-data">{json.dumps(MODELS, ensure_ascii=False).replace("</", "<\\/")}</script>
+<script>{(SMB / "builder.js").read_text()}</script>"""
+(HERE / "site" / "small-model" / "builder").mkdir(parents=True, exist_ok=True)
+(HERE / "site" / "small-model" / "builder" / "index.html").write_text(
+    page("The small model builder · SYNTAX", builder, "syntaxes", og="small-model",
+         description="Choose what a small model reads, does and answers, and read what the nearest models already built were measured to do.",
+         path="/small-model/builder/"))
 (HERE / "site" / "favicon.svg").write_text(MARK)
 shutil.copytree(HERE / "fonts", HERE / "site" / "fonts", dirs_exist_ok=True)
 # The link-preview images are drawn by og.py and kept in og/; a syntax without one is refused, so a new syntax
