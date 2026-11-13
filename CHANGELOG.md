@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.13.1 — 13 November 2026
+
+- ungli's link preview counts only the NSMs that are built (17), not every model listed beside them, which had made it say 22.
+
 ## 0.13.0 — 13 November 2026
 
 - The board game syntax has a ninth element type, **kind of fun**, essential: the enjoyment a game is built to give, 42 elements named as the books on play and games name them (competition (agon), chance (alea), make-believe (mimicry), vertigo (ilinx), flow, hard fun, triumph (fiero) and the rest). It is read, as every type here is, from boardgameBuilder, which asks for one before a design is marked complete. Its family mark has a row more.
