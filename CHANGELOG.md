@@ -2,6 +2,11 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.11.0 — 13 November 2026
+
+- A new syntax, **band**: a band of individual practitioners, each doing their own thing, who show and publish together in episodes. Its element types are the curator, the people, the question, the way in, the space, the signing and the episode, read from Bairang's own documents. Bairang is the band described in it. It is no longer a page of its own in the menu, and /bairang/ redirects to /band/.
+- The narrow small model syntax is now named **NSM** (his word), at /nsm/; /narrow-small-model/ and /small-model/ redirect there. Its element types now read as one sentence about an NSM: it does, reads, answers with, starts from, learns from and runs on. ungli, its builder, has its own interface: a task laid out as a line of steps, blocks dragged into an NSM's six slots, and a finger over the step being read.
+
 ## 0.10.0 — 13 November 2026
 
 - The small model syntax is now the **narrow small model** syntax: narrow is the size of a model's answer, a kind, a span, an item, a number or codes, never a sentence, and not the size of the model. Its builder is now **ungli**, at [ungli.syntax.prayasabhinav.net](https://ungli.syntax.prayasabhinav.net), named for *ungli rakhna*, to put a finger on the exact spot, which is all a model there does. ungli has its own mark: one fingertip resting on one cell of a row.

@@ -30,7 +30,8 @@ if newest != VERSION:
     sys.exit(f"VERSION is {VERSION} but the newest CHANGELOG entry is {newest}")
 
 # A syntax is named by the primary name of the kind of thing it breaks up, in plain lower case: never a tool or a brand
-PRIMARY_NAME = re.compile(r"^[a-z]+( [a-z]+)*$")
+# One exception, his word of 13 November 2026 ("NSM is" the name of the syntax): a name in capitals, for NSM.
+PRIMARY_NAME = re.compile(r"^([a-z]+( [a-z]+)*|[A-Z]{2,})$")
 
 games = json.loads((BGB / "games.json").read_text())
 SYNTAXES = [{
@@ -123,12 +124,12 @@ SYNTAXES.append({
 # of the kind of outout and accuracy) be made? -- syntax", then "make builder and deploy"). The syntax and the table of
 # models built so far, each with what was measured on it, are kept with the builder, ungli, in projects/ungli/.
 SMB = HERE / "projects" / "ungli"
-small = json.loads((SMB / "narrow-small-model-syntax.json").read_text())
+small = json.loads((SMB / "nsm-syntax.json").read_text())
 MODELS = json.loads((SMB / "models.json").read_text())
 SYNTAXES.append({
     "name": small["name"],
     "read_from": "ungli",
-    "slug": "narrow-small-model",
+    "slug": "nsm",
     "breaks_up": small["breaks_up"],
     "left_out": small["left_out"],
     "element_types": small["element_types"],
@@ -136,6 +137,21 @@ SYNTAXES.append({
                    "what": "a builder: design a task as steps of narrow small models and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
                    "links": []}],
     "described_entities": [{"name": m["name"], "url": f"https://ungli.syntax.prayasabhinav.net/#{m['slug']}"} for m in MODELS],
+})
+
+# The band syntax, read from Bairang (his words, 13 November 2026: "bairang is a kind of thing which has syntax - it is
+# example"). Bairang is the band described in it; until then it had a page and a place in the menu of its own here.
+band = json.loads((HERE.parent / "koher" / "bairang" / "band-syntax.json").read_text())
+SYNTAXES.append({
+    "name": band["name"],
+    "read_from": "Bairang",
+    "slug": band["name"],
+    "breaks_up": band["breaks_up"],
+    "left_out": band["left_out"],
+    "note": band["note"],
+    "element_types": band["element_types"],
+    "instances": [],
+    "described_entities": [{"name": "Bairang", "url": "https://bairang.koher.app"}],
 })
 
 # Every element type says whether a thing of that kind needs it, so completeness can be checked by type: a thing is
@@ -161,7 +177,7 @@ SOURCE = "https://github.com/syntax-context/core"
 
 
 def nav(current):
-    links = [("/", "Home", "home"), ("/syntaxes/", "Syntaxes", "syntaxes"), ("/bairang/", "Bairang", "bairang")]
+    links = [("/", "Home", "home"), ("/syntaxes/", "Syntaxes", "syntaxes")]
     mark = lambda key: ' aria-current="page"' if key == current else ""
     return "".join(f'<a href="{href}"{mark(key)}>{e(text)}</a>' for href, text, key in links)
 
@@ -235,7 +251,7 @@ for s in SYNTAXES:
     body = f"""<h1>The {e(s['name'])} syntax</h1>
 <p class="lede">It breaks up {e(s['breaks_up'])}. It has {len(s['element_types'])} element types and {n_el} elements, and a {e(s['name'])} described in it is one choice of elements from each type.</p>
 {f'<p>{e(s["note"])}</p>' if s.get("note") else ""}
-<h2>Instances</h2><ul>{inst}</ul>
+<h2>Instances</h2>{f'<ul>{inst}</ul>' if inst else '<p>No tool is built on it yet.</p>'}
 <h2>Element types and elements</h2>{types}
 <h2>Left out</h2><p>{e(s["left_out"])}</p>
 <h2>Described in it</h2>{f'<ul class="entities">{ents}</ul>' if ents else '<p>Nothing is described in it yet.</p>'}
@@ -251,8 +267,8 @@ for s in SYNTAXES:
 
 rows = "".join(
     f'<li><a href="/{s["slug"]}/">{family_mark(s)}<span class="name">{e(s["name"])}</span>'
-    f'<span class="what">{len(s["element_types"])} element types · {sum(len(t["elements"]) for t in s["element_types"])} elements · '
-    f'instance: {", ".join(e(i["name"]) for i in s["instances"])}</span></a></li>'
+    f'<span class="what">{len(s["element_types"])} element types · {sum(len(t["elements"]) for t in s["element_types"])} elements · ' +
+    (f'instance: {", ".join(e(i["name"]) for i in s["instances"])}' if s["instances"] else f'described in it: {", ".join(e(x["name"]) for x in s["described_entities"])}') + '</span></a></li>'
     for s in SYNTAXES)
 index = f"""<h1>Kinds of things, broken into parts</h1>
 <p class="lede">A kind of thing can be broken into the same parts every time. SYNTAX writes those parts down: the element types a kind of thing has, and the elements of each type. Once they are written, each thing of that kind can be described as a choice of elements, compared with others, and made by choosing differently.</p>
@@ -275,13 +291,6 @@ listing = f"""<h1>Syntaxes</h1>
 <ul class="syntaxes">{rows}</ul>"""
 (HERE / "site" / "syntaxes").mkdir(parents=True, exist_ok=True)
 (HERE / "site" / "syntaxes" / "index.html").write_text(page("Syntaxes · SYNTAX", listing, "syntaxes", path="/syntaxes/"))
-bairang = """<h1>Bairang</h1>
-<p class="lede">A letter sent without enough postage. Whoever receives it pays, or it goes back.</p>
-<p>Bairang is a band of individual practitioners, each doing their own thing, who show and publish together in episodes. The work sits between art and design. I curate it, and I am also one of the people in it.</p>
-<p>Each invitation carries a provocation and asks for one work in response to it. There is no open call. You can propose yourself as somebody I should invite, and a gallery or space can say what it can offer an episode. I write to spaces and ask what they could offer. I invite them to apply or pitch.</p>
-<p><a href="https://bairang.koher.app">bairang.koher.app</a></p>"""
-(HERE / "site" / "bairang").mkdir(parents=True, exist_ok=True)
-(HERE / "site" / "bairang" / "index.html").write_text(page("Bairang · SYNTAX", bairang, "bairang", path="/bairang/"))
 (HERE / "site" / "favicon.svg").write_text(MARK)
 shutil.copytree(HERE / "fonts", HERE / "site" / "fonts", dirs_exist_ok=True)
 # The link-preview images are drawn by og.py and kept in og/; a syntax without one is refused, so a new syntax

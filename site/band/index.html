@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The band syntax · SYNTAX</title>
+<meta name="description" content="The band syntax breaks up a band of individual practitioners, each doing their own thing, who show and publish together in episodes.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SYNTAX">
+<meta property="og:title" content="The band syntax · SYNTAX">
+<meta property="og:description" content="The band syntax breaks up a band of individual practitioners, each doing their own thing, who show and publish together in episodes.">
+<meta property="og:url" content="https://syntax.prayasabhinav.net/band/">
+<meta property="og:image" content="https://syntax.prayasabhinav.net/og/band.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The band syntax · SYNTAX: its mark beside its name">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://syntax.prayasabhinav.net/band/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/mukta-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>/* SYNTAX — frontend-design-prayas-plain: the fixed tokens, Mukta only, served from /fonts with no request to Google.
+   Two zones: the field (the mark alone on the night) and the sheet (everything read). */
+@font-face { font-family: "Mukta"; font-weight: 400; font-display: swap; src: url(/fonts/mukta-400.woff2) format("woff2"); }
+@font-face { font-family: "Mukta"; font-weight: 600; font-display: swap; src: url(/fonts/mukta-600.woff2) format("woff2"); }
+@font-face { font-family: "Mukta"; font-weight: 800; font-display: swap; src: url(/fonts/mukta-800.woff2) format("woff2"); }
+
+:root {
+  --ground: #0a1428; --deep: #12213f; --cobalt: #1848c0; --cobalt-2: #3a6ae0; --mist: #9fb3e0;
+  --sheet: #f8f4ec; --ink: #0a1428; --warm: #e8a53a; --radius: 6px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--ink); font: 400 17px/1.6 "Mukta", "Noto Sans", "Segoe UI", sans-serif; }
+
+.page { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); min-height: 100vh; }
+.field { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px; padding: 48px 24px; color: var(--mist); }
+.field a { color: inherit; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.field svg { width: min(16rem, 60%); max-height: 56vh; height: auto; display: block; }
+.field .v a { display: inline; color: inherit; }
+.field .word { font-weight: 800; font-size: 48px; line-height: 1; letter-spacing: 0.08em; color: var(--sheet); }
+.field .v { font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; font-variant-numeric: tabular-nums; }
+
+.sheet { background: var(--sheet); margin: 24px 24px 24px 0; border-radius: var(--radius); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35); padding: 48px; }
+main, footer { max-width: 46rem; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+.nav a { font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; background: var(--mist); padding: 8px 16px; border-radius: var(--radius); }
+.nav a:hover, .nav a:focus-visible { background: var(--cobalt); color: var(--sheet); }
+.nav a[aria-current="page"] { background: var(--ink); color: var(--sheet); }
+main > * + * { margin-top: 16px; }
+h1 { font-weight: 800; font-size: 48px; line-height: 1.1; margin: 0; }
+h2 { font-weight: 800; font-size: 32px; line-height: 1.2; margin: 48px 0 0; }
+h3 { font-weight: 800; font-size: 22px; line-height: 1.3; margin: 32px 0 0; }
+p { margin: 0; }
+.lede { font-size: 22px; line-height: 1.5; }
+.label, .holds { font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+.holds { color: var(--cobalt); margin-left: 8px; vertical-align: middle; }
+.aside { font-size: 14px; }
+a { color: var(--cobalt); text-underline-offset: 3px; }
+
+dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 24px; margin: 16px 0 0; }
+dt { font-weight: 600; }
+dd { margin: 0; }
+
+/* A syntax on the index, and a type on its page: flat blocks of the deep tone, never a coloured rule */
+.syntaxes { list-style: none; padding: 0; display: grid; gap: 16px; }
+.syntaxes a { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 24px; align-items: center; background: var(--ink); color: var(--sheet); border-radius: var(--radius); padding: 24px; text-decoration: none; }
+.syntaxes svg { grid-row: span 2; width: 48px; height: 64px; display: block; }
+.syntaxes .name { display: block; font-weight: 800; font-size: 32px; line-height: 1.2; }
+.syntaxes .what { display: block; font-size: 14px; color: var(--mist); font-variant-numeric: tabular-nums; }
+.syntaxes a:hover, .syntaxes a:focus-visible { background: var(--cobalt); }
+.syntaxes a:hover .what, .syntaxes a:focus-visible .what { color: var(--sheet); }
+
+.type { margin-top: 32px; }
+.type h3 { margin: 0; }
+.type .aside { margin-top: 8px; font-size: 17px; }
+
+.entities { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
+.entities a { display: block; background: var(--ink); color: var(--sheet); border-radius: var(--radius); padding: 4px 12px; font-size: 14px; text-decoration: none; }
+.entities a:hover, .entities a:focus-visible { background: var(--cobalt); }
+
+footer { margin-top: 48px; font-size: 14px; }
+
+@media (max-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr); }
+  .field { position: static; height: auto; padding: 32px 16px 24px; }
+  .field a { flex-direction: row; gap: 16px; }
+  .field svg { width: auto; height: 48px; }
+  .field .word { font-size: 32px; }
+  .sheet { margin: 0 16px 16px; padding: 24px; }
+  .nav { margin-bottom: 32px; }
+  h1 { font-size: 32px; }
+  h2 { font-size: 22px; margin-top: 32px; }
+  .lede { font-size: 17px; }
+  dl { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  dd { margin-bottom: 8px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="field"><a href="/band/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 280" role="img" aria-label="The band syntax"><title>The band syntax: 7 element types, one element chosen from each</title><rect width="120" height="280" rx="6" fill="#0a1428"/><rect x="4" y="4" width="32" height="32" rx="3" fill="#12213f"/><rect x="44" y="4" width="32" height="32" rx="3" fill="#1848c0"/><rect x="84" y="4" width="32" height="32" rx="3" fill="#12213f"/><rect x="4" y="44" width="32" height="32" rx="3" fill="#12213f"/><rect x="44" y="44" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="44" width="32" height="32" rx="3" fill="#1848c0"/><rect x="4" y="84" width="32" height="32" rx="3" fill="#12213f"/><rect x="44" y="84" width="32" height="32" rx="3" fill="#1848c0"/><rect x="84" y="84" width="32" height="32" rx="3" fill="#12213f"/><rect x="4" y="124" width="32" height="32" rx="3" fill="#1848c0"/><rect x="44" y="124" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="124" width="32" height="32" rx="3" fill="#12213f"/><rect x="4" y="164" width="32" height="32" rx="3" fill="#12213f"/><rect x="44" y="164" width="32" height="32" rx="3" fill="#1848c0"/><rect x="84" y="164" width="32" height="32" rx="3" fill="#12213f"/><rect x="4" y="204" width="32" height="32" rx="3" fill="#1848c0"/><rect x="44" y="204" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="204" width="32" height="32" rx="3" fill="#12213f"/><rect x="4" y="244" width="32" height="32" rx="3" fill="#12213f"/><rect x="44" y="244" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="244" width="32" height="32" rx="3" fill="#e8a53a"/></svg><span class="word">band</span></a><span class="v"><a href="/">SYNTAX</a> · Version 0.11.0</span></div>
+<div class="sheet">
+<nav class="nav"><a href="/">Home</a><a href="/syntaxes/" aria-current="page">Syntaxes</a></nav>
+<main><h1>The band syntax</h1>
+<p class="lede">It breaks up a band of individual practitioners, each doing their own thing, who show and publish together in episodes. It has 7 element types and 21 elements, and a band described in it is one choice of elements from each type.</p>
+<p>Read from Bairang&#x27;s own documents on 13 November 2026 (his words that day: &quot;bairang is a kind of thing which has syntax - it is example&quot;). Bairang is the band described in it.</p>
+<h2>Instances</h2><p>No tool is built on it yet.</p>
+<h2>Element types and elements</h2><section class="type"><h3>curator <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">The person who starts the band, fixes each episode&#x27;s question and writes every invitation.</p>
+<dl><dt>one of the people</dt><dd>the curator also makes a work for the episode, unsigned like the rest</dd><dt>outside the band</dt><dd>the curator invites and shows, and makes no work</dd></dl></section><section class="type"><h3>people <span class="holds">holds several</span> <span class="holds">essential</span></h3>
+<p class="aside">Individual practitioners, each doing their own thing. They practise something other than art.</p>
+<dl><dt>research</dt><dd>someone whose practice is finding things out</dd><dt>writing</dt><dd>someone whose practice is writing</dd><dt>sound</dt><dd>someone who makes sound</dd><dt>making</dt><dd>someone who makes things with their hands or with machines</dd><dt>teaching</dt><dd>someone whose practice is teaching</dd><dt>code</dt><dd>someone who writes code</dd></dl></section><section class="type"><h3>question <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">The provocation each invitation carries for an episode. Each person makes one work in answer to it.</p>
+</section><section class="type"><h3>way in <span class="holds">holds several</span> <span class="holds">essential</span></h3>
+<p class="aside">How a person comes into an episode. There is no open call.</p>
+<dl><dt>invitation</dt><dd>the curator writes to the person and asks for one work in answer to the question</dd><dt>proposing yourself</dt><dd>a person or a space proposes itself, to be considered for being invited to pitch</dd><dt>a pitch under a token</dt><dd>the invited person pitches under a token, with no name, so the pitch is read without knowing whose it is</dd></dl></section><section class="type"><h3>space <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">Where an episode is shown. The curator writes to spaces and asks what they could offer, and invites them to apply or pitch.</p>
+<dl><dt>library</dt><dd>a library</dd><dt>bookshop</dt><dd>a bookshop</dd><dt>school</dt><dd>a school</dd><dt>makerspace</dt><dd>a makerspace</dd><dt>print shop</dt><dd>a print shop</dd><dt>research centre</dt><dd>a research centre</dd></dl></section><section class="type"><h3>signing <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">Whether a work carries its maker&#x27;s name.</p>
+<dl><dt>unsigned</dt><dd>no work carries its maker&#x27;s name; a ledger keeps which token is whose, closed for ten years, and each maker can claim their work when they choose, or never</dd><dt>signed</dt><dd>each work carries its maker&#x27;s name</dd></dl></section><section class="type"><h3>episode <span class="holds">holds several</span> <span class="holds">essential</span></h3>
+<p class="aside">One round of the band: one question, its works, shown together.</p>
+<dl><dt>shown in a space</dt><dd>the works are shown together, for real, in the space</dd><dt>published online</dt><dd>the works are published together online</dd></dl></section>
+<h2>Left out</h2><p>Artists and art spaces: the people of a band in this syntax practise something other than art, and its spaces are not art spaces. It also leaves out a list of who made which work, an open call, and money.</p>
+<h2>Described in it</h2><ul class="entities"><li><a href="https://bairang.koher.app">Bairang</a></li></ul>
+<p class="aside">The syntax as data: <a href="/band.json">band.json</a>. It is read from Bairang each time this site is built, so the two never differ.</p></main>
+<footer><p>SYNTAX is a project of <a href="https://prayasabhinav.net">Prayas Abhinav</a>, licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, with its source at <a href="https://github.com/syntax-context/core">github.com/syntax-context/core</a>. No analytics and no counters. Set in Mukta by Ek Type (<a href="/fonts/OFL.txt">SIL Open Font License</a>).</p></footer>
+</div>
+</div>
+</body>
+</html>

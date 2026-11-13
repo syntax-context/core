@@ -1,0 +1,156 @@
+{
+ "name": "band",
+ "read_from": "Bairang",
+ "slug": "band",
+ "breaks_up": "a band of individual practitioners, each doing their own thing, who show and publish together in episodes",
+ "left_out": "Artists and art spaces: the people of a band in this syntax practise something other than art, and its spaces are not art spaces. It also leaves out a list of who made which work, an open call, and money.",
+ "note": "Read from Bairang's own documents on 13 November 2026 (his words that day: \"bairang is a kind of thing which has syntax - it is example\"). Bairang is the band described in it.",
+ "element_types": [
+  {
+   "name": "curator",
+   "holds": "one",
+   "need": "essential",
+   "description": "The person who starts the band, fixes each episode's question and writes every invitation.",
+   "elements": [
+    {
+     "name": "one of the people",
+     "description": "the curator also makes a work for the episode, unsigned like the rest"
+    },
+    {
+     "name": "outside the band",
+     "description": "the curator invites and shows, and makes no work"
+    }
+   ]
+  },
+  {
+   "name": "people",
+   "holds": "several",
+   "need": "essential",
+   "description": "Individual practitioners, each doing their own thing. They practise something other than art.",
+   "elements": [
+    {
+     "name": "research",
+     "description": "someone whose practice is finding things out"
+    },
+    {
+     "name": "writing",
+     "description": "someone whose practice is writing"
+    },
+    {
+     "name": "sound",
+     "description": "someone who makes sound"
+    },
+    {
+     "name": "making",
+     "description": "someone who makes things with their hands or with machines"
+    },
+    {
+     "name": "teaching",
+     "description": "someone whose practice is teaching"
+    },
+    {
+     "name": "code",
+     "description": "someone who writes code"
+    }
+   ]
+  },
+  {
+   "name": "question",
+   "holds": "one",
+   "need": "essential",
+   "description": "The provocation each invitation carries for an episode. Each person makes one work in answer to it.",
+   "elements": []
+  },
+  {
+   "name": "way in",
+   "holds": "several",
+   "need": "essential",
+   "description": "How a person comes into an episode. There is no open call.",
+   "elements": [
+    {
+     "name": "invitation",
+     "description": "the curator writes to the person and asks for one work in answer to the question"
+    },
+    {
+     "name": "proposing yourself",
+     "description": "a person or a space proposes itself, to be considered for being invited to pitch"
+    },
+    {
+     "name": "a pitch under a token",
+     "description": "the invited person pitches under a token, with no name, so the pitch is read without knowing whose it is"
+    }
+   ]
+  },
+  {
+   "name": "space",
+   "holds": "one",
+   "need": "essential",
+   "description": "Where an episode is shown. The curator writes to spaces and asks what they could offer, and invites them to apply or pitch.",
+   "elements": [
+    {
+     "name": "library",
+     "description": "a library"
+    },
+    {
+     "name": "bookshop",
+     "description": "a bookshop"
+    },
+    {
+     "name": "school",
+     "description": "a school"
+    },
+    {
+     "name": "makerspace",
+     "description": "a makerspace"
+    },
+    {
+     "name": "print shop",
+     "description": "a print shop"
+    },
+    {
+     "name": "research centre",
+     "description": "a research centre"
+    }
+   ]
+  },
+  {
+   "name": "signing",
+   "holds": "one",
+   "need": "essential",
+   "description": "Whether a work carries its maker's name.",
+   "elements": [
+    {
+     "name": "unsigned",
+     "description": "no work carries its maker's name; a ledger keeps which token is whose, closed for ten years, and each maker can claim their work when they choose, or never"
+    },
+    {
+     "name": "signed",
+     "description": "each work carries its maker's name"
+    }
+   ]
+  },
+  {
+   "name": "episode",
+   "holds": "several",
+   "need": "essential",
+   "description": "One round of the band: one question, its works, shown together.",
+   "elements": [
+    {
+     "name": "shown in a space",
+     "description": "the works are shown together, for real, in the space"
+    },
+    {
+     "name": "published online",
+     "description": "the works are published together online"
+    }
+   ]
+  }
+ ],
+ "instances": [],
+ "described_entities": [
+  {
+   "name": "Bairang",
+   "url": "https://bairang.koher.app"
+  }
+ ]
+}
