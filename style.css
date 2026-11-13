@@ -31,6 +31,7 @@ h1 { font-weight: 800; font-size: 48px; line-height: 1.1; margin: 0; }
 h2 { font-weight: 800; font-size: 32px; line-height: 1.2; margin: 48px 0 0; }
 h3 { font-weight: 800; font-size: 22px; line-height: 1.3; margin: 32px 0 0; }
 p { margin: 0; }
+.note > * + * { margin-top: 1.1em; }   /* a note: a blank line in the editor is a gap here (13 November 2026, his screenshot: "there is no blank line in post after figure") */
 .lede { font-size: 22px; line-height: 1.5; }
 .label, .holds { font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
 .holds { color: var(--cobalt); margin-left: 8px; vertical-align: middle; }

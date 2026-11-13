@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.13.2 — 13 November 2026
+
+- A note shows the gaps the editor shows: a blank line between paragraphs, or after a diagram, is a gap on the page, and a single line break stays a line break.
+
 ## 0.13.1 — 13 November 2026
 
 - ungli's link preview counts only the NSMs that are built (17), not every model listed beside them, which had made it say 22.

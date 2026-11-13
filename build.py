@@ -318,8 +318,8 @@ def markdown(text):
             out.append("<ol>" + "".join(f"<li>{inline(re.sub(r'^\s*\d+\. ', '', l))}</li>" for l in lines) + "</ol>")
         elif all(l.startswith(">") for l in lines):
             out.append("<blockquote><p>" + "<br>".join(inline(l.lstrip("> ")) for l in lines) + "</p></blockquote>")
-        else:   # each line is its own paragraph, as the editor shows it
-            out.extend(f"<p>{inline(l)}</p>" for l in lines if l.strip())
+        else:   # as the editor shows it: a line break stays a line break, and a blank line between blocks is a gap (style.css, .note)
+            out.append("<p>" + "<br>".join(inline(l) for l in lines if l.strip()) + "</p>")
     return "\n".join(out)
 NOTES = sorted((json.loads(f.read_text()) for f in (HERE / "site-notes").glob("*.json")), key=lambda n: (n.get("date") or "", n["title"]), reverse=True) if (HERE / "site-notes").is_dir() else []
 shutil.rmtree(HERE / "site" / "notes", ignore_errors=True)
@@ -328,7 +328,7 @@ when = lambda d: f"{int(d[8:10])} {['January','February','March','April','May','
 for n in NOTES:
     slug = n["url"].rstrip("/").split("/")[-1]
     (HERE / "site" / "notes" / slug).mkdir()
-    (HERE / "site" / "notes" / slug / "index.html").write_text(page(f'{n["title"]} · Notes · SYNTAX', f'<h1>{e(n["title"])}</h1>\n<p class="aside">{when(n.get("date"))}</p>\n{markdown(n.get("text") or "")}\n<p class="aside"><a href="/notes/">All notes</a></p>', "notes", path=f"/notes/{slug}/", description=n["title"]))
+    (HERE / "site" / "notes" / slug / "index.html").write_text(page(f'{n["title"]} · Notes · SYNTAX', f'<h1>{e(n["title"])}</h1>\n<p class="aside">{when(n.get("date"))}</p>\n<div class="note">{markdown(n.get("text") or "")}</div>\n<p class="aside"><a href="/notes/">All notes</a></p>', "notes", path=f"/notes/{slug}/", description=n["title"]))
 listing = "".join(f'<li><a href="/notes/{n["url"].rstrip("/").split("/")[-1]}/"><span class="name">{e(n["title"])}</span><span class="what">{when(n.get("date"))}</span></a></li>' for n in NOTES)
 (HERE / "site" / "notes" / "index.html").write_text(page("Notes · SYNTAX", f'<h1>Notes</h1>\n<p class="lede">Notes on syntaxes and the tools built on them.</p>\n' + (f'<ul class="syntaxes notes">{listing}</ul>' if NOTES else '<p>No notes yet.</p>'), "notes", path="/notes/", description="Notes on SYNTAX, its syntaxes and the tools built on them."))
 (HERE / "site" / "favicon.svg").write_text(MARK)
