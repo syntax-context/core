@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.14.6 — 13 November 2026
+
+- A browser now checks for a newer page each time, here and on ungli, so a change shows at once instead of an older copy the browser kept.
+
 ## 0.14.5 — 13 November 2026
 
 - kahen and the misunderstanding probes are no longer listed in ungli.
