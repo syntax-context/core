@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.15.0 — 13 November 2026
+
+- The NSM syntax has three optional element types for the plain code beside an NSM: *code takes* (one NSM's answer, several NSMs' answers, the input itself, a list written in advance), *code does* (checks, looks up, counts, compares with a line, routes, filters, assembles) and *code gives* (a decision, a name or none, a flag for a person, something made from pieces written in advance, the input passed on, don't know to a person). Each element names the NSM where code already does it. ungli shows them as code blocks in a colour of their own and reads them from here.
+
 ## 0.14.6 — 13 November 2026
 
 - A browser now checks for a newer page each time, here and on ungli, so a change shows at once instead of an older copy the browser kept.
