@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.14.2 — 13 November 2026
+
+- mom, a base trained from scratch, is no longer listed in ungli: a base answers nothing and is not an NSM. The warning drawn from its record went with it. ungli's picture now counts 15 NSMs built.
+
 ## 0.14.1 — 13 November 2026
 
 - Coherence Diagnostic left ungli's NSMs: its classifier sorts a whole statement and a hosted model writes its narration, so it is not one. Coherence v2, a spec of small models that only point, is listed as in progress. ungli's picture now counts 16 NSMs built.
