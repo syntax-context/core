@@ -1,9 +1,11 @@
-"""Bring SYNTAX's notes from the editor's texts API (the notes source) into site-notes/.
+"""Bring SYNTAX's notes from the editor into site-notes/.
 
 His words, 13 November 2026: "there is no syntax notes page - why? mount it in editor too". A note published in the
 editor is kept on the home app's server; this copies each one into site-notes/<slug>.json, removes any the editor no
 longer has, and prints "changed" when anything differs, so the caller rebuilds and deploys the site only then.
-build.py makes /notes/ and /notes/<slug>/ from these files. The API is public and read-only: no key.
+build.py makes /notes/ and /notes/<slug>/ from these files. Where the notes are read from, and the key, are not in this
+file: they come from NOTES_SOURCE, a git-ignored file beside it holding two lines, URL=... and KEY=... (13 November
+2026, his words: "not public and published - private. it exposes my setup").
 Run from this folder: python3 notes-pull.py
 """
 import json
@@ -13,11 +15,12 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "site-notes"
-API = "<notes source>"
+CONF = dict(l.split("=", 1) for l in (HERE / "NOTES_SOURCE").read_text().split() if "=" in l)
+API, KEY = CONF["URL"].rstrip("/"), CONF["KEY"]
 
 
 def get(path):
-    req = urllib.request.Request(API + path, headers={"User-Agent": "syntax-notes-pull"})
+    req = urllib.request.Request(API + path, headers={"User-Agent": "syntax-notes-pull", "Authorization": "Bearer " + KEY})
     return json.loads(urllib.request.urlopen(req, timeout=60).read())
 
 

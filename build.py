@@ -291,7 +291,7 @@ listing = f"""<h1>Syntaxes</h1>
 <ul class="syntaxes">{rows}</ul>"""
 (HERE / "site" / "syntaxes").mkdir(parents=True, exist_ok=True)
 (HERE / "site" / "syntaxes" / "index.html").write_text(page("Syntaxes · SYNTAX", listing, "syntaxes", path="/syntaxes/"))
-# Notes, written in the editor (prayasabhinav.net/panel, "SYNTAX · Notes") and brought here by notes-pull.py (his words,
+# Notes, written in his editor and brought here by notes-pull.py (his words,
 # 13 November 2026: "there is no syntax notes page - why? mount it in editor too"). The text is the editor's Markdown;
 # this turns the few marks the editor uses into HTML, and attachments point at the editor's server, where they are kept.
 def inline(t):
@@ -300,8 +300,10 @@ def inline(t):
     t = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: f'<a href="{media(m.group(2))}">{m.group(1)}</a>', t)
     t = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", t)
     return re.sub(r"(?<![*\w])\*([^*]+)\*(?!\*)", r"<em>\1</em>", t)
+# Where a note's attachments are served from is not in this file: MEDIA= in the git-ignored NOTES_SOURCE.
+NOTES_MEDIA = next((l.split("=", 1)[1] for l in ((HERE / "NOTES_SOURCE").read_text().split() if (HERE / "NOTES_SOURCE").exists() else []) if l.startswith("MEDIA=")), "")
 def media(url):
-    return "<media address>" + url if url.startswith("/media/") else url
+    return NOTES_MEDIA.rstrip("/") + url if url.startswith("/media/") and NOTES_MEDIA else url
 def markdown(text):
     out = []
     for block in re.split(r"\n\s*\n", text.strip()):

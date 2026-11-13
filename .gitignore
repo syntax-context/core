@@ -24,3 +24,5 @@ models
 
 # Notes brought from the editor by notes-pull.py; the editor is their source
 site-notes/
+# Where the notes come from, and the key: never in git (13 November 2026)
+NOTES_SOURCE
