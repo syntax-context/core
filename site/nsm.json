@@ -136,7 +136,7 @@
     },
     {
      "name": "an encoder with a new head",
-     "description": "MiniLM, 33 million parameters, with a small new layer that picks one of a few kinds"
+     "description": "an English encoder, such as MiniLM (33 million parameters) or DeBERTa, with a small new layer that picks one of a few kinds or says yes or no"
     },
     {
      "name": "an adapter on a trained model",
@@ -233,6 +233,10 @@
   {
    "name": "RAM",
    "url": "https://ungli.syntax.prayasabhinav.net/#ram"
+  },
+  {
+   "name": "Coherence Diagnostic",
+   "url": "https://ungli.syntax.prayasabhinav.net/#coherence-diagnostic"
   },
   {
    "name": "aadha",

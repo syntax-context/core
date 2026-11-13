@@ -215,7 +215,7 @@ def page(title, body, current, field=None, og="home", description=DESCRIPTION, p
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(description)}">
 <meta property="og:url" content="{SITE}{path}">
-<meta property="og:image" content="{SITE}/og/{og}.png">
+<meta property="og:image" content="{SITE}/og/{og}.png?v={VERSION}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{e(title)}: its mark beside its name">
