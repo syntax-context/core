@@ -66,7 +66,7 @@ The table below is written by `build.py` from the same list the site is built fr
 | <img src="site/personhood/mark.svg" height="40" alt="the personhood mark"> | [**personhood**](https://syntax.prayasabhinav.net/personhood/) | 4 | 17 | Split-Domain Cognition | Split-Domain Cognition; Koher | [`personhood.json`](https://syntax.prayasabhinav.net/personhood.json) |
 | <img src="site/framework/mark.svg" height="40" alt="the framework mark"> | [**framework**](https://syntax.prayasabhinav.net/framework/) | 5 | 13 | the Museum of Vestigial Desire | Museum of Vestigial Desire | [`framework.json`](https://syntax.prayasabhinav.net/framework.json) |
 | <img src="site/life/mark.svg" height="40" alt="the life mark"> | [**life**](https://syntax.prayasabhinav.net/life/) | 5 | 10 | Split-Domain Cognition | Split-Domain Cognition's animal-rights variant | [`life.json`](https://syntax.prayasabhinav.net/life.json) |
-| <img src="site/nsm/mark.svg" height="40" alt="the NSM mark"> | [**NSM**](https://syntax.prayasabhinav.net/nsm/) | 12 | 86 | ungli | ungli | [`nsm.json`](https://syntax.prayasabhinav.net/nsm.json) |
+| <img src="site/nsm/mark.svg" height="40" alt="the NSM mark"> | [**NSM**](https://syntax.prayasabhinav.net/nsm/) | 12 | 87 | ungli | ungli | [`nsm.json`](https://syntax.prayasabhinav.net/nsm.json) |
 | <img src="site/band/mark.svg" height="40" alt="the band mark"> | [**band**](https://syntax.prayasabhinav.net/band/) | 7 | 21 | Bairang |  | [`band.json`](https://syntax.prayasabhinav.net/band.json) |
 <!-- syntaxes:end -->
 

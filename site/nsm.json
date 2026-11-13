@@ -380,6 +380,10 @@
    "description": "Where the examples it trains on come from. Who gives the right answers is learns from.",
    "elements": [
     {
+     "name": "rows code made from templates",
+     "description": "rows that code builds from templates and word lists, with the answer known from how each was made"
+    },
+    {
      "name": "texts a model wrote",
      "description": "examples a language model wrote for training, read before use; the NSM itself never writes"
     },
@@ -405,7 +409,7 @@
     },
     {
      "name": "a public dataset",
-     "description": "examples someone else published, used only once you have agreed to the source"
+     "description": "examples someone else published, used only once you have agreed to the source. No NSM here has trained on one directly: rai's teacher reader read SQuAD 2.0 (126,689 rows) before teaching rai"
     }
    ]
   },
@@ -465,7 +469,7 @@
     },
     {
      "name": "what people give it in use",
-     "description": "what people type, say or show it once it is set up"
+     "description": "what people type, say or show it once it is set up. No NSM here has been measured on it yet; rai's record says it was not measured on answers typed by people who use it"
     }
    ]
   },

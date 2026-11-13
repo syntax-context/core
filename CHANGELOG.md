@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.17.1 — 13 November 2026
+
+- *data comes from* has *rows code made from templates*, which is what rai and RAM trained on; the records said *texts a model wrote* for both, which was wrong. *a public dataset* and *what people give it in use* now say why no NSM has them yet. In ungli each NSM shows what it trained on and how many rows, from its own records: rai 34,800, RAM 14,000, aadha 47,623, kahen 2,616.
+
 ## 0.17.0 — 13 November 2026
 
 - The NSM syntax has three optional element types for its training data (his words: *"Ungli should have slots to specify the kind of data needed to train"*): *data comes from* (where the examples come from), *how many* (in four bands) and *tested on* (what it is measured on and never trains on). *learns from* still says who gives the right answers. Each NSM's record carries them only where its own notes and tests say so: rai and RAM on texts a model wrote, aadha on texts people wrote and your keys given blind, the chooser on your own writing in a few dozen, Beam on runs simulated by code, khatka on a few hundred pairs from a list written in advance.
