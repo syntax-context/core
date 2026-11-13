@@ -134,7 +134,7 @@ SYNTAXES.append({
     "left_out": small["left_out"],
     "element_types": small["element_types"],
     "instances": [{"name": "ungli", "url": "https://ungli.syntax.prayasabhinav.net",
-                   "what": "a builder: design a task as steps of narrow small models and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
+                   "what": "a builder: design a task as steps of NSMs (Narrow Small Models) and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
                    "links": []}],
     "described_entities": [{"name": m["name"], "url": f"https://ungli.syntax.prayasabhinav.net/#{m['slug']}"} for m in MODELS],
 })

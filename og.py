@@ -51,9 +51,9 @@ for s in build.SYNTAXES:
     n_el = sum(len(t["elements"]) for t in s["element_types"])
     cards[s["slug"]] = card(build.family_mark(s), "a syntax", s["name"],
                             f"{len(s['element_types'])} element types and {n_el} elements")
-# ungli, the builder on the narrow small model syntax, has its own host and its own mark; it has its own preview.
+# ungli, the builder on the NSM syntax, has its own host and its own mark; it has its own preview.
 cards["ungli"] = card((HERE / "projects" / "ungli" / "brand" / "ungli-mark.svg").read_text(), "ungli rakhna · on the exact spot", "ungli",
-                      f"A builder for narrow small models, beside what {len(build.MODELS)} models already built were measured to do",
+                      f"A builder for NSMs (Narrow Small Models), beside what {len(build.MODELS)} models already built were measured to do",
                       url="ungli.syntax.prayasabhinav.net", ground="#17111f", sheet="#f2eee3", ink="#1c1524", accent="#5b2d8e")   # ungli's own palette: the election ink on ballot paper
 
 with tempfile.TemporaryDirectory() as tmp:

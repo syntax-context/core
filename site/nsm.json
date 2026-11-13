@@ -2,7 +2,7 @@
  "name": "NSM",
  "read_from": "ungli",
  "slug": "nsm",
- "breaks_up": "a narrow small model (NSM): one that does a single job and answers with a kind, a span, an item, a number or codes, never with sentences, and leaves the decision to code; narrow is the size of its answer, not of the model",
+ "breaks_up": "an NSM (Narrow Small Model): one that does a single job and answers with a kind, a span, an item, a number or codes, never with sentences, and leaves the decision to code; narrow is the size of its answer, not of the model",
  "left_out": "A model that writes. Anything that writes sentences for people is not an NSM: an NSM answers with a kind, a span, an item, a number or codes, and code decides what follows. Also left out: what the NSM is for in the world, its name, and the keys, which stay with the person who keyed them.",
  "element_types": [
   {
@@ -221,7 +221,7 @@
   {
    "name": "ungli",
    "url": "https://ungli.syntax.prayasabhinav.net",
-   "what": "a builder: design a task as steps of narrow small models and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
+   "what": "a builder: design a task as steps of NSMs (Narrow Small Models) and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
    "links": []
   }
  ],
