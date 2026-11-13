@@ -177,7 +177,7 @@ SOURCE = "https://github.com/syntax-context/core"
 
 
 def nav(current):
-    links = [("/", "Home", "home"), ("/syntaxes/", "Syntaxes", "syntaxes")]
+    links = [("/", "Home", "home"), ("/syntaxes/", "Syntaxes", "syntaxes"), ("/notes/", "Notes", "notes")]
     mark = lambda key: ' aria-current="page"' if key == current else ""
     return "".join(f'<a href="{href}"{mark(key)}>{e(text)}</a>' for href, text, key in links)
 
@@ -291,6 +291,42 @@ listing = f"""<h1>Syntaxes</h1>
 <ul class="syntaxes">{rows}</ul>"""
 (HERE / "site" / "syntaxes").mkdir(parents=True, exist_ok=True)
 (HERE / "site" / "syntaxes" / "index.html").write_text(page("Syntaxes · SYNTAX", listing, "syntaxes", path="/syntaxes/"))
+# Notes, written in the editor (prayasabhinav.net/panel, "SYNTAX · Notes") and brought here by notes-pull.py (his words,
+# 13 November 2026: "there is no syntax notes page - why? mount it in editor too"). The text is the editor's Markdown;
+# this turns the few marks the editor uses into HTML, and attachments point at the editor's server, where they are kept.
+def inline(t):
+    t = e(t)
+    t = re.sub(r"!\[([^\]]*)\]\(([^)\s]+)\)", lambda m: f'<img src="{media(m.group(2))}" alt="{m.group(1)}">', t)
+    t = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: f'<a href="{media(m.group(2))}">{m.group(1)}</a>', t)
+    t = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", t)
+    return re.sub(r"(?<![*\w])\*([^*]+)\*(?!\*)", r"<em>\1</em>", t)
+def media(url):
+    return "<media address>" + url if url.startswith("/media/") else url
+def markdown(text):
+    out = []
+    for block in re.split(r"\n\s*\n", text.strip()):
+        lines = block.split("\n")
+        if re.match(r"^#{1,6} ", lines[0]) and len(lines) == 1:
+            n = min(len(lines[0].split(" ")[0]) + 1, 4); out.append(f"<h{n}>{inline(lines[0].split(' ', 1)[1])}</h{n}>")
+        elif all(re.match(r"^\s*[-•] ", l) for l in lines):
+            out.append("<ul>" + "".join(f"<li>{inline(re.sub(r'^\s*[-•] ', '', l))}</li>" for l in lines) + "</ul>")
+        elif all(re.match(r"^\s*\d+\. ", l) for l in lines):
+            out.append("<ol>" + "".join(f"<li>{inline(re.sub(r'^\s*\d+\. ', '', l))}</li>" for l in lines) + "</ol>")
+        elif all(l.startswith(">") for l in lines):
+            out.append("<blockquote><p>" + "<br>".join(inline(l.lstrip("> ")) for l in lines) + "</p></blockquote>")
+        else:
+            out.append("<p>" + "<br>".join(inline(l) for l in lines) + "</p>")
+    return "\n".join(out)
+NOTES = sorted((json.loads(f.read_text()) for f in (HERE / "site-notes").glob("*.json")), key=lambda n: (n.get("date") or "", n["title"]), reverse=True) if (HERE / "site-notes").is_dir() else []
+shutil.rmtree(HERE / "site" / "notes", ignore_errors=True)
+(HERE / "site" / "notes").mkdir(parents=True)
+when = lambda d: f"{int(d[8:10])} {['January','February','March','April','May','June','July','August','September','October','November','December'][int(d[5:7]) - 1]} {d[:4]}" if d else ""
+for n in NOTES:
+    slug = n["url"].rstrip("/").split("/")[-1]
+    (HERE / "site" / "notes" / slug).mkdir()
+    (HERE / "site" / "notes" / slug / "index.html").write_text(page(f'{n["title"]} · Notes · SYNTAX', f'<h1>{e(n["title"])}</h1>\n<p class="aside">{when(n.get("date"))}</p>\n{markdown(n.get("text") or "")}\n<p class="aside"><a href="/notes/">All notes</a></p>', "notes", path=f"/notes/{slug}/", description=n["title"]))
+listing = "".join(f'<li><a href="/notes/{n["url"].rstrip("/").split("/")[-1]}/"><span class="name">{e(n["title"])}</span><span class="what">{when(n.get("date"))}</span></a></li>' for n in NOTES)
+(HERE / "site" / "notes" / "index.html").write_text(page("Notes · SYNTAX", f'<h1>Notes</h1>\n<p class="lede">Notes on syntaxes and the tools built on them.</p>\n' + (f'<ul class="syntaxes notes">{listing}</ul>' if NOTES else '<p>No notes yet.</p>'), "notes", path="/notes/", description="Notes on SYNTAX, its syntaxes and the tools built on them."))
 (HERE / "site" / "favicon.svg").write_text(MARK)
 shutil.copytree(HERE / "fonts", HERE / "site" / "fonts", dirs_exist_ok=True)
 # The link-preview images are drawn by og.py and kept in og/; a syntax without one is refused, so a new syntax

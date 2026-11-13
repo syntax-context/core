@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.12.0 — 13 November 2026
+
+- A Notes page, in the menu beside Home and Syntaxes. Notes are written in my editor, under SYNTAX · Notes, and come onto the site when I publish them there: every ten minutes my Mac brings them in, and the site is rebuilt and deployed only when a note has changed. Each note has its own address, /notes/<its address>.
+
 ## 0.11.1 — 13 November 2026
 
 - Wherever the phrase appears, a narrow small model is written NSM (Narrow Small Model), on the NSM syntax's page and in ungli, which now says at the top that it follows the NSM syntax.
