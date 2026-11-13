@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.16.0 — 13 November 2026
+
+- The NSM syntax has eleven more elements, each shown possible by a peer-reviewed paper found through Consensus and checked through find-research-papers and Crossref: *does* counts and notices the unusual; *reads* a short video clip; *answers with* several kinds, a mask, a stretch of time and points on a body; *starts from* a small copy taught by a bigger model; *learns from* the cases it asks you to label, normal cases only, and what it meets after it is set up. No NSM built so far uses them, and ungli marks them not yet used. The NSM syntax now has 53 elements, and 70 with the code blocks.
+
 ## 0.15.2 — 13 November 2026
 
 - kahen's record is back in ungli's readings, with its result (108 of 179, where always answering the same gets 107) and the warning drawn from it, and is still not listed among the exemplars or here. ungli shows the records of weak results as they stand.
