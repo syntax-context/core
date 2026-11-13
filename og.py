@@ -25,18 +25,18 @@ FONTS = (HERE / "fonts").as_uri()
 e = build.e
 
 
-def card(mark, kicker, name, line, url="syntax.prayasabhinav.net"):
+def card(mark, kicker, name, line, url="syntax.prayasabhinav.net", ground="#0a1428", sheet="#f8f4ec", ink="#0a1428", accent="#1848c0"):
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face {{ font-family: "Mukta"; font-weight: 400; src: url({FONTS}/mukta-400.woff2); }}
 @font-face {{ font-family: "Mukta"; font-weight: 600; src: url({FONTS}/mukta-600.woff2); }}
 @font-face {{ font-family: "Mukta"; font-weight: 800; src: url({FONTS}/mukta-800.woff2); }}
-html, body {{ margin: 0; width: 1200px; height: 630px; background: #0a1428; font-family: "Mukta", sans-serif; }}
+html, body {{ margin: 0; width: 1200px; height: 630px; background: {ground}; font-family: "Mukta", sans-serif; }}
 .page {{ display: grid; grid-template-columns: 440px 1fr; height: 630px; }}
 .field {{ display: flex; align-items: center; justify-content: center; }}
 .field svg {{ height: 420px; width: auto; max-width: 340px; }}
-.sheet {{ background: #f8f4ec; margin: 32px 32px 32px 0; border-radius: 6px; padding: 56px; display: flex;
-  flex-direction: column; justify-content: center; color: #0a1428; }}
-.kicker {{ font-weight: 600; font-size: 22px; letter-spacing: 0.08em; text-transform: uppercase; color: #1848c0; }}
+.sheet {{ background: {sheet}; margin: 32px 32px 32px 0; border-radius: 6px; padding: 56px; display: flex;
+  flex-direction: column; justify-content: center; color: {ink}; }}
+.kicker {{ font-weight: 600; font-size: 22px; letter-spacing: 0.08em; text-transform: uppercase; color: {accent}; }}
 .name {{ font-weight: 800; font-size: 96px; line-height: 1; margin-top: 16px; }}
 .line {{ font-size: 32px; line-height: 1.3; margin-top: 24px; }}
 .url {{ font-weight: 600; font-size: 22px; letter-spacing: 0.08em; margin-top: auto; }}
@@ -54,7 +54,7 @@ for s in build.SYNTAXES:
 # ungli, the builder on the narrow small model syntax, has its own host and its own mark; it has its own preview.
 cards["ungli"] = card((HERE / "projects" / "ungli" / "brand" / "ungli-mark.svg").read_text(), "ungli rakhna · on the exact spot", "ungli",
                       f"A builder for narrow small models, beside what {len(build.MODELS)} models already built were measured to do",
-                      url="ungli.syntax.prayasabhinav.net")
+                      url="ungli.syntax.prayasabhinav.net", ground="#17111f", sheet="#f2eee3", ink="#1c1524", accent="#5b2d8e")   # ungli's own palette: the election ink on ballot paper
 
 with tempfile.TemporaryDirectory() as tmp:
     for slug, html in cards.items():
