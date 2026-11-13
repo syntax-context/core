@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.16.1 — 13 November 2026
+
+- *a small copy taught by a bigger model* is out of the NSM syntax: the bigger model may write text, and an NSM never writes text or comes from a model that does. *an adapter on a trained model* now says the model under it does not write text, and the syntax's *left out* says an NSM never starts from such a model or is taught by one.
+
 ## 0.16.0 — 13 November 2026
 
 - The NSM syntax has eleven more elements, each shown possible by a peer-reviewed paper found through Consensus and checked through find-research-papers and Crossref: *does* counts and notices the unusual; *reads* a short video clip; *answers with* several kinds, a mask, a stretch of time and points on a body; *starts from* a small copy taught by a bigger model; *learns from* the cases it asks you to label, normal cases only, and what it meets after it is set up. No NSM built so far uses them, and ungli marks them not yet used. The NSM syntax now has 53 elements, and 70 with the code blocks.
