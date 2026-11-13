@@ -2,6 +2,14 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.14.1 — 13 November 2026
+
+- Coherence Diagnostic left ungli's NSMs: its classifier sorts a whole statement and a hosted model writes its narration, so it is not one. Coherence v2, a spec of small models that only point, is listed as in progress. ungli's picture now counts 16 NSMs built.
+
+## 0.14.0 — 13 November 2026
+
+- The NSM syntax has six more elements, each shown possible by a published paper found through Consensus and checked through Crossref: *reads* a window of sensor readings and an image, *answers with* a box, *starts from* a frozen image encoder, *learns from* comparisons you made, and *runs on* a microcontroller. No NSM built so far uses them, and ungli marks them, and the ten other elements no built NSM uses, as not yet used.
+
 ## 0.13.2 — 13 November 2026
 
 - A note shows the gaps the editor shows: a blank line between paragraphs, or after a diagram, is a gap on the page, and a single line break stays a line break.
