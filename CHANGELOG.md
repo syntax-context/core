@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.20.0 — 14 November 2026
+
+- The intelligence syntax is read from Split-Domain Cognition's canon and Koher's positions as well as the Museum's essays (his words: *"read koher and sdc too"*): eight more elements, each with its passage word for word and its source linked. *seems intelligent to*: whoever it agrees with; *input*: writing only; *context*: what was said, not who said it; *interpretation*: describes, and code decides, and points to the relevant part; *story*: the person's reading first; *works for*: the person's intent, and two people, never their arbiter. Neither speaks to *keys* or *learning*, so those take nothing from them. The syntax now has 43 elements. A source the page gives no date for is cited by the day it was read.
+
 ## 0.19.0 — 14 November 2026
 
 - The intelligence syntax has 16 more elements, two for each type: methods by which an intelligence is made that way, each shown possible by a peer-reviewed paper found through Consensus and checked through find-research-papers and Crossref (his words: *"There are no elements - get methods from consensus"*). *keys*: preference labels, people and a model routed; *seems intelligent to*: people in conversation, a machine judge; *learning*: slows change where it matters, replays what it learnt; *input*: acting in the world, a simulated world; *context*: looks it up, a map of relations; *interpretation*: asks what was meant, offers readings to choose from; *story*: stays with the person, works on what it cannot read; *works for*: passes hard cases to a person, chooses whom to ask. The syntax now has 35 elements.

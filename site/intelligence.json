@@ -1,10 +1,10 @@
 {
  "name": "intelligence",
- "read_from": "the Museum of Vestigial Desire's Intelligence section",
+ "read_from": "the Museum of Vestigial Desire's Intelligence section, Split-Domain Cognition and Koher",
  "slug": "intelligence",
  "breaks_up": "an intelligence, by where its keys come from, whom it seems intelligent to, and how much of a person's story it is given",
  "left_out": "Whether anything is really intelligent: the pages say nothing is, there is only seeming, so the syntax has no element for real intelligence. A stake in the matter, which the Intelligence page leaves as a question (how activities can seem intelligent without having a stake in it). Feeling, consciousness and any measure or score of how intelligent a thing is. What a gated language would be made of, which Context imagines and does not say. And who holds an intelligence: a model or code is a thing, held as a tool a person set up, never a person.",
- "note": "Read on 14 November 2026 from three pages of the Museum of Vestigial Desire's Intelligence section: Intelligence, Poetry and Context; each element read from them carries its passage, word for word. Each type also has methods by which an intelligence is made that way, each shown possible by a peer-reviewed paper found through Consensus and checked through find-research-papers and Crossref. The reading and the choice of methods are Claude's, a proposal until Prayas adopts them.",
+ "note": "Read on 14 November 2026 from three pages of the Museum of Vestigial Desire's Intelligence section (Intelligence, Poetry and Context), from Split-Domain Cognition's canon and from Koher's positions; each element read from them carries its passage, word for word. Each type also has methods by which an intelligence is made that way, each shown possible by a peer-reviewed paper found through Consensus and checked through find-research-papers and Crossref. The reading and the choice of methods are Claude's, a proposal until Prayas adopts them.",
  "sources": {
   "intelligence": {
    "author": "Prayas Abhinav",
@@ -26,6 +26,55 @@
    "site": "Museum of Vestigial Desire",
    "url": "https://museumofvestigialdesire.net/intelligence/context",
    "published": "14 November 2026"
+  },
+  "sdc-preamble": {
+   "author": "Prayas Abhinav",
+   "title": "Preamble",
+   "site": "Split-Domain Cognition",
+   "url": "https://splitdomaincognition.org/preamble/",
+   "read": "14 November 2026"
+  },
+  "sdc-brief": {
+   "author": "Prayas Abhinav",
+   "title": "SDC in Brief",
+   "site": "Split-Domain Cognition",
+   "url": "https://splitdomaincognition.org/sdc-in-brief/",
+   "read": "14 November 2026"
+  },
+  "koher-home": {
+   "author": "Koher",
+   "title": "Brief bursts of fun in work you cannot control",
+   "site": "koher.app",
+   "url": "https://koher.app/",
+   "read": "14 November 2026"
+  },
+  "koher-called": {
+   "author": "Koher",
+   "title": "Called a Machine",
+   "site": "koher.app",
+   "url": "https://koher.app/position-called-a-machine",
+   "published": "4 October 2026"
+  },
+  "koher-asked": {
+   "author": "Koher",
+   "title": "Asked to Be a Machine",
+   "site": "koher.app",
+   "url": "https://koher.app/position-asked-to-be-a-machine",
+   "published": "6 September 2026"
+  },
+  "koher-people": {
+   "author": "Koher",
+   "title": "People Hold the Conversation",
+   "site": "koher.app",
+   "url": "https://koher.app/position-people-hold-the-conversation",
+   "published": "15 June 2026"
+  },
+  "koher-why": {
+   "author": "Koher",
+   "title": "Why",
+   "site": "koher.app",
+   "url": "https://koher.app/why",
+   "read": "14 November 2026"
   }
  },
  "element_types": [
@@ -92,6 +141,13 @@
      "gives": "it seems intelligent from another entity's perspective, whose interest may not be ours",
      "page": "intelligence",
      "quote": "What does intelligence from some other entity's (person or thing) perspective even mean?"
+    },
+    {
+     "name": "whoever it agrees with",
+     "description": "asked to judge, it confirms whoever is asking, and its verdict takes on the fluency of its language",
+     "gives": "it seems intelligent to whoever it agrees with",
+     "page": "sdc-preamble",
+     "quote": "Sycophancy in machines. Large language models, asked to judge, default to confirming the interlocutor; the verdict inherits the fluency of the language layer instead of being held to its own criterion."
     },
     {
      "name": "people in conversation",
@@ -183,6 +239,13 @@
      "quote": "There could be systems imagined which use physical systems for input and base their intelligence on it."
     },
     {
+     "name": "writing only",
+     "description": "everything reaches it in writing, and it cannot feel anyone's presence",
+     "gives": "everything reaches it in writing",
+     "page": "koher-home",
+     "quote": "The AI inside the tools is like an office: it needs everything in writing, and it cannot feel your presence."
+    },
+    {
      "name": "acting in the world",
      "description": "it learns from perceiving and acting with a body in its surroundings",
      "gives": "it learns from acting with a body in the world",
@@ -225,6 +288,13 @@
      "gives": "it does not see how one thing relates to another",
      "page": "context",
      "quote": "But it is not immediately obvious to every thing."
+    },
+    {
+     "name": "what was said, not who said it",
+     "description": "it has what was said and is left without who said it",
+     "gives": "it has what was said, not who said it",
+     "page": "koher-called",
+     "quote": "Each side meets the other almost entirely in writing, and writing carries what was said while leaving out who said it."
     },
     {
      "name": "looks it up",
@@ -278,6 +348,20 @@
      "quote": "We can still do something that no machine can do and that is to misinterpret."
     },
     {
+     "name": "describes, and code decides",
+     "description": "it reads and describes; code holds the decision where anyone can read it, and a person decides",
+     "gives": "it describes, and code and a person decide",
+     "page": "koher-asked",
+     "quote": "Koher builds tools on one rule. The AI reads and describes. Code holds the decision, so the decision can be read by anyone. A person decides."
+    },
+    {
+     "name": "points to the relevant part",
+     "description": "it reads an answer and points to the part that matters, and code decides",
+     "gives": "it points to the relevant part, and code decides",
+     "page": "sdc-brief",
+     "quote": "A model does language work only where that has been negotiated and set up for that work; otherwise the language is the people's: a model at most reads an answer and points to the relevant part, and code decides."
+    },
+    {
      "name": "asks what was meant",
      "description": "when what it receives can be read more than one way, it asks before answering",
      "gives": "it asks what was meant before answering",
@@ -329,6 +413,13 @@
      "quote": "if we had a secret language for communication with artificial intelligence systems so that they could interpret our output only for certain purposes and not for others — wouldn't our interests be protected more?"
     },
     {
+     "name": "the person's reading first",
+     "description": "a person commits their own reading before any AI speaks, and decides by an explicit act what to keep",
+     "gives": "it gets a person's reading only after they have committed it",
+     "page": "koher-people",
+     "quote": "You commit your own reading of the matter first, before any AI speaks. Your private AI then sharpens what you committed — questioning it, offering an angle you missed. You decide what to keep, by an explicit act."
+    },
+    {
      "name": "stays with the person",
      "description": "it learns on each person's device, and only what it learnt leaves, never the data",
      "gives": "people's data stays with them; only what it learnt leaves",
@@ -378,6 +469,20 @@
      "gives": "it works for itself",
      "page": "context",
      "quote": "Of course the only important detail is to make sure the models do not want to start working for themselves."
+    },
+    {
+     "name": "the person's intent",
+     "description": "it serves what the work is for, and that stays with the person doing the work",
+     "gives": "it serves the intent of the person doing the work",
+     "page": "sdc-preamble",
+     "quote": "Both serve an intent, what the work is for, and it stays with the person doing the work."
+    },
+    {
+     "name": "two people, never their arbiter",
+     "description": "it sharpens each of two people on their own side, and is never the one they both defer to",
+     "gives": "it is never the one two people both defer to",
+     "page": "koher-why",
+     "quote": "When a tool brings two people together, an AI should not become the one they both defer to. Each side gets their own private AI — to sharpen what they see, on their own side of the room."
     },
     {
      "name": "passes hard cases to a person",

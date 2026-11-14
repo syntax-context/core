@@ -68,7 +68,7 @@ The table below is written by `build.py` from the same list the site is built fr
 | <img src="site/life/mark.svg" height="40" alt="the life mark"> | [**life**](https://syntax.prayasabhinav.net/life/) | 5 | 10 | Split-Domain Cognition | Split-Domain Cognition's animal-rights variant | [`life.json`](https://syntax.prayasabhinav.net/life.json) |
 | <img src="site/nsm/mark.svg" height="40" alt="the NSM mark"> | [**NSM**](https://syntax.prayasabhinav.net/nsm/) | 12 | 87 | ungli | ungli | [`nsm.json`](https://syntax.prayasabhinav.net/nsm.json) |
 | <img src="site/band/mark.svg" height="40" alt="the band mark"> | [**band**](https://syntax.prayasabhinav.net/band/) | 7 | 21 | Bairang |  | [`band.json`](https://syntax.prayasabhinav.net/band.json) |
-| <img src="site/intelligence/mark.svg" height="40" alt="the intelligence mark"> | [**intelligence**](https://syntax.prayasabhinav.net/intelligence/) | 8 | 35 | the Museum of Vestigial Desire's Intelligence section | jaisa | [`intelligence.json`](https://syntax.prayasabhinav.net/intelligence.json) |
+| <img src="site/intelligence/mark.svg" height="40" alt="the intelligence mark"> | [**intelligence**](https://syntax.prayasabhinav.net/intelligence/) | 8 | 43 | the Museum of Vestigial Desire's Intelligence section, Split-Domain Cognition and Koher | jaisa | [`intelligence.json`](https://syntax.prayasabhinav.net/intelligence.json) |
 <!-- syntaxes:end -->
 
 Each syntax is read from the project that holds it. Where a syntax lives in one project and SYNTAX copies it, the two drift; here the build reads the instance's own file every time, so the site and the instance cannot say different things.

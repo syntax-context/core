@@ -163,7 +163,7 @@ INTEL = HERE / "projects" / "jaisa-des-waisa-bhes"
 intelligence = json.loads((INTEL / "intelligence-syntax.json").read_text())
 SYNTAXES.append({
     "name": intelligence["name"],
-    "read_from": "the Museum of Vestigial Desire's Intelligence section",
+    "read_from": "the Museum of Vestigial Desire's Intelligence section, Split-Domain Cognition and Koher",
     "slug": intelligence["name"],
     "breaks_up": intelligence["breaks_up"],
     "left_out": intelligence["left_out"],
@@ -273,7 +273,7 @@ for s in SYNTAXES:
     body = f"""<h1>The {e(s['name'])} syntax</h1>
 <p class="lede">It breaks up {e(s['breaks_up'])}. It has {len(s['element_types'])} element types and {n_el} elements, and {'an' if s['name'][0] in 'aeiou' else 'a'} {e(s['name'])} described in it is one choice of elements from each type.</p>
 {f'<p>{e(s["note"])}</p>' if s.get("note") else ""}
-{('<h2>Read from</h2><ol>' + ''.join(f'<li>{e(x["author"])}, <a href="{e(x["url"])}"><i>{e(x["title"])}</i></a>, {e(x["site"])}, first published {e(x["published"])}.</li>' for x in s["sources"].values()) + '</ol>') if s.get("sources") else ""}
+{('<h2>Read from</h2><ol>' + ''.join(f'<li>{e(x["author"])}, <a href="{e(x["url"])}"><i>{e(x["title"])}</i></a>, {e(x["site"])}, {("first published " + e(x["published"])) if x.get("published") else ("read " + e(x["read"]))}.</li>' for x in s["sources"].values()) + '</ol>') if s.get("sources") else ""}
 <h2>Instances</h2>{f'<ul>{inst}</ul>' if inst else '<p>No tool is built on it yet.</p>'}
 <h2>Element types and elements</h2>{types}
 <h2>Left out</h2><p>{e(s["left_out"])}</p>
