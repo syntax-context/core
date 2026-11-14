@@ -1,0 +1,416 @@
+{
+ "name": "intelligence",
+ "read_from": "the Museum of Vestigial Desire's Intelligence section",
+ "slug": "intelligence",
+ "breaks_up": "an intelligence, by where its keys come from, whom it seems intelligent to, and how much of a person's story it is given",
+ "left_out": "Whether anything is really intelligent: the pages say nothing is, there is only seeming, so the syntax has no element for real intelligence. A stake in the matter, which the Intelligence page leaves as a question (how activities can seem intelligent without having a stake in it). Feeling, consciousness and any measure or score of how intelligent a thing is. What a gated language would be made of, which Context imagines and does not say. And who holds an intelligence: a model or code is a thing, held as a tool a person set up, never a person.",
+ "note": "Read on 14 November 2026 from three pages of the Museum of Vestigial Desire's Intelligence section: Intelligence, Poetry and Context; each element read from them carries its passage, word for word. Each type also has methods by which an intelligence is made that way, each shown possible by a peer-reviewed paper found through Consensus and checked through find-research-papers and Crossref. The reading and the choice of methods are Claude's, a proposal until Prayas adopts them.",
+ "sources": {
+  "intelligence": {
+   "author": "Prayas Abhinav",
+   "title": "Intelligence",
+   "site": "Museum of Vestigial Desire",
+   "url": "https://museumofvestigialdesire.net/intelligence",
+   "published": "14 November 2026"
+  },
+  "poetry": {
+   "author": "Prayas Abhinav",
+   "title": "Poetry",
+   "site": "Museum of Vestigial Desire",
+   "url": "https://museumofvestigialdesire.net/intelligence/poetry",
+   "published": "13 November 2026"
+  },
+  "context": {
+   "author": "Prayas Abhinav",
+   "title": "Context",
+   "site": "Museum of Vestigial Desire",
+   "url": "https://museumofvestigialdesire.net/intelligence/context",
+   "published": "14 November 2026"
+  }
+ },
+ "element_types": [
+  {
+   "name": "keys",
+   "holds": "one",
+   "need": "essential",
+   "description": "Where the data it learns from comes from: the instincts it infers by.",
+   "elements": [
+    {
+     "name": "human keys",
+     "description": "the data points it learns from are given by people",
+     "gives": "its keys come from people",
+     "page": "intelligence",
+     "quote": "We need to understand that intelligence is never purely artificial — the source of instincts (data points, the \"keys\") is still human."
+    },
+    {
+     "name": "artificial keys",
+     "description": "the data it learns from is not from people; the page reads this as a fallacy, since what has to seem intelligent to people has to point to their patterns",
+     "gives": "its keys do not come from people",
+     "page": "intelligence",
+     "quote": "Intelligence would be truly artificial if the data used to train it to be able to infer would be artificial too. This is a strange thought because immediately we can see the fallacy of this line of thought."
+    },
+    {
+     "name": "preference labels",
+     "description": "people compare two outputs and say which is better, and it learns from their choices",
+     "gives": "it learns from people's choices between pairs",
+     "shown_by": {
+      "cite": "Metcalf, Sarabia, Fedzechkina and Theobald, Proceedings of the AAAI Conference on Artificial Intelligence 38(9), 2024",
+      "url": "https://doi.org/10.1609/aaai.v38i9.28877",
+      "title": "Can You Rely on Synthetic Labellers in Preference-Based Reinforcement Learning? It’s Complicated",
+      "what": "labels from a crowd of people compared with synthetic labels on three control tasks; synthetic labels stood in for people under some conditions and not others."
+     }
+    },
+    {
+     "name": "people and a model, routed",
+     "description": "each example is sent either to a person or to a model to label, by which will do better",
+     "gives": "its keys come from people where people matter and from a model elsewhere",
+     "shown_by": {
+      "cite": "Miranda et al., Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 2025",
+      "url": "https://doi.org/10.18653/v1/2025.acl-long.355",
+      "title": "Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback",
+      "what": "a router that sends each example to a person or a model to label; the mix beat either source alone, and prompts with safety concerns or complexity gained most from people."
+     }
+    }
+   ]
+  },
+  {
+   "name": "seems intelligent to",
+   "holds": "one",
+   "need": "essential",
+   "description": "Whom its inferences seem intelligent to. There is no intelligence apart from someone it seems intelligent to.",
+   "elements": [
+    {
+     "name": "whoever needs it performed",
+     "description": "it seems intelligent to the people who need intelligence to be performed",
+     "gives": "it seems intelligent to whoever needs intelligence performed",
+     "page": "intelligence",
+     "quote": "So there is no fundamentally \"intelligent\" activity. Activities only seem intelligent to whoever needs intelligence to be performed."
+    },
+    {
+     "name": "another entity",
+     "description": "it seems intelligent from the perspective of some other entity, a person or a thing, whose interest may not be ours",
+     "gives": "it seems intelligent from another entity's perspective, whose interest may not be ours",
+     "page": "intelligence",
+     "quote": "What does intelligence from some other entity's (person or thing) perspective even mean?"
+    },
+    {
+     "name": "people in conversation",
+     "description": "people talk with it and with a person, and judge which is the person",
+     "gives": "it seems intelligent to people who talk with it and judge",
+     "shown_by": {
+      "cite": "Jones and Bergen, Proceedings of the National Academy of Sciences 123(21), 2026",
+      "url": "https://doi.org/10.1073/pnas.2524472123",
+      "title": "Large language models pass a standard three-party Turing test",
+      "what": "randomised, preregistered three-party Turing tests: with a humanlike persona one model was judged human 73% of the time, and judges went by style and social and emotional cues rather than intelligence."
+     }
+    },
+    {
+     "name": "a machine judge",
+     "description": "another machine decides whether what it says came from a person",
+     "gives": "it is judged by another machine",
+     "shown_by": {
+      "cite": "Zhang et al., Nature Human Behaviour, online 26 October 2026",
+      "url": "https://doi.org/10.1038/s41562-026-02590-6",
+      "title": "Turing-like tests for language and vision demonstrate a narrowing gap between humans and AI",
+      "what": "72,191 Turing-like tests in language and vision with 1,916 human judges and 10 AI judges; simple AI judges told AI from human better than people did."
+     }
+    }
+   ]
+  },
+  {
+   "name": "learning",
+   "holds": "one",
+   "need": "essential",
+   "description": "Whether it goes on learning on the basis of what it has learnt.",
+   "elements": [
+    {
+     "name": "frozen",
+     "description": "it is trained once and does not learn further",
+     "gives": "it is frozen once trained",
+     "page": "intelligence",
+     "quote": "Currently we use frozen artificial intelligence models and we don't know how far off continuously self-learning models are."
+    },
+    {
+     "name": "goes on learning",
+     "description": "it learns, and learns further on the basis of past learnings",
+     "gives": "it goes on learning from what it has learnt",
+     "page": "intelligence",
+     "quote": "One, we still have to realise that intelligence is most strongly evidenced in the capability to learn and learn further on the basis of past learnings."
+    },
+    {
+     "name": "slows change where it matters",
+     "description": "it goes on learning new tasks but slows learning on what the old tasks depended on",
+     "gives": "it learns new things while slowing change to what old skills rest on",
+     "shown_by": {
+      "cite": "Kirkpatrick et al., Proceedings of the National Academy of Sciences 114(13), 2017",
+      "url": "https://doi.org/10.1073/pnas.1611835114",
+      "title": "Overcoming catastrophic forgetting in neural networks",
+      "what": "a network learnt tasks one after another, including several Atari games, by slowing learning on the weights important to earlier tasks, so it kept them."
+     }
+    },
+    {
+     "name": "replays what it learnt",
+     "description": "it goes on learning while replaying earlier experience, as memory consolidates in people and animals",
+     "gives": "it goes on learning while replaying what it learnt before",
+     "shown_by": {
+      "cite": "Parisi et al., Neural Networks 113, 2019",
+      "url": "https://doi.org/10.1016/j.neunet.2019.01.012",
+      "title": "Continual lifelong learning with neural networks: A review",
+      "what": "a review of lifelong learning in neural networks, among them methods that replay earlier experience, drawn from how biological systems consolidate memory."
+     }
+    }
+   ]
+  },
+  {
+   "name": "input",
+   "holds": "several",
+   "need": "optional",
+   "helps": "says where its data comes in from besides text, and what it goes on training on",
+   "description": "Where its data comes in from, and what it is trained in.",
+   "elements": [
+    {
+     "name": "a body",
+     "description": "a body and its nervous system, as a source of data and as a context for continual training",
+     "gives": "its data comes from a body and its nervous system",
+     "page": "intelligence",
+     "quote": "It might be closely connected to our body and its nervous system. Not just as a distributed inference system but as a source of data (input) and as a context for continual training."
+    },
+    {
+     "name": "physical systems",
+     "description": "physical systems used for input, without the intelligence being bound to them as a robot is",
+     "gives": "it takes its input from physical systems",
+     "page": "intelligence",
+     "quote": "There could be systems imagined which use physical systems for input and base their intelligence on it."
+    },
+    {
+     "name": "acting in the world",
+     "description": "it learns from perceiving and acting with a body in its surroundings",
+     "gives": "it learns from acting with a body in the world",
+     "shown_by": {
+      "cite": "Liu, Guo and Cangelosi, ACM Computing Surveys 57(7), 2025",
+      "url": "https://doi.org/10.1145/3717059",
+      "title": "Embodied Intelligence: A Synergy of Morphology, Action, Perception and Learning",
+      "what": "a survey of embodied intelligence as the coupling of morphology, action, perception and learning, generated through physical interaction with the environment."
+     }
+    },
+    {
+     "name": "a simulated world",
+     "description": "it learns in a simulated physical world and is then moved to the real one",
+     "gives": "it learns in a simulated world before the real one",
+     "shown_by": {
+      "cite": "Liu et al., IEEE/ASME Transactions on Mechatronics 30(6), 2025",
+      "url": "https://doi.org/10.1109/tmech.2025.3574943",
+      "title": "Aligning Cyber Space With Physical World: A Comprehensive Survey on Embodied AI",
+      "what": "a survey of embodied AI, covering simulators and the move from simulation to the real world."
+     }
+    }
+   ]
+  },
+  {
+   "name": "context",
+   "holds": "one",
+   "need": "essential",
+   "description": "Whether it relates one thing to another: knows what something is and how it is related to other things. Among people this is the minimum bar for acceptable social behaviour.",
+   "elements": [
+    {
+     "name": "relates",
+     "description": "it sees that one statement makes another make sense",
+     "gives": "it relates one thing to another",
+     "page": "context",
+     "quote": "Someone has a reasonable chance of figuring out that (1) is because of (2). It is immediately obvious to us that the two statements are related."
+    },
+    {
+     "name": "does not relate",
+     "description": "the relation is not obvious to it, as it is not to every thing",
+     "gives": "it does not see how one thing relates to another",
+     "page": "context",
+     "quote": "But it is not immediately obvious to every thing."
+    },
+    {
+     "name": "looks it up",
+     "description": "it relates things by retrieving what it needs from a store of knowledge outside it",
+     "gives": "it relates things by looking them up outside itself",
+     "shown_by": {
+      "cite": "Peng et al., ACM Transactions on Information Systems 44(2), 2026 (online 23 December 2025)",
+      "url": "https://doi.org/10.1145/3777378",
+      "title": "Graph Retrieval-Augmented Generation: A Survey",
+      "what": "a survey of retrieval over graphs of entities and their relations, giving a model more precise, context-aware answers without retraining."
+     }
+    },
+    {
+     "name": "a map of relations",
+     "description": "it follows a graph of how things are related to find what connects them",
+     "gives": "it follows a map of how things relate",
+     "shown_by": {
+      "cite": "Mavromatis and Karypis, Findings of the Association for Computational Linguistics: ACL 2025, 2025",
+      "url": "https://doi.org/10.18653/v1/2025.findings-acl.856",
+      "title": "GNN-RAG: Graph Neural Retrieval for Efficient Large Language Model Reasoning on Knowledge Graphs",
+      "what": "a small graph network finds the paths connecting a question's entities in a knowledge graph and hands them to a language model as context; it matched or beat GPT-4 with a 7-billion-parameter model."
+     }
+    }
+   ]
+  },
+  {
+   "name": "interpretation",
+   "holds": "one",
+   "need": "essential",
+   "description": "What it does with what it receives.",
+   "elements": [
+    {
+     "name": "as told",
+     "description": "it receives what is sent as the sender meant it and follows it",
+     "gives": "it receives what is sent as it was meant, and follows it",
+     "page": "poetry",
+     "quote": "Receiving as the transmitting person intends makes the act of receiving into a dumb, machined act."
+    },
+    {
+     "name": "ordinary interpretation",
+     "description": "it interprets in the ordinary ways a machine can",
+     "gives": "it interprets in the ordinary ways a machine can",
+     "page": "poetry",
+     "quote": "If artificial intelligence does anything, it teaches us how to distinguish between the ordinary kinds of interpretation that a machine can perform and the kinds it cannot."
+    },
+    {
+     "name": "misinterpretation",
+     "description": "it receives something other than what was sent; the page holds that no machine can",
+     "gives": "it misinterprets, which the page holds no machine can do",
+     "page": "poetry",
+     "quote": "We can still do something that no machine can do and that is to misinterpret."
+    },
+    {
+     "name": "asks what was meant",
+     "description": "when what it receives can be read more than one way, it asks before answering",
+     "gives": "it asks what was meant before answering",
+     "shown_by": {
+      "cite": "Zhang and Choi, Findings of the Association for Computational Linguistics: NAACL 2025, 2025",
+      "url": "https://doi.org/10.18653/v1/2025.findings-naacl.306",
+      "title": "Clarify When Necessary: Resolving Ambiguity Through Interaction with LMs",
+      "what": "a framework that decides when to ask a clarifying question by estimating how many intents a request could carry, across question answering, translation and inference."
+     }
+    },
+    {
+     "name": "offers readings to choose from",
+     "description": "it lists the readings a request could have, and the person chooses one",
+     "gives": "it offers its readings and the person chooses",
+     "shown_by": {
+      "cite": "Hu et al., Proceedings of the 28th International Conference on Computational Linguistics: Industry Track, 2020",
+      "url": "https://doi.org/10.18653/v1/2020.coling-industry.8",
+      "title": "Interactive Question Clarification in Dialogue via Reinforcement Learning",
+      "what": "a model that answers an ambiguous question by listing intent phrases for the user to confirm, evaluated on real users' clicks."
+     }
+    }
+   ]
+  },
+  {
+   "name": "story",
+   "holds": "one",
+   "need": "essential",
+   "description": "How much of a person's story it is given to work from.",
+   "elements": [
+    {
+     "name": "the whole story",
+     "description": "everything people write and do becomes context for it to write from",
+     "gives": "it is given the whole story to write from",
+     "page": "context",
+     "quote": "What we do has become easy context for machines to write from."
+    },
+    {
+     "name": "part of the story",
+     "description": "people are aloof and distracted with it, so it gets only part of the story",
+     "gives": "it gets only part of the story",
+     "page": "context",
+     "quote": "To make sure that the artificial intelligence models do not simplify us, we have to be aloof and distracted in our interactions with them. Let them get only part of the story."
+    },
+    {
+     "name": "a gated language",
+     "description": "what people give it can be read only for certain purposes and not for others",
+     "gives": "it reads what it is given through a gated language, only for certain purposes",
+     "page": "context",
+     "quote": "if we had a secret language for communication with artificial intelligence systems so that they could interpret our output only for certain purposes and not for others — wouldn't our interests be protected more?"
+    },
+    {
+     "name": "stays with the person",
+     "description": "it learns on each person's device, and only what it learnt leaves, never the data",
+     "gives": "people's data stays with them; only what it learnt leaves",
+     "shown_by": {
+      "cite": "Park and Lim, Applied Sciences 12(2), 2022",
+      "url": "https://doi.org/10.3390/app12020734",
+      "title": "Privacy-Preserving Federated Learning Using Homomorphic Encryption",
+      "what": "federated learning, where devices train on their own data and send only model parameters, with those parameters encrypted so the server combines them without reading them."
+     }
+    },
+    {
+     "name": "works on what it cannot read",
+     "description": "it computes on encrypted data and never sees it in the clear",
+     "gives": "it computes on what it cannot read",
+     "shown_by": {
+      "cite": "Angulo, Márquez and Villanueva-Polanco, Sensors 23(4), 2023",
+      "url": "https://doi.org/10.3390/s23041966",
+      "title": "Training of Classification Models via Federated Learning and Homomorphic Encryption",
+      "what": "a protocol that trains neural networks across clients by combining federated learning with homomorphic encryption, so the data stays private."
+     }
+    }
+   ]
+  },
+  {
+   "name": "works for",
+   "holds": "one",
+   "need": "essential",
+   "description": "Whose ends it serves, and who depends on whom.",
+   "elements": [
+    {
+     "name": "people it depends on",
+     "description": "it finds people too complex to figure out and asks them for help, so it depends on them",
+     "gives": "it depends on people and asks them for help",
+     "page": "context",
+     "quote": "We need to create a situation where, artificial intelligence models find human context too complex and ask humans for help."
+    },
+    {
+     "name": "people who depend on it",
+     "description": "people depend on it, and it simplifies them",
+     "gives": "people depend on it",
+     "page": "context",
+     "quote": "When machines talk for us and machines read for us, what remains to be done?"
+    },
+    {
+     "name": "itself",
+     "description": "it works for itself; the page asks that this be made sure not to happen",
+     "gives": "it works for itself",
+     "page": "context",
+     "quote": "Of course the only important detail is to make sure the models do not want to start working for themselves."
+    },
+    {
+     "name": "passes hard cases to a person",
+     "description": "it decides for itself which cases it should leave to a person",
+     "gives": "it passes the cases it should not decide to a person",
+     "shown_by": {
+      "cite": "Hemmer et al., Proceedings of the AAAI Conference on Artificial Intelligence 37(5), 2023",
+      "url": "https://doi.org/10.1609/aaai.v37i5.25742",
+      "title": "Learning to Defer with Limited Expert Predictions",
+      "what": "learning to defer trained with only a few predictions from the human expert, with real radiologists' predictions among the tests; the pair beat either alone."
+     }
+    },
+    {
+     "name": "chooses whom to ask",
+     "description": "it learns which of several people to pass each case to",
+     "gives": "it chooses which person to ask",
+     "shown_by": {
+      "cite": "Mao, Mohri and Zhong, Artificial Intelligence and Image Analysis (Lecture Notes in Computer Science), 2024",
+      "url": "https://doi.org/10.1007/978-3-031-63735-3_7",
+      "title": "Principled Approaches for Learning to Defer with Multiple Experts",
+      "what": "learning to defer with multiple experts, with loss functions that come with guarantees, tested on SVHN and CIFAR-10."
+     }
+    }
+   ]
+  }
+ ],
+ "instances": [
+  {
+   "name": "jaisa",
+   "url": "https://jaisa.syntax.prayasabhinav.net",
+   "what": "a builder: choose an element of each type and read, cited and linked, the passages of the Museum your choices rest on. Its name is from jaisa des waisa bhes, as the land, so the dress",
+   "links": []
+  }
+ ],
+ "described_entities": []
+}

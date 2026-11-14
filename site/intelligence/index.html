@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The intelligence syntax · SYNTAX</title>
+<meta name="description" content="The intelligence syntax breaks up an intelligence, by where its keys come from, whom it seems intelligent to, and how much of a person&#x27;s story it is given.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SYNTAX">
+<meta property="og:title" content="The intelligence syntax · SYNTAX">
+<meta property="og:description" content="The intelligence syntax breaks up an intelligence, by where its keys come from, whom it seems intelligent to, and how much of a person&#x27;s story it is given.">
+<meta property="og:url" content="https://syntax.prayasabhinav.net/intelligence/">
+<meta property="og:image" content="https://syntax.prayasabhinav.net/og/intelligence.png?v=0.19.0">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The intelligence syntax · SYNTAX: its mark beside its name">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://syntax.prayasabhinav.net/intelligence/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/mukta-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>/* SYNTAX — frontend-design-prayas-plain: the fixed tokens, Mukta only, served from /fonts with no request to Google.
+   Two zones: the field (the mark alone on the night) and the sheet (everything read). */
+@font-face { font-family: "Mukta"; font-weight: 400; font-display: swap; src: url(/fonts/mukta-400.woff2) format("woff2"); }
+@font-face { font-family: "Mukta"; font-weight: 600; font-display: swap; src: url(/fonts/mukta-600.woff2) format("woff2"); }
+@font-face { font-family: "Mukta"; font-weight: 800; font-display: swap; src: url(/fonts/mukta-800.woff2) format("woff2"); }
+
+:root {
+  --ground: #0a1428; --deep: #12213f; --cobalt: #1848c0; --cobalt-2: #3a6ae0; --mist: #9fb3e0;
+  --sheet: #f8f4ec; --ink: #0a1428; --warm: #e8a53a; --radius: 6px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--ink); font: 400 17px/1.6 "Mukta", "Noto Sans", "Segoe UI", sans-serif; }
+
+.page { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); min-height: 100vh; }
+.field { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px; padding: 48px 24px; color: var(--mist); }
+.field a { color: inherit; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.field svg { width: min(16rem, 60%); max-height: 56vh; height: auto; display: block; }
+.field .v a { display: inline; color: inherit; }
+.field .word { font-weight: 800; font-size: 48px; line-height: 1; letter-spacing: 0.08em; color: var(--sheet); }
+.field .v { font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; font-variant-numeric: tabular-nums; }
+
+.sheet { background: var(--sheet); margin: 24px 24px 24px 0; border-radius: var(--radius); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35); padding: 48px; }
+main, footer { max-width: 46rem; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+.nav a { font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; background: var(--mist); padding: 8px 16px; border-radius: var(--radius); }
+.nav a:hover, .nav a:focus-visible { background: var(--cobalt); color: var(--sheet); }
+.nav a[aria-current="page"] { background: var(--ink); color: var(--sheet); }
+main > * + * { margin-top: 16px; }
+h1 { font-weight: 800; font-size: 48px; line-height: 1.1; margin: 0; }
+h2 { font-weight: 800; font-size: 32px; line-height: 1.2; margin: 48px 0 0; }
+h3 { font-weight: 800; font-size: 22px; line-height: 1.3; margin: 32px 0 0; }
+p { margin: 0; }
+.note > * + * { margin-top: 1.1em; }   /* a note: a blank line in the editor is a gap here (13 November 2026, his screenshot: "there is no blank line in post after figure") */
+.lede { font-size: 22px; line-height: 1.5; }
+.label, .holds { font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+.holds { color: var(--cobalt); margin-left: 8px; vertical-align: middle; }
+.aside { font-size: 14px; }
+a { color: var(--cobalt); text-underline-offset: 3px; }
+
+dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 24px; margin: 16px 0 0; }
+dt { font-weight: 600; }
+dd { margin: 0; }
+
+/* A syntax on the index, and a type on its page: flat blocks of the deep tone, never a coloured rule */
+.syntaxes { list-style: none; padding: 0; display: grid; gap: 16px; }
+.syntaxes a { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 24px; align-items: center; background: var(--ink); color: var(--sheet); border-radius: var(--radius); padding: 24px; text-decoration: none; }
+.syntaxes svg { grid-row: span 2; width: 48px; height: 64px; display: block; }
+.syntaxes .name { display: block; font-weight: 800; font-size: 32px; line-height: 1.2; }
+.syntaxes .what { display: block; font-size: 14px; color: var(--mist); font-variant-numeric: tabular-nums; }
+.syntaxes a:hover, .syntaxes a:focus-visible { background: var(--cobalt); }
+.syntaxes a:hover .what, .syntaxes a:focus-visible .what { color: var(--sheet); }
+
+.syntaxes.notes a { grid-template-columns: minmax(0, 1fr); }
+.syntaxes.notes .name { font-size: 24px; }
+main img { max-width: 100%; height: auto; border-radius: var(--radius); }
+blockquote { margin: 16px 0; padding-left: 16px; border-left: 3px solid var(--cobalt); }
+.type { margin-top: 32px; }
+.type h3 { margin: 0; }
+.type .aside { margin-top: 8px; font-size: 17px; }
+
+.entities { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
+.entities a { display: block; background: var(--ink); color: var(--sheet); border-radius: var(--radius); padding: 4px 12px; font-size: 14px; text-decoration: none; }
+.entities a:hover, .entities a:focus-visible { background: var(--cobalt); }
+
+footer { margin-top: 48px; font-size: 14px; }
+
+@media (max-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr); }
+  .field { position: static; height: auto; padding: 32px 16px 24px; }
+  .field a { flex-direction: row; gap: 16px; }
+  .field svg { width: auto; height: 48px; }
+  .field .word { font-size: 32px; }
+  .sheet { margin: 0 16px 16px; padding: 24px; }
+  .nav { margin-bottom: 32px; }
+  h1 { font-size: 32px; }
+  h2 { font-size: 22px; margin-top: 32px; }
+  .lede { font-size: 17px; }
+  dl { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  dd { margin-bottom: 8px; }
+}
+.shown { display: block; font-size: .86em; opacity: .75; margin-top: 2px; }
+.shown a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="page">
+<div class="field"><a href="/intelligence/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 320" role="img" aria-label="The intelligence syntax"><title>The intelligence syntax: 8 element types, one element chosen from each</title><rect width="120" height="320" rx="6" fill="#0a1428"/><rect x="4" y="4" width="32" height="32" rx="3" fill="#1848c0"/><rect x="44" y="4" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="4" width="32" height="32" rx="3" fill="#12213f"/><rect x="4" y="44" width="32" height="32" rx="3" fill="#1848c0"/><rect x="44" y="44" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="44" width="32" height="32" rx="3" fill="#12213f"/><rect x="4" y="84" width="32" height="32" rx="3" fill="#12213f"/><rect x="44" y="84" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="84" width="32" height="32" rx="3" fill="#1848c0"/><rect x="4" y="124" width="32" height="32" rx="3" fill="#12213f"/><rect x="44" y="124" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="124" width="32" height="32" rx="3" fill="#1848c0"/><rect x="4" y="164" width="32" height="32" rx="3" fill="#1848c0"/><rect x="44" y="164" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="164" width="32" height="32" rx="3" fill="#12213f"/><rect x="4" y="204" width="32" height="32" rx="3" fill="#12213f"/><rect x="44" y="204" width="32" height="32" rx="3" fill="#1848c0"/><rect x="84" y="204" width="32" height="32" rx="3" fill="#12213f"/><rect x="4" y="244" width="32" height="32" rx="3" fill="#1848c0"/><rect x="44" y="244" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="244" width="32" height="32" rx="3" fill="#12213f"/><rect x="4" y="284" width="32" height="32" rx="3" fill="#12213f"/><rect x="44" y="284" width="32" height="32" rx="3" fill="#12213f"/><rect x="84" y="284" width="32" height="32" rx="3" fill="#e8a53a"/></svg><span class="word">intelligence</span></a><span class="v"><a href="/">SYNTAX</a> · Version 0.19.0</span></div>
+<div class="sheet">
+<nav class="nav"><a href="/">Home</a><a href="/syntaxes/" aria-current="page">Syntaxes</a><a href="/notes/">Notes</a></nav>
+<main><h1>The intelligence syntax</h1>
+<p class="lede">It breaks up an intelligence, by where its keys come from, whom it seems intelligent to, and how much of a person&#x27;s story it is given. It has 8 element types and 35 elements, and an intelligence described in it is one choice of elements from each type.</p>
+<p>Read on 14 November 2026 from three pages of the Museum of Vestigial Desire&#x27;s Intelligence section: Intelligence, Poetry and Context; each element read from them carries its passage, word for word. Each type also has methods by which an intelligence is made that way, each shown possible by a peer-reviewed paper found through Consensus and checked through find-research-papers and Crossref. The reading and the choice of methods are Claude&#x27;s, a proposal until Prayas adopts them.</p>
+<h2>Read from</h2><ol><li>Prayas Abhinav, <a href="https://museumofvestigialdesire.net/intelligence"><i>Intelligence</i></a>, Museum of Vestigial Desire, first published 14 November 2026.</li><li>Prayas Abhinav, <a href="https://museumofvestigialdesire.net/intelligence/poetry"><i>Poetry</i></a>, Museum of Vestigial Desire, first published 13 November 2026.</li><li>Prayas Abhinav, <a href="https://museumofvestigialdesire.net/intelligence/context"><i>Context</i></a>, Museum of Vestigial Desire, first published 14 November 2026.</li></ol>
+<h2>Instances</h2><ul><li><a href="https://jaisa.syntax.prayasabhinav.net">jaisa</a>: a builder: choose an element of each type and read, cited and linked, the passages of the Museum your choices rest on. Its name is from jaisa des waisa bhes, as the land, so the dress</li></ul>
+<h2>Element types and elements</h2><section class="type"><h3>keys <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">Where the data it learns from comes from: the instincts it infers by.</p>
+<dl><dt>human keys</dt><dd>the data points it learns from are given by people</dd><dt>artificial keys</dt><dd>the data it learns from is not from people; the page reads this as a fallacy, since what has to seem intelligent to people has to point to their patterns</dd><dt>preference labels</dt><dd>people compare two outputs and say which is better, and it learns from their choices <span class="shown">shown in <a href="https://doi.org/10.1609/aaai.v38i9.28877">Metcalf, Sarabia, Fedzechkina and Theobald, Proceedings of the AAAI Conference on Artificial Intelligence 38(9), 2024</a></span></dd><dt>people and a model, routed</dt><dd>each example is sent either to a person or to a model to label, by which will do better <span class="shown">shown in <a href="https://doi.org/10.18653/v1/2025.acl-long.355">Miranda et al., Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 2025</a></span></dd></dl></section><section class="type"><h3>seems intelligent to <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">Whom its inferences seem intelligent to. There is no intelligence apart from someone it seems intelligent to.</p>
+<dl><dt>whoever needs it performed</dt><dd>it seems intelligent to the people who need intelligence to be performed</dd><dt>another entity</dt><dd>it seems intelligent from the perspective of some other entity, a person or a thing, whose interest may not be ours</dd><dt>people in conversation</dt><dd>people talk with it and with a person, and judge which is the person <span class="shown">shown in <a href="https://doi.org/10.1073/pnas.2524472123">Jones and Bergen, Proceedings of the National Academy of Sciences 123(21), 2026</a></span></dd><dt>a machine judge</dt><dd>another machine decides whether what it says came from a person <span class="shown">shown in <a href="https://doi.org/10.1038/s41562-026-02590-6">Zhang et al., Nature Human Behaviour, online 26 October 2026</a></span></dd></dl></section><section class="type"><h3>learning <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">Whether it goes on learning on the basis of what it has learnt.</p>
+<dl><dt>frozen</dt><dd>it is trained once and does not learn further</dd><dt>goes on learning</dt><dd>it learns, and learns further on the basis of past learnings</dd><dt>slows change where it matters</dt><dd>it goes on learning new tasks but slows learning on what the old tasks depended on <span class="shown">shown in <a href="https://doi.org/10.1073/pnas.1611835114">Kirkpatrick et al., Proceedings of the National Academy of Sciences 114(13), 2017</a></span></dd><dt>replays what it learnt</dt><dd>it goes on learning while replaying earlier experience, as memory consolidates in people and animals <span class="shown">shown in <a href="https://doi.org/10.1016/j.neunet.2019.01.012">Parisi et al., Neural Networks 113, 2019</a></span></dd></dl></section><section class="type"><h3>input <span class="holds">holds several</span> <span class="holds">optional</span></h3>
+<p class="aside">Where its data comes in from, and what it is trained in. Optional: says where its data comes in from besides text, and what it goes on training on</p>
+<dl><dt>a body</dt><dd>a body and its nervous system, as a source of data and as a context for continual training</dd><dt>physical systems</dt><dd>physical systems used for input, without the intelligence being bound to them as a robot is</dd><dt>acting in the world</dt><dd>it learns from perceiving and acting with a body in its surroundings <span class="shown">shown in <a href="https://doi.org/10.1145/3717059">Liu, Guo and Cangelosi, ACM Computing Surveys 57(7), 2025</a></span></dd><dt>a simulated world</dt><dd>it learns in a simulated physical world and is then moved to the real one <span class="shown">shown in <a href="https://doi.org/10.1109/tmech.2025.3574943">Liu et al., IEEE/ASME Transactions on Mechatronics 30(6), 2025</a></span></dd></dl></section><section class="type"><h3>context <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">Whether it relates one thing to another: knows what something is and how it is related to other things. Among people this is the minimum bar for acceptable social behaviour.</p>
+<dl><dt>relates</dt><dd>it sees that one statement makes another make sense</dd><dt>does not relate</dt><dd>the relation is not obvious to it, as it is not to every thing</dd><dt>looks it up</dt><dd>it relates things by retrieving what it needs from a store of knowledge outside it <span class="shown">shown in <a href="https://doi.org/10.1145/3777378">Peng et al., ACM Transactions on Information Systems 44(2), 2026 (online 23 December 2025)</a></span></dd><dt>a map of relations</dt><dd>it follows a graph of how things are related to find what connects them <span class="shown">shown in <a href="https://doi.org/10.18653/v1/2025.findings-acl.856">Mavromatis and Karypis, Findings of the Association for Computational Linguistics: ACL 2025, 2025</a></span></dd></dl></section><section class="type"><h3>interpretation <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">What it does with what it receives.</p>
+<dl><dt>as told</dt><dd>it receives what is sent as the sender meant it and follows it</dd><dt>ordinary interpretation</dt><dd>it interprets in the ordinary ways a machine can</dd><dt>misinterpretation</dt><dd>it receives something other than what was sent; the page holds that no machine can</dd><dt>asks what was meant</dt><dd>when what it receives can be read more than one way, it asks before answering <span class="shown">shown in <a href="https://doi.org/10.18653/v1/2025.findings-naacl.306">Zhang and Choi, Findings of the Association for Computational Linguistics: NAACL 2025, 2025</a></span></dd><dt>offers readings to choose from</dt><dd>it lists the readings a request could have, and the person chooses one <span class="shown">shown in <a href="https://doi.org/10.18653/v1/2020.coling-industry.8">Hu et al., Proceedings of the 28th International Conference on Computational Linguistics: Industry Track, 2020</a></span></dd></dl></section><section class="type"><h3>story <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">How much of a person&#x27;s story it is given to work from.</p>
+<dl><dt>the whole story</dt><dd>everything people write and do becomes context for it to write from</dd><dt>part of the story</dt><dd>people are aloof and distracted with it, so it gets only part of the story</dd><dt>a gated language</dt><dd>what people give it can be read only for certain purposes and not for others</dd><dt>stays with the person</dt><dd>it learns on each person&#x27;s device, and only what it learnt leaves, never the data <span class="shown">shown in <a href="https://doi.org/10.3390/app12020734">Park and Lim, Applied Sciences 12(2), 2022</a></span></dd><dt>works on what it cannot read</dt><dd>it computes on encrypted data and never sees it in the clear <span class="shown">shown in <a href="https://doi.org/10.3390/s23041966">Angulo, Márquez and Villanueva-Polanco, Sensors 23(4), 2023</a></span></dd></dl></section><section class="type"><h3>works for <span class="holds">holds one</span> <span class="holds">essential</span></h3>
+<p class="aside">Whose ends it serves, and who depends on whom.</p>
+<dl><dt>people it depends on</dt><dd>it finds people too complex to figure out and asks them for help, so it depends on them</dd><dt>people who depend on it</dt><dd>people depend on it, and it simplifies them</dd><dt>itself</dt><dd>it works for itself; the page asks that this be made sure not to happen</dd><dt>passes hard cases to a person</dt><dd>it decides for itself which cases it should leave to a person <span class="shown">shown in <a href="https://doi.org/10.1609/aaai.v37i5.25742">Hemmer et al., Proceedings of the AAAI Conference on Artificial Intelligence 37(5), 2023</a></span></dd><dt>chooses whom to ask</dt><dd>it learns which of several people to pass each case to <span class="shown">shown in <a href="https://doi.org/10.1007/978-3-031-63735-3_7">Mao, Mohri and Zhong, Artificial Intelligence and Image Analysis (Lecture Notes in Computer Science), 2024</a></span></dd></dl></section>
+<h2>Left out</h2><p>Whether anything is really intelligent: the pages say nothing is, there is only seeming, so the syntax has no element for real intelligence. A stake in the matter, which the Intelligence page leaves as a question (how activities can seem intelligent without having a stake in it). Feeling, consciousness and any measure or score of how intelligent a thing is. What a gated language would be made of, which Context imagines and does not say. And who holds an intelligence: a model or code is a thing, held as a tool a person set up, never a person.</p>
+<h2>Described in it</h2><p>Nothing is described in it yet.</p>
+<p class="aside">The syntax as data: <a href="/intelligence.json">intelligence.json</a>. It is read from the Museum of Vestigial Desire&#x27;s Intelligence section each time this site is built, so the two never differ.</p></main>
+<footer><p>SYNTAX is a project of <a href="https://prayasabhinav.net">Prayas Abhinav</a>, licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, with its source at <a href="https://github.com/syntax-context/core">github.com/syntax-context/core</a>. No analytics and no counters. Set in Mukta by Ek Type (<a href="/fonts/OFL.txt">SIL Open Font License</a>).</p></footer>
+</div>
+</div>
+</body>
+</html>

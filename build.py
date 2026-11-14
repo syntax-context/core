@@ -155,6 +155,27 @@ SYNTAXES.append({
     "described_entities": [{"name": "Bairang", "url": "https://bairang.koher.app"}],
 })
 
+# The intelligence syntax, read from the Museum of Vestigial Desire's Intelligence section (his words, 14 November 2026:
+# "create a intelligence syntax and builder"). It is kept with its builder in projects/jaisa-des-waisa-bhes/; each element
+# carries the passage of the Museum page it is read from. Its builder is jaisa (his word, 14 November 2026: "jaisa locked"),
+# at jaisa.syntax.prayasabhinav.net.
+INTEL = HERE / "projects" / "jaisa-des-waisa-bhes"
+intelligence = json.loads((INTEL / "intelligence-syntax.json").read_text())
+SYNTAXES.append({
+    "name": intelligence["name"],
+    "read_from": "the Museum of Vestigial Desire's Intelligence section",
+    "slug": intelligence["name"],
+    "breaks_up": intelligence["breaks_up"],
+    "left_out": intelligence["left_out"],
+    "note": intelligence["note"],
+    "sources": intelligence["sources"],   # the three pages, cited and linked on its page (his words: "Cite and link intelligence text")
+    "element_types": intelligence["element_types"],
+    "instances": [{"name": "jaisa", "url": "https://jaisa.syntax.prayasabhinav.net",
+                   "what": "a builder: choose an element of each type and read, cited and linked, the passages of the Museum your choices rest on. Its name is from jaisa des waisa bhes, as the land, so the dress",
+                   "links": []}],
+    "described_entities": [],
+})
+
 # Every element type says whether a thing of that kind needs it, so completeness can be checked by type: a thing is
 # complete when every essential type is decided, and an optional type says what deciding it does (Prayas, 19 October 2026).
 for s in SYNTAXES:
@@ -244,14 +265,15 @@ for s in SYNTAXES:
     types = "".join(
         f"""<section class="type"><h3>{e(t['name'])} <span class="holds">holds {t['holds']}</span>{f' <span class="holds">{t["need"]}</span>' if t.get("need") else ""}</h3>
 <p class="aside">{e(t['description'])}{f" Optional: {e(t['helps'])}" if t.get("helps") else ""}</p>
-{f"<dl>{''.join(f'<dt>{e(x["name"])}{' <span class="holds">thing</span>' if x.get("thing") else ''}</dt><dd>{e(x["description"])}</dd>' for x in t['elements'])}</dl>" if t['elements'] else ""}</section>"""
+{f"<dl>{''.join(f'<dt>{e(x["name"])}{' <span class="holds">thing</span>' if x.get("thing") else ''}</dt><dd>{e(x["description"])}{f' <span class="shown">shown in <a href="{e(x["shown_by"]["url"])}">{e(x["shown_by"]["cite"])}</a></span>' if x.get("shown_by") else ""}</dd>' for x in t['elements'])}</dl>" if t['elements'] else ""}</section>"""
         for t in s["element_types"])
     inst = "".join(f'<li><a href="{e(i["url"])}">{e(i["name"])}</a>: {e(i["what"])}{"".join(f' (<a href="{e(u)}">{e(label)}</a>)' for label, u in i["links"])}</li>' for i in s["instances"])
     ents = "".join(f'<li><a href="{e(x["url"])}">{e(x["name"])}</a></li>' for x in s["described_entities"])
     n_el = sum(len(t["elements"]) for t in s["element_types"])
     body = f"""<h1>The {e(s['name'])} syntax</h1>
-<p class="lede">It breaks up {e(s['breaks_up'])}. It has {len(s['element_types'])} element types and {n_el} elements, and a {e(s['name'])} described in it is one choice of elements from each type.</p>
+<p class="lede">It breaks up {e(s['breaks_up'])}. It has {len(s['element_types'])} element types and {n_el} elements, and {'an' if s['name'][0] in 'aeiou' else 'a'} {e(s['name'])} described in it is one choice of elements from each type.</p>
 {f'<p>{e(s["note"])}</p>' if s.get("note") else ""}
+{('<h2>Read from</h2><ol>' + ''.join(f'<li>{e(x["author"])}, <a href="{e(x["url"])}"><i>{e(x["title"])}</i></a>, {e(x["site"])}, first published {e(x["published"])}.</li>' for x in s["sources"].values()) + '</ol>') if s.get("sources") else ""}
 <h2>Instances</h2>{f'<ul>{inst}</ul>' if inst else '<p>No tool is built on it yet.</p>'}
 <h2>Element types and elements</h2>{types}
 <h2>Left out</h2><p>{e(s["left_out"])}</p>

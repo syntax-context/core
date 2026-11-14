@@ -79,3 +79,5 @@ footer { margin-top: 48px; font-size: 14px; }
   dl { grid-template-columns: minmax(0, 1fr); gap: 0; }
   dd { margin-bottom: 8px; }
 }
+.shown { display: block; font-size: .86em; opacity: .75; margin-top: 2px; }
+.shown a { color: inherit; }

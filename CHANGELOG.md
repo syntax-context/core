@@ -2,6 +2,16 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.19.0 — 14 November 2026
+
+- The intelligence syntax has 16 more elements, two for each type: methods by which an intelligence is made that way, each shown possible by a peer-reviewed paper found through Consensus and checked through find-research-papers and Crossref (his words: *"There are no elements - get methods from consensus"*). *keys*: preference labels, people and a model routed; *seems intelligent to*: people in conversation, a machine judge; *learning*: slows change where it matters, replays what it learnt; *input*: acting in the world, a simulated world; *context*: looks it up, a map of relations; *interpretation*: asks what was meant, offers readings to choose from; *story*: stays with the person, works on what it cannot read; *works for*: passes hard cases to a person, chooses whom to ask. The syntax now has 35 elements.
+- A syntax's page shows, beside an element shown possible by a paper, the paper it is shown in, linked by its DOI; the NSM syntax's papers appear on its page for the first time.
+
+## 0.18.0 — 14 November 2026
+
+- The eighth syntax, **intelligence**: an intelligence, broken into eight element types read from the Museum of Vestigial Desire's Intelligence section (the pages *Intelligence*, *Poetry* and *Context*): where its keys come from, whom it seems intelligent to, whether it goes on learning, where its input comes from, whether it relates one thing to another, what it does with what it receives, how much of a person's story it is given, and whom it works for. Every element carries the passage it is read from, word for word. *Left out* says what the pages do not settle, real intelligence among it, since the pages say there is only seeming. The syntax is kept with its builder, **jaisa** (*jaisa des waisa bhes*, as the land, so the dress), in `projects/jaisa-des-waisa-bhes/`, where a person chooses an element of each type and reads the passages the choices rest on.
+- The framework syntax has a seventh room, *intelligence*, for the Museum's section of that name.
+
 ## 0.17.1 — 13 November 2026
 
 - *data comes from* has *rows code made from templates*, which is what rai and RAM trained on; the records said *texts a model wrote* for both, which was wrong. *a public dataset* and *what people give it in use* now say why no NSM has them yet. In ungli each NSM shows what it trained on and how many rows, from its own records: rai 34,800, RAM 14,000, aadha 47,623, kahen 2,616.
