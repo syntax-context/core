@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.21.3 — 15 November 2026
+
+- An address without its last slash, such as /notes/ungli, redirected to the http:// address behind the HTTPS proxy; it now keeps https.
+
 ## 0.21.2 — 15 November 2026
 
 - The NSMnum syntax's page says how to write the plural (his words: *"specify on NSMnum page - how to use plural"*): one NSMnum, three NSMnum, never NSMnums, and said aloud en-ess-em-num for one or many.
