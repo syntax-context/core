@@ -4,7 +4,7 @@
  "slug": "nsmnum",
  "breaks_up": "an NSMnum (Narrow Small Model): one that does a single job and answers with a kind, a span, an item, a number or codes, never with sentences, and leaves the decision to code; narrow is the size of its answer, not of the model",
  "left_out": "A model that writes. Anything that writes text is not an NSMnum, and an NSMnum never starts from such a model or is taught by one: an NSMnum answers with a kind, a span, an item, a number or codes, and code decides what follows. Also left out: what the NSMnum is for in the world, its name, and the keys, which stay with the person who keyed them.",
- "note": "NSMnum stands for Narrow Small Model. I changed its short form from NSM to NSMnum on 15 November 2026 to avoid a collision: NSM is already the Natural Semantic Metalanguage, Anna Wierzbicka and Cliff Goddard's theory of meaning in linguistics, and the other short forms I tried were taken too. The num is for number, the only thing such a model gives back.",
+ "note": "NSMnum stands for Narrow Small Model. I changed its short form from NSM to NSMnum on 15 November 2026 to avoid a collision: NSM is already the Natural Semantic Metalanguage, Anna Wierzbicka and Cliff Goddard's theory of meaning in linguistics, and the other short forms I tried were taken too. The num is for number, the only thing such a model gives back. NSMnum is both singular and plural, written and said the same: one NSMnum, three NSMnum, layers of NSMnum, the nearest NSMnum already built; never NSMnums. Said aloud: en-ess-em-num, for one or many.",
  "element_types": [
   {
    "name": "does",

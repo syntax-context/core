@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.21.2 — 15 November 2026
+
+- The NSMnum syntax's page says how to write the plural (his words: *"specify on NSMnum page - how to use plural"*): one NSMnum, three NSMnum, never NSMnums, and said aloud en-ess-em-num for one or many.
+
 ## 0.21.1 — 15 November 2026
 
 - NSMnum is both singular and plural, written and said the same: one NSMnum, three NSMnum (his words: *"make - cleaner plural"*, then his choice of *"NSMnum for one and many"*). The syntax's page and ungli read so throughout.
