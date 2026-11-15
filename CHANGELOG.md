@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.21.0 — 15 November 2026
+
+- The NSM syntax is now the **NSMnum** syntax, at /nsmnum/; /nsm/ and its JSON and preview card redirect there, as /narrow-small-model/ and /small-model/ do. He changed the short form to avoid a collision (his words: *"customise NSM and make it specific - iteration not full name"*, then *"find something with no collissions"*): NSM is already the Natural Semantic Metalanguage, Anna Wierzbicka and Cliff Goddard's theory of meaning in linguistics, and NSMn, NSMk, NSMv, NSMi, NSMidX, NSMnk and others were taken too. *num* is for number, the only thing such a model gives back; the full name, Narrow Small Model, is unchanged. The syntax's note says why, and ungli says NSMnum throughout.
+
 ## 0.20.0 — 14 November 2026
 
 - The intelligence syntax is read from Split-Domain Cognition's canon and Koher's positions as well as the Museum's essays (his words: *"read koher and sdc too"*): eight more elements, each with its passage word for word and its source linked. *seems intelligent to*: whoever it agrees with; *input*: writing only; *context*: what was said, not who said it; *interpretation*: describes, and code decides, and points to the relevant part; *story*: the person's reading first; *works for*: the person's intent, and two people, never their arbiter. Neither speaks to *keys* or *learning*, so those take nothing from them. The syntax now has 43 elements. A source the page gives no date for is cited by the day it was read.

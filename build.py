@@ -30,8 +30,9 @@ if newest != VERSION:
     sys.exit(f"VERSION is {VERSION} but the newest CHANGELOG entry is {newest}")
 
 # A syntax is named by the primary name of the kind of thing it breaks up, in plain lower case: never a tool or a brand
-# One exception, his word of 13 November 2026 ("NSM is" the name of the syntax): a name in capitals, for NSM.
-PRIMARY_NAME = re.compile(r"^([a-z]+( [a-z]+)*|[A-Z]{2,})$")
+# One exception, his word of 13 November 2026 ("NSM is" the name of the syntax): a name in capitals, for NSM, written NSMnum
+# from 15 November 2026 to avoid a collision with the Natural Semantic Metalanguage (his words: "find something with no collissions").
+PRIMARY_NAME = re.compile(r"^([a-z]+( [a-z]+)*|[A-Z]{2,}|NSMnum)$")
 
 games = json.loads((BGB / "games.json").read_text())
 SYNTAXES = [{
@@ -124,18 +125,18 @@ SYNTAXES.append({
 # of the kind of outout and accuracy) be made? -- syntax", then "make builder and deploy"). The syntax and the table of
 # models built so far, each with what was measured on it, are kept with the builder, ungli, in projects/ungli/.
 SMB = HERE / "projects" / "ungli"
-small = json.loads((SMB / "nsm-syntax.json").read_text())
+small = json.loads((SMB / "nsmnum-syntax.json").read_text())
 MODELS = json.loads((SMB / "models.json").read_text())
 SYNTAXES.append({
     "name": small["name"],
     "read_from": "ungli",
-    "slug": "nsm",
+    "slug": "nsmnum",
     "breaks_up": small["breaks_up"],
     "left_out": small["left_out"],
-    "note": small["note"],   # which NSM this is, and which it is not (13 November 2026)
+    "note": small["note"],   # which NSMnum this is, and which it is not (13 November 2026)
     "element_types": small["element_types"],
     "instances": [{"name": "ungli", "url": "https://ungli.syntax.prayasabhinav.net",
-                   "what": "a builder: design a task as steps of NSMs (Narrow Small Models) and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
+                   "what": "a builder: design a task as steps of NSMnums (Narrow Small Models) and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
                    "links": []}],
     "described_entities": [{"name": m["name"], "url": f"https://ungli.syntax.prayasabhinav.net/#{m['slug']}"} for m in MODELS if m.get("listed", True)],
 })

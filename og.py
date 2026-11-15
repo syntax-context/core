@@ -50,10 +50,10 @@ cards = {"home": card(build.MARK, "Kinds of things, broken into parts", "SYNTAX"
 for s in build.SYNTAXES:
     n_el = sum(len(t["elements"]) for t in s["element_types"])
     cards[s["slug"]] = card(build.family_mark(s), "a syntax", s["name"],
-                            ("NSM (Narrow Small Model) · " if s["slug"] == "nsm" else "") + f"{len(s['element_types'])} element types and {n_el} elements")
-# ungli, the builder on the NSM syntax, has its own host and its own mark; it has its own preview.
+                            ("NSMnum (Narrow Small Model) · " if s["slug"] == "nsmnum" else "") + f"{len(s['element_types'])} element types and {n_el} elements")
+# ungli, the builder on the NSMnum syntax, has its own host and its own mark; it has its own preview.
 cards["ungli"] = card((HERE / "projects" / "ungli" / "brand" / "ungli-mark.svg").read_text(), "ungli rakhna · on the exact spot", "ungli",
-                      f"A builder for NSMs (Narrow Small Models), beside what {sum(1 for m in build.MODELS if m.get("built"))} NSMs already built were measured to do",
+                      f"A builder for NSMnums (Narrow Small Models), beside what {sum(1 for m in build.MODELS if m.get("built"))} NSMnums already built were measured to do",
                       url="ungli.syntax.prayasabhinav.net", ground="#17111f", sheet="#f2eee3", ink="#1c1524", accent="#5b2d8e")   # ungli's own palette: the election ink on ballot paper
 
 with tempfile.TemporaryDirectory() as tmp:
