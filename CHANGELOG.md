@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.22.0 — 15 November 2026
+
+- The NSMnum syntax's page lists four small tasks from ordinary work (his words: *"Put examples of small tasks on syntax site and ungli"*): a TA bill's journey dates against the sanction order, purchase invoices against GSTR-2B (no step needs a model), an RTI application transferred to the authority that holds what it asks for, and a leave application against the attendance minimum. Each is set out as code and at most one NSMnum, with its blocks, and opens in ungli at its own address; none is built. They are read from ungli's `small-tasks.json`, so the two never differ.
+
 ## 0.21.3 — 15 November 2026
 
 - An address without its last slash, such as /notes/ungli, redirected to the http:// address behind the HTTPS proxy; it now keeps https.

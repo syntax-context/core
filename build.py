@@ -139,6 +139,9 @@ SYNTAXES.append({
                    "what": "a builder: design a task as steps of NSMnum (Narrow Small Models) and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
                    "links": []}],
     "described_entities": [{"name": m["name"], "url": f"https://ungli.syntax.prayasabhinav.net/#{m['slug']}"} for m in MODELS if m.get("listed", True)],
+    # small tasks from ordinary work, none built, read from ungli's own file (his words, 15 November 2026: "Put examples of
+    # small tasks on syntax site and ungli"); each opens in ungli at #task/<slug>
+    "small_tasks": json.loads((SMB / "small-tasks.json").read_text()),
 })
 
 # The band syntax, read from Bairang (his words, 13 November 2026: "bairang is a kind of thing which has syntax - it is
@@ -225,6 +228,18 @@ SITE = "https://syntax.prayasabhinav.net"
 DESCRIPTION = "SYNTAX breaks kinds of things into element types and elements, so that each thing of that kind can be described, compared and made from the same parts."
 
 
+def small_tasks(tasks):
+    """the Small tasks section of a syntax's page: each task, its steps and their blocks, and where it opens in ungli"""
+    if not tasks: return ""
+    def step(x):
+        blocks = " · ".join(e(v) for v in {**x.get("slots", {}), **x.get("code", {})}.values())
+        if x["kind"] == "code": return f'<li>Code: {e(x["does"])}<br><span class="aside">Blocks: {blocks}</span></li>'
+        return f'<li>An NSMnum: {e(x["does"])} Then code: {e(x["then"])}<br><span class="aside">Blocks: {blocks}</span></li>'
+    return ('<h2 id="small-tasks">Small tasks</h2><p>Tasks from ordinary work, each set out as a few steps of code and at most one NSMnum. None of them is built. '
+            'Each opens in ungli, which shows beside it the NSMnum I have built for the most similar jobs, with what each was measured to do. An NSMnum that points hands back a place in the text, never words of its own.</p>'
+            + "".join(f'<h3>{e(x["name"])}</h3><p>{e(x["task"])}</p><ol>{"".join(step(s) for s in x["steps"])}</ol>'
+                      f'<p><a href="https://ungli.syntax.prayasabhinav.net/#task/{e(x["slug"])}">Open it in ungli</a></p>' for x in tasks))
+
 def page(title, body, current, field=None, og="home", description=DESCRIPTION, path="/"):
     return f"""<!doctype html>
 <html lang="en-GB">
@@ -279,6 +294,7 @@ for s in SYNTAXES:
 <h2>Element types and elements</h2>{types}
 <h2>Left out</h2><p>{e(s["left_out"])}</p>
 <h2>Described in it</h2>{f'<ul class="entities">{ents}</ul>' if ents else '<p>Nothing is described in it yet.</p>'}
+{small_tasks(s.get("small_tasks"))}
 <p class="aside">The syntax as data: <a href="/{s['slug']}.json">{s['slug']}.json</a>. It is read from {e(s['read_from'])} each time this site is built, so the two never differ.</p>"""
     out = HERE / "site" / s["slug"]
     out.mkdir(parents=True, exist_ok=True)
