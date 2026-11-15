@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.25.0 — 15 November 2026
+
+- SYNTAX, written in capitals, now says what it stands for: **Sorting Your Notions into Types, Alternatives and eXclusions**, the three things every syntax writes down (his words: *"SYNTAX is all caps so it looks like acronym - give plausible expansion on site if not already"*, then his choice among three expansions, each checked through /new-idea and for collisions, none found). The home page says it under its heading, and the README under its logo.
+
 ## 0.24.0 — 15 November 2026
 
 - NSMnum's full name is **Narrow Small Model (numerating)** (his words: *"I am thinking Narrow Small Model (numerating)"*, *"Put full form on all surfaces"*), replacing *Narrow Small Model, numeric* of an hour before. num is for numerating, because all this kind of model does is name a number. Inside parentheses it is written with square brackets: NSMnum (Narrow Small Model [numerating]). The NSMnum syntax's page, note and preview card say so.

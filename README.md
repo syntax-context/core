@@ -1,5 +1,7 @@
 <p align="center"><a href="https://syntax.prayasabhinav.net"><img src="brand/syntax-lockup.svg" width="420" alt="SYNTAX"></a></p>
 
+<p align="center"><strong>S</strong>orting <strong>Y</strong>our <strong>N</strong>otions into <strong>T</strong>ypes, <strong>A</strong>lternatives and e<strong>X</strong>clusions</p>
+
 <p align="center">
 <a href="CHANGELOG.md"><img src="badges/version.svg" alt="version"></a>
 <a href="#syntaxes"><img src="badges/syntaxes.svg" alt="syntaxes"></a>

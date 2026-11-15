@@ -311,6 +311,7 @@ rows = "".join(
     (f'instance: {", ".join(e(i["name"]) for i in s["instances"])}' if s["instances"] else f'described in it: {", ".join(e(x["name"]) for x in s["described_entities"])}') + '</span></a></li>'
     for s in SYNTAXES)
 index = f"""<h1>Kinds of things, broken into parts</h1>
+<p class="aside">SYNTAX: Sorting Your Notions into Types, Alternatives and eXclusions. A syntax writes down the element types of a kind of thing, the elements to choose among under each, and what it leaves out.</p>
 <p class="lede">A kind of thing can be broken into the same parts every time. SYNTAX writes those parts down: the element types a kind of thing has, and the elements of each type. Once they are written, each thing of that kind can be described as a choice of elements, compared with others, and made by choosing differently.</p>
 <h2>The words</h2>
 <dl class="words">
