@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.23.0 — 15 November 2026
+
+- NSMnum's full name is now **Narrow Small Model, numeric**, so that every letter stands for a word: N, S and M for Narrow Small Model, num for numeric, since a number is the only thing such a model gives back (his words: *"Make NSMnum make sense as as an acronym"*, then his choice of *"…Model, numeric"* among four expansions, each checked for collisions). The NSMnum syntax's page, its note and its preview card say so, and the builder ungli reads the same.
+
 ## 0.22.1 — 15 November 2026
 
 - The NSMnum syntax's page says how to say NSMnum (his words: *"Put pronounciation guide for nsmnum on all surfaces"*): en-ess-em-num (एन-एस-एम-नम), four syllables, the letters N, S and M and then num as in number, for one or many. aadha, described in it, links its release 0.8.1.
