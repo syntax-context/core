@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.21.1 — 15 November 2026
+
+- NSMnum is both singular and plural, written and said the same: one NSMnum, three NSMnum (his words: *"make - cleaner plural"*, then his choice of *"NSMnum for one and many"*). The syntax's page and ungli read so throughout.
+
 ## 0.21.0 — 15 November 2026
 
 - The NSM syntax is now the **NSMnum** syntax, at /nsmnum/; /nsm/ and its JSON and preview card redirect there, as /narrow-small-model/ and /small-model/ do. He changed the short form to avoid a collision (his words: *"customise NSM and make it specific - iteration not full name"*, then *"find something with no collissions"*): NSM is already the Natural Semantic Metalanguage, Anna Wierzbicka and Cliff Goddard's theory of meaning in linguistics, and NSMn, NSMk, NSMv, NSMi, NSMidX, NSMnk and others were taken too. *num* is for number, the only thing such a model gives back; the full name, Narrow Small Model, is unchanged. The syntax's note says why, and ungli says NSMnum throughout.
