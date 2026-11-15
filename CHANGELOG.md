@@ -2,6 +2,11 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.24.0 — 15 November 2026
+
+- NSMnum's full name is **Narrow Small Model (numerating)** (his words: *"I am thinking Narrow Small Model (numerating)"*, *"Put full form on all surfaces"*), replacing *Narrow Small Model, numeric* of an hour before. num is for numerating, because all this kind of model does is name a number. Inside parentheses it is written with square brackets: NSMnum (Narrow Small Model [numerating]). The NSMnum syntax's page, note and preview card say so.
+- In the builder ungli a block is placed only by dragging it onto its slot; a click or a double click no longer places it (his words: *"Ungli element double click should not place element. Drag and drop is needed"*). On a phone or with a pen, a copy of the block follows the finger and drops where it lifts.
+
 ## 0.23.1 — 15 November 2026
 
 - The NSMnum syntax's note says each part of NSMnum stands for a word, not every letter (num is three letters for one word), and says the expansion once.
