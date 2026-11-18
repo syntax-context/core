@@ -137,7 +137,7 @@ SYNTAXES.append({
     "element_types": small["element_types"],
     "instances": [{"name": "ungli", "url": "https://ungli.syntax.prayasabhinav.net",
                    "what": "a builder: design a task as steps of NSMnum (Narrow Small Models [numerating]) and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
-                   "links": []}],
+                   "links": [("the ungli skill for Claude Code", "https://github.com/koherarchitecture/ungli#the-ungli-skill-for-claude-code")]}],
     "described_entities": [{"name": m["name"], "url": f"https://ungli.syntax.prayasabhinav.net/#{m['slug']}"} for m in MODELS if m.get("listed", True)],
     # small tasks from ordinary work, none built, read from ungli's own file (his words, 15 November 2026: "Put examples of
     # small tasks on syntax site and ungli"); each opens in ungli at #task/<slug>

@@ -63,14 +63,14 @@ The table below is written by `build.py` from the same list the site is built fr
 <!-- syntaxes:start -->
 | Mark | Syntax | Element types | Elements | Read from | Instances | As data |
 |---|---|---|---|---|---|---|
-| <img src="site/board-game/mark.svg" height="40" alt="the board game mark"> | [**board game**](https://syntax.prayasabhinav.net/board-game/) | 9 | 193 | boardgameBuilder | boardgameBuilder | [`board-game.json`](https://syntax.prayasabhinav.net/board-game.json) |
+| <img src="site/board-game/mark.svg" height="40" alt="the board game mark"> | [**board game**](https://syntax.prayasabhinav.net/board-game/) | 9 | 219 | boardgameBuilder | boardgameBuilder | [`board-game.json`](https://syntax.prayasabhinav.net/board-game.json) |
 | <img src="site/record/mark.svg" height="40" alt="the record mark"> | [**record**](https://syntax.prayasabhinav.net/record/) | 3 | 6 | Zariia | Zariia | [`record.json`](https://syntax.prayasabhinav.net/record.json) |
 | <img src="site/personhood/mark.svg" height="40" alt="the personhood mark"> | [**personhood**](https://syntax.prayasabhinav.net/personhood/) | 4 | 17 | Split-Domain Cognition | Split-Domain Cognition; Koher | [`personhood.json`](https://syntax.prayasabhinav.net/personhood.json) |
 | <img src="site/framework/mark.svg" height="40" alt="the framework mark"> | [**framework**](https://syntax.prayasabhinav.net/framework/) | 5 | 14 | the Museum of Vestigial Desire | Museum of Vestigial Desire | [`framework.json`](https://syntax.prayasabhinav.net/framework.json) |
 | <img src="site/life/mark.svg" height="40" alt="the life mark"> | [**life**](https://syntax.prayasabhinav.net/life/) | 5 | 10 | Split-Domain Cognition | Split-Domain Cognition's animal-rights variant | [`life.json`](https://syntax.prayasabhinav.net/life.json) |
 | <img src="site/nsmnum/mark.svg" height="40" alt="the NSMnum mark"> | [**NSMnum**](https://syntax.prayasabhinav.net/nsmnum/) | 12 | 87 | ungli | ungli | [`nsmnum.json`](https://syntax.prayasabhinav.net/nsmnum.json) |
 | <img src="site/band/mark.svg" height="40" alt="the band mark"> | [**band**](https://syntax.prayasabhinav.net/band/) | 7 | 21 | Bairang |  | [`band.json`](https://syntax.prayasabhinav.net/band.json) |
-| <img src="site/intelligence/mark.svg" height="40" alt="the intelligence mark"> | [**intelligence**](https://syntax.prayasabhinav.net/intelligence/) | 8 | 43 | the Museum of Vestigial Desire's Intelligence section, Split-Domain Cognition and Koher | jaisa | [`intelligence.json`](https://syntax.prayasabhinav.net/intelligence.json) |
+| <img src="site/intelligence/mark.svg" height="40" alt="the intelligence mark"> | [**intelligence**](https://syntax.prayasabhinav.net/intelligence/) | 8 | 46 | the Museum of Vestigial Desire's Intelligence section, Split-Domain Cognition and Koher | jaisa | [`intelligence.json`](https://syntax.prayasabhinav.net/intelligence.json) |
 <!-- syntaxes:end -->
 
 Each syntax is read from the project that holds it. Where a syntax lives in one project and SYNTAX copies it, the two drift; here the build reads the instance's own file every time, so the site and the instance cannot say different things.

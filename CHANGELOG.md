@@ -2,6 +2,10 @@
 
 What changed in SYNTAX, newest first. The version is in `VERSION` and shown on every page; `build.py` stops if `VERSION` and the newest entry here disagree. To add an entry: raise `VERSION` (the middle number for something people can use, the last for a fix), add a section at the top with the same number and the date, and build.
 
+## 0.26.0 — 18 November 2026
+
+- NSMnum's page links the ungli skill for Claude Code, beside the builder: it answers from my records on ungli and NSMnum and, given a task, asks one question at a time until the task is broken into NSMnum steps (his words: *"release it in ungli repo on gh and on nsmnum and ungli page"*).
+
 ## 0.25.0 — 15 November 2026
 
 - SYNTAX, written in capitals, now says what it stands for: **Sorting Your Notions into Types, Alternatives and eXclusions**, the three things every syntax writes down (his words: *"SYNTAX is all caps so it looks like acronym - give plausible expansion on site if not already"*, then his choice among three expansions, each checked through /new-idea and for collisions, none found). The home page says it under its heading, and the README under its logo.

@@ -75,6 +75,13 @@
    "site": "koher.app",
    "url": "https://koher.app/why",
    "read": "14 November 2026"
+  },
+  "semantics": {
+   "author": "Prayas Abhinav",
+   "title": "Semantics",
+   "site": "Museum of Vestigial Desire",
+   "url": "https://museumofvestigialdesire.net/intelligence/semantics",
+   "published": "16 November 2026"
   }
  },
  "element_types": [
@@ -266,6 +273,14 @@
       "title": "Aligning Cyber Space With Physical World: A Comprehensive Survey on Embodied AI",
       "what": "a survey of embodied AI, covering simulators and the move from simulation to the real world."
      }
+    },
+    {
+     "name": "remote presence",
+     "description": "a person's presence reaches it through physical interfaces or through ones that represent physical presence, such as video calls",
+     "gives": "its input includes a sign of someone being there that text alone does not carry",
+     "page": "semantics",
+     "quote": "The interfaces for unforgeable intent that I spoke of are mostly physical today or ones that represent a physical presence (like video calls) but the scope is wide open to figure and make more such interfaces possible.",
+     "read": "16 November 2026, read by jaisa, unreviewed"
     }
    ]
   },
@@ -382,6 +397,22 @@
       "title": "Interactive Question Clarification in Dialogue via Reinforcement Learning",
       "what": "a model that answers an ambiguous question by listing intent phrases for the user to confirm, evaluated on real users' clicks."
      }
+    },
+    {
+     "name": "checks against held intent",
+     "description": "it checks the meaning in a person's text against the intent they hold, which has to be shown in some unforgeable way",
+     "gives": "its reading of a text is tested against the intent behind it and not against the text alone",
+     "page": "semantics",
+     "quote": "Interfaces that allow the semantic meaning held in our text to be validated against our held intent (manifested in some unforgeable way) will help us be believable.",
+     "read": "16 November 2026, read by jaisa, unreviewed"
+    },
+    {
+     "name": "reads cues and gestures",
+     "description": "where people are disconnected by language, it reads cues, hints and gestures to try to connect",
+     "gives": "its way of connecting does not depend on words alone",
+     "page": "semantics",
+     "quote": "In the disconnected form, the current capacities to read cues, hints and gestures are the only ways available to break out and try to connect.",
+     "read": "16 November 2026, read by jaisa, unreviewed"
     }
    ]
   },

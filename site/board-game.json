@@ -298,6 +298,18 @@
     {
      "name": "yes-or-no questions",
      "description": "One player knows a secret. The others ask questions that can be answered yes or no, and each answer shrinks the list of things it could be."
+    },
+    {
+     "name": "take away",
+     "description": "On your turn you take away as many pieces as you like from one pile or one part of the board. Nothing is ever added back, so every move leaves less, and the last move decides the game."
+    },
+    {
+     "name": "complete a square, go again",
+     "description": "Players take turns drawing one line between two dots. Whoever draws the line that closes a square writes their initial in it and draws again, so a move that closes one square can lead to a run of them."
+    },
+    {
+     "name": "told how close",
+     "description": "One player hides a word or a code, and the other guesses it. Each guess is answered with how many parts are right, and how many are in the right place, so every answer narrows what it could be."
     }
    ]
   },
@@ -848,6 +860,98 @@
     {
      "name": "rehearse a future",
      "description": "Players practise a way of living or working that does not exist yet, such as a village that shares everything, to see how it might feel before anyone tries it for real."
+    },
+    {
+     "name": "feedback loop",
+     "description": "What happens feeds back into its own cause, so a gain makes the next gain easier, or a loss the next loss. More farms bring more money, which buys more farms."
+    },
+    {
+     "name": "tipping point",
+     "description": "A slow change goes on with little effect until a line is crossed, and then everything changes at once, the way a lake can stay clear for years and then turn green in a summer."
+    },
+    {
+     "name": "stocks build up",
+     "description": "Some things pile up turn by turn, like debt, soil or trust, and the size of the pile matters more than any single turn. Work waiting between two steps of a factory line piles up the same way."
+    },
+    {
+     "name": "the world takes a turn",
+     "description": "Between the players' turns, the system itself moves by a fixed rule: the river rises, prices change, an illness spreads. Nobody decides it; the rule does."
+    },
+    {
+     "name": "events and shocks",
+     "description": "Cards or rolls bring sudden outside changes, such as a flood, an election or a price crash, which no player chose and every player must respond to."
+    },
+    {
+     "name": "a round is a year",
+     "description": "Each round stands for a long stretch of real time, a season, a year or a decade, so a lifetime of change fits into an afternoon."
+    },
+    {
+     "name": "visible indicators",
+     "description": "Gauges on the board show how the whole system is doing, such as the water level, trust or pollution, and every move shows up on them. They describe the world, not who is ahead."
+    },
+    {
+     "name": "unequal starting positions",
+     "description": "Players begin with different amounts of money, land or connections, the way people do, and the game does not even it out."
+    },
+    {
+     "name": "the powerful make the rules",
+     "description": "Partway through, whoever is ahead gets to write or change the rules for everyone else, and the others play by them."
+    },
+    {
+     "name": "conflicting goals",
+     "description": "Each role wins by its own measure, and the measures pull against each other: the fisher wants the catch, the conservationist wants the fish. Everyone knows the others' goals."
+    },
+    {
+     "name": "a starting situation",
+     "description": "Play opens on a described situation, who is where, what has just happened and what is at stake, which every player reads before the first move."
+    },
+    {
+     "name": "argued moves",
+     "description": "A player may try anything, explains why it would work, and a judge or the whole table decides what happens, instead of the rules covering every action."
+    },
+    {
+     "name": "pause to reflect",
+     "description": "Play stops at set points so players can say what they notice before going on, not only at the end."
+    },
+    {
+     "name": "play again, compare",
+     "description": "The same game is played more than once with one thing changed, and players compare what happened each time."
+    },
+    {
+     "name": "says what it leaves out",
+     "description": "The game tells players what it simplified or left out of the real situation, so they know where it stops being true."
+    },
+    {
+     "name": "made with the people it models",
+     "description": "The people whose situation the game is about help design it, and play it to check that it rings true."
+    },
+    {
+     "name": "supply chain",
+     "description": "Each player is one link in a chain, such as maker, wholesaler, distributor and shop, passing goods one way and orders the other, so one player's choice reaches all the others."
+    },
+    {
+     "name": "only your own corner",
+     "description": "Each player sees only their own stock and the orders that reach them, never the whole system, and has to guess the rest."
+    },
+    {
+     "name": "bottleneck",
+     "description": "The slowest step sets the pace of everything after it, so speeding up any other step changes nothing."
+    },
+    {
+     "name": "push or pull",
+     "description": "Goods are made ahead to a guess and pushed down the line, or made only when an order pulls them, and players feel the difference."
+    },
+    {
+     "name": "batch size",
+     "description": "Players choose how many to make or move at once, a big batch now or one at a time, and pay for the choice in waiting or in setting up."
+    },
+    {
+     "name": "machines break down",
+     "description": "Equipment fails at random and must be repaired, so a plan that assumes everything works will not hold."
+    },
+    {
+     "name": "cost of too much and too little",
+     "description": "Holding stock costs something every round, and running out costs more, so players keep balancing between the two."
     }
    ]
   }
